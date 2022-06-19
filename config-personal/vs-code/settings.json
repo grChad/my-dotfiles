@@ -1,0 +1,103 @@
+{
+   "workbench.colorTheme": "One Dark Pro Darker",
+   "editor.fontLigatures": true,
+   "editor.fontFamily": "Cascadia Code",
+   "errorLens.enabledDiagnosticLevels": [
+      "error",
+      "warning",
+      "hint",
+      "info"
+   ],
+   "errorLens.enabled": true,
+   "editor.tabSize": 2,
+   "vim.leader": "<Space>",
+   "vim.normalModeKeyBindingsNonRecursive": [
+      { // Bajar mas rapido
+         "before": ["J"],
+         "after": ["5", "j"]
+      },
+      { // Subir mas rapido
+         "before": ["K"],
+         "after": ["5", "k"]
+      },
+      {
+         "before": ["<Leader>", ";"],
+         "after": ["$", "a", ";"]
+      },
+      { // anidar lineas
+         "before": ["<Leader>", ","],
+         "after": ["J"]
+      },
+      { // Para guardar o escribir el archivo
+         "before": ["<Leader>", "w"],
+         "commands": ["workbench.action.files.save"]
+      },
+      { // Para eliminar el resaltado
+         "before": ["<Leader>", "m"],
+         "commands": [":noh"]
+      },
+      { // Atajo para abrir la paleta de comandos
+         "before": ["<Leader>", "p"],
+         "commands": [ "workbench.action.showCommands" ]
+      },
+      { // Para acceder a los simolos
+         "before": ["<Leader>", "t"],
+         "commands": [ "workbench.action.gotoSymbol" ]
+      },
+      { // Buffer prev
+         "before": ["<Leader>", "j"],
+         "commands": [":tabprev"]
+      },
+      { // Buffer next
+         "before": ["<Leader>", "k"],
+         "commands": [":tabnext"]
+      },
+      { // deleted buffer actual
+         "before": ["<Leader>", "q"],
+         "commands": ["workbench.action.closeActiveEditor"]
+      },
+      { // limpia todos los buffers exepto donde se encuentra
+         "before": ["<Leader>", "s", "a"],
+         "commands": [":tabdelete"]
+      },
+      { // toggle file manager
+         "before": ["<Leader>", "<Tab>"],
+         "commands": ["workbench.action.toggleSidebarVisibility"]
+      },
+      { // focus in fila manager
+         "before": ["<Leader>", "f"],
+         "commands": [ "revealInExplorer" ],
+      },
+      { // Alternar comantarios en modo Normal
+         "before": ["<leader>", "c"],
+         "commands": [ "editor.action.commentLine" ],
+      },
+      { // Cambiar de nombre a una propiedad
+         "before": ["<leader>", "r", "e"],
+         "commands": [ "editor.action.rename" ]
+      },
+      { // Mostrar la definicion
+         "before": ["M"],
+         "commands": ["editor.action.showHover"]
+      }
+   ],
+   "vim.insertModeKeyBindingsNonRecursive": [
+      { // Ir a Escap con 'kj'
+         "before": ["k", "j"],
+         "after": ["<ESC>"]
+      }
+   ],
+   "vim.visualModeKeyBindings": [
+      { // Alternar comantario en modo visual
+         "before": ["<leader>", "c"],
+         "commands": [
+            "editor.action.commentLine",
+            "extension.vim_escape"
+         ],
+      }
+   ],
+   "editor.fontSize": 15,
+   "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+}

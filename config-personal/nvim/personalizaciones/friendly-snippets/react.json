@@ -1,0 +1,22 @@
+{
+  "reactClassCompoment": {
+    "prefix": "rcc",
+    "body": "import React, { Component } from 'react'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>${TM_FILENAME_BASE}</div>\n\t\t)\n\t}\n}\n\nexport default ${TM_FILENAME_BASE}\n",
+    "description": "Creates a React component class"
+  },
+  "reactClassCompomentPropTypes": {
+    "prefix": "rccp",
+    "body": "import React, { Component } from 'react'\nimport PropTypes from 'prop-types'\n\nclass ${TM_FILENAME_BASE} extends Component {\n\trender () {\n\t\treturn (\n\t\t\t<div>${TM_FILENAME_BASE}</div>\n\t\t)\n\t}\n}\n\n${TM_FILENAME_BASE}.propTypes = {\n\n}\n\nexport default ${TM_FILENAME_BASE}\n",
+    "description": "Creates a React component class with PropTypes"
+  },
+  "reactFunctionComponent": {
+    "prefix": "rfc",
+    "body": "import React from 'react'\n\nconst ${TM_FILENAME_BASE} = () => {\n\treturn (\n\t\t<div>${TM_FILENAME_BASE}</div>\n\t)\n}\n\nexport default ${TM_FILENAME_BASE}\n",
+    "description": "Creates a React function component without PropTypes"
+  },
+  "function in const": {
+    "prefix": "fun",
+    "body": "const ${1:name} = (${2}) => {\n\t${3}\n}",
+    "description": "Snip Custom"
+  },
+}

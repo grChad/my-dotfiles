@@ -1,0 +1,10 @@
+# Install:
+   sudo apt install tmux   // debian
+   sudo dnf isntall tmux   // fedora
+
+" Configuracion para la apariencia: oh my tmux"
+   cd
+   git clone https://github.com/gpakosz/.tmux.git
+   ln -s -f .tmux/.tmux.conf
+   cp .tmux/.tmux.conf.local .
+   * revisar bien esto, ya que tuve un inconveniente, puede ser por copiar mal.

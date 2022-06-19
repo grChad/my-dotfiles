@@ -1,0 +1,46 @@
+" --------------------------------------------------------------------------
+                        " Set Configs
+" --------------------------------------------------------------------------
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" Set Config
+set clipboard+=unnamed
+set clipboard+=ideaput
+set rnu
+set showmode
+
+" --------------------------------------------------------------------------
+                        " Comand Leader & keys Settings
+" --------------------------------------------------------------------------
+let mapleader=" "
+
+" Open the Configuration & Load the Configuration
+nnoremap <Leader>e :e ~/.ideavimrc<CR>
+nnoremap <Leader>re :source ~/.ideavimrc<CR>
+
+" Desabilitar la navegacion con las flechas de direcciones
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
+
+" Save file
+nnoremap <leader>w :write<CR>
+
+" change <esc> => 'kj'.
+imap kj <Esc>
+set timeoutlen=800     " tiempo a esperar el comando.
+
+" Move in Buffer
+nnoremap <Leader>j :action PreviousTab<CR>
+nnoremap <Leader>k :action NextTab<CR>
+
+" Delete Tab or Buffer
+nnoremap <Leader>q :action CloseContent<CR>
+nnoremap <Leader>rn :action RenameElement<CR>

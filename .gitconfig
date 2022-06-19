@@ -1,0 +1,9 @@
+[user]
+	name = GabrielRIP
+	email = jgrcreations@gmail.com
+[credential]
+	helper = store
+[color]
+	ui = auto
+[init]
+	defaultbranch = main

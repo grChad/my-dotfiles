@@ -1,0 +1,3 @@
+# no incluir los siguientes folders and files
+plugin/
+.git/

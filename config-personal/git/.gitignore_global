@@ -1,0 +1,5 @@
+# archivos o ficheros a ignorar
+
+.git/
+dist/
+node_modules/
