@@ -1,8 +1,3 @@
-vim.g.tex_flavor = "latex"           -- Tratar archivos .tex como LaTex y no como Tex
-
--- NOTE: 'Espacio' como tecla Leader
-vim.g.mapLeader = ' '
-
 local keymap = vim.api.nvim_set_keymap
 local noremap = { noremap = true }
 local silent = { silent = true }
