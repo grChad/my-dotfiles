@@ -23,13 +23,6 @@ local colors = {
    command_text   = '#080808',
 }
 
--- NOTE: Agregar iconos en lugar de NORMAL, INSERT.. por default es => 'mode'
-local mode_custom = {
-   function() return '   ' end,
-   padding = { left = 0, right = 0 },
-   separator = { left = '', right = '' }
-}
-
 -- NOTE: modificado del tema 'bubbles' y 'dracula'
 local theme_custom = {
    normal = {
@@ -58,7 +51,23 @@ require('lualine').setup {
       globalstatus = 3, -- para tener todos los estados de los buffers en un solo lugar, nvim 0.7
    },
    sections = {
-      lualine_a = { mode_custom },
+      lualine_a = {
+         {
+            'mode',
+            padding = { left = 0, right = 0 },
+            separator = { left = '', right = '' },
+            fmt = function(str)
+               if str == 'NORMAL' then return ' ' .. str
+               elseif str == 'INSERT' then return 'פֿ ' .. str
+               elseif str == 'VISUAL' or str == 'V-LINE' then return ' ' .. str
+               elseif str == 'REPLACE' then return '﯒ ' .. str
+               elseif str == 'COMMAND' then return 'גּ ' .. str
+               elseif str == 'SELECT' then return '濾' .. str
+               elseif str == 'TERMINAL' then return ' ' .. str
+               else return ' ' .. str end
+            end,
+         }
+      },
       lualine_b = {
          { 'branch', icon = { '', color = { fg = colors.icon_git } } },
          {
@@ -78,6 +87,7 @@ require('lualine').setup {
          {
             'diagnostics',
             symbols = { error = " ", warn = " ", info = " ", hint = " " },
+            update_in_insert = true,
          },
          { 'progress', padding = { left = 1, right = 1} }
       },
@@ -98,5 +108,5 @@ require('lualine').setup {
       lualine_z = { 'location' },
    },
    tabline = {},
-   extensions = {},
+   extensions = { 'nvim-tree' },
 }
