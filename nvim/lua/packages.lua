@@ -51,7 +51,11 @@ packer.startup(function(use)
    }
 
    -- IDE and complementos ---------------------------------------------------
-   use { 'jiangmiao/auto-pairs' } -- {},[],'',""..
+   use {
+      'windwp/nvim-autopairs',
+      after = { 'nvim-treesitter', 'nvim-cmp' },
+      config = function() require('plugins.autopairs') end
+   }
    use { 'easymotion/vim-easymotion' }
    use { 'editorconfig/editorconfig-vim' }   -- normalize files
    use { 'KabbAmine/vCoolor.vim' }           -- palet of colors
