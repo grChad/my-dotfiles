@@ -1,58 +1,86 @@
-local set = vim.opt
+local options = {
+   number         = true,                 -- Muestra el número de línea actual
+   relativenumber = false,                -- Muertra los numeros relativos a la linea actual
+   mouse          = 'nvi',                -- Habilitar el Mouse, pero no en el CMD
+   encoding       = "utf-8",              -- Codificacion mostrada
+   fileencoding   = "utf-8",              -- Codificación escrita en el archivo
+   clipboard      = {
+      'unnamed,unnamedplus',              -- Copiar y pegar en portapapeles
+   },
 
--- OPCION DE INTERFAS DE USUARIO ----------------------------------
-set.mouse = 'nvi'                    -- Usar el mouse, pero no en modo linea de comando
-set.fileencoding = 'utf-8'           -- File content encoding for the buffer
-set.number = true                    -- Enumerar las filas de codigo
--- set.relativenumber = true            -- Numeros relativos
-set.clipboard = 'unnamedplus'        -- Portapapeles
-set.cursorline = true                -- Resalta la linea donde esta el cursor
-set.signcolumn = 'yes'               -- columna de signos, gitSign
-set.termguicolors = true             -- Es requerido para personalizar el editor
+   expandtab      = true,                 -- Usa espacios en lugar de tabulaciones
+   smartindent    = true,                 -- Sangría inteligente
+   smarttab       = true,                 -- Tabulacion más inteligente
+   autoindent     = true,                 -- Indentado Inteligente
+   shiftwidth     = 2,                    -- El ancho de cada sangria
+   tabstop        = 2,                    -- Espacios por cada Tab
 
--- OPCION DE INDENTACION ------------------------------------------
--- set.numberwidth = 3               -- margin para ver mejor el numero relativo
-set.tabstop = 2
-set.shiftwidth = 2
-set.autoindent = true
-set.expandtab = true
-set.smarttab = true
-set.smartindent = true
+   wrap           = false,                -- Texto en una sola linea
+   writebackup    = false,                -- No se requiere(nose)
+   linebreak      = true,                 -- Romper la linea si la palabra no alcanza.
+   updatetime     = 200,                  -- Completado mas rapida
+   timeoutlen     = 400,
 
--- OPCION DE BUSQUEDA ---------------------------------------------
-set.hidden = true
-set.ignorecase = true
-set.wildignorecase = true            -- Ignore case in filenames browsed by wildmenu
-set.smartcase = true
-set.incsearch = true                 -- Highlight en busqueda de manera incremental
+   cmdheight      = 1,                    -- Altura de la Terminal CMD
+   inccommand     = 'split',              -- Muestra incrementalmente los efectos de los comandos, abre split (ideal para reemplazar)
+   showmode       = false,                -- CMD message -- INSERTAR -- NORMAL -- ...
+   history        = 50,                   -- Numero de comandos a recordar en una tabla
 
--- OPCION DE RENDERIZADO DE TEXTO ---------------------------------
-set.wrap = false                     -- Text Wrap
-set.linebreak = true                -- Romper la linea si la palabra no alcanza.
+   foldlevelstart = 99,                   -- Expandir todos los pliegues por defecto
+   foldtext       = "CustomFold()",       -- Función personalizada para foldtext
+   foldmethod     = 'marker',             -- Plegado con soporte de triples.
+   swapfile       = false,                -- Archivos de intercambio
+   undofile       = true,                 -- Establece deshacer en archivo
+   viminfo        = "'1000",              -- Aumentar el tamaño del historial de archivos
 
--- OPTIONS OTHERS -------------------------------------------------
-set.cmdheight = 1                    -- height de la terminal
-set.completeopt = {"menuone", "noselect"} -- Completion engine options
-set.fixeol = true                    -- Restaurar EOL y EOF si falta escribir
-set.foldmethod = 'marker'            -- Plegado con soporte de triples
-set.inccommand = "split"
-set.laststatus = 3                   -- Una sola linea de estados para todos los splits
-set.nrformats = 'unsigned'           -- Treat all numbers as unsigned with <C-A> and <C-X>
-set.scrolloff = 5                    -- Dejar 5 lineas por encima o debajo del cursor
-set.sidescrolloff = 5                -- Dejar 5 lineas a los laterales del cursor
-set.splitbelow = true                -- Open splits below the current window
-set.splitright = true                -- Open splits right of the current window
-set.timeoutlen = 500
-set.updatetime = 300
-set.inccommand = 'split'             -- Incrementally show effects of commands, opens split
-set.history = 50                     -- Numero de comandos a recordar en una tabla
-set.pumheight = 15                   -- Height of the pop up menu
+   incsearch      = true,                 -- Comience a buscar antes de presionar enter
+   ignorecase     = true,                 -- Necesario para smartcase
+   smartcase      = true,                 -- Caso de usos en la búsqueda
 
-set.list = true                      -- for plug indent-blanckline
-set.undofile = true
-set.ruler = false                    -- muestra el cursor todo el tiempo
-set.swapfile = false                 -- Desabilidar los archivos de intercambio
+   signcolumn     = 'yes:2',              -- Columna de signos, con un extra
+   termguicolors  = true,                 -- Para personalizar el editor
+   cursorline     = true,                 -- Resalta la linea donde esta el cursor
+   emoji          = false,                -- visualizar emojis
 
+   showtabline    = 2,                    -- Mostrar siempre pestañas
+   softtabstop    = 2,                    -- Insertar 2 espacios para una pestaña
+   splitright     = true,                 -- Open Split vertical a la derecha
+   splitbelow     = true,                 -- Open Split Horizontal debajo
+   scrolloff      = 8,                    -- Dejar espacio encima o debajo del cursor
+   sidescrolloff  = 8,                    -- Dejar espacio a los laterales del cursor
+   list           = true,                 -- Obligatorio para el plug indent_blankline
+   lazyredraw     = true,                 -- Hace que las macros sean más rápidas y evita errores en asignaciones complicadas
+   laststatus     = 3,                    -- Estado global para todas las ventanas
+   pumheight      = 10,                   -- Numero maximo de items de Completado
+   completeopt    = {
+      'menu' ,'menuone', 'noselect',      -- Completion engine options
+   },
 
-vim.opt.colorcolumn:append("81")     -- Numero maximo de caracteres en linea
-vim.opt.shortmess:append("c")        -- No parar mendajes a 'ins-completion-menu'
+   conceallevel   = 0,                    -- Usar `` en archivos markdown
+   errorbells     = false,                -- Sonido de errores
+   wildignore     = "*node_modules/**",   -- No buscar dentro de los módulos de Node.js
+   backspace      = {
+      'indent', 'eol', 'start',           -- Asegurarse de que el backspace(<-) funcione
+   },
+}
+
+for k, v in pairs(options) do
+   vim.opt[k] = v
+end
+
+vim.opt.colorcolumn:append('80')          -- Numero maximo de caracteres en linea
+vim.opt.shortmess:append('c');
+vim.opt.formatoptions:remove('c');
+vim.opt.formatoptions:remove('r');
+vim.opt.formatoptions:remove('o');
+
+local globals = {
+   fillchars               = 'fold:\\ ',  -- Rellene los caracteres necesarios para los pliegues
+   mapleader               = ' ',         -- Map leader
+   speeddating_no_mappings = 1,           -- Deshabilitar asignaciones predeterminadas para citas rápidas
+   tex_flavor              = 'latex'      -- Tratar archivos .tex como LaTex y no como Tex
+}
+
+for k, v in pairs(globals) do
+   vim.g[k] = v
+end
