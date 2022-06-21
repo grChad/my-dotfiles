@@ -2,8 +2,8 @@ local options = {
    number         = true,                 -- Muestra el número de línea actual
    relativenumber = false,                -- Muertra los numeros relativos a la linea actual
    mouse          = 'nvi',                -- Habilitar el Mouse, pero no en el CMD
-   encoding       = "utf-8",              -- Codificacion mostrada
-   fileencoding   = "utf-8",              -- Codificación escrita en el archivo
+   encoding       = 'utf-8',              -- Codificacion mostrada
+   fileencoding   = 'utf-8',              -- Codificación escrita en el archivo
    clipboard      = {
       'unnamed', 'unnamedplus',              -- Copiar y pegar en portapapeles
    },
@@ -27,7 +27,7 @@ local options = {
    history        = 50,                   -- Numero de comandos a recordar en una tabla
 
    foldlevelstart = 99,                   -- Expandir todos los pliegues por defecto
-   foldtext       = "CustomFold()",       -- Función personalizada para foldtext
+   foldtext       = 'CustomFold()',       -- Función personalizada para foldtext
    foldmethod     = 'marker',             -- Plegado con soporte de triples.
    swapfile       = false,                -- Archivos de intercambio
    undofile       = true,                 -- Establece deshacer en archivo
@@ -58,7 +58,7 @@ local options = {
 
    conceallevel   = 0,                    -- Usar `` en archivos markdown
    errorbells     = false,                -- Sonido de errores
-   wildignore     = "*node_modules/**",   -- No buscar dentro de los módulos de Node.js
+   wildignore     = '*node_modules/**',   -- No buscar dentro de los módulos de Node.js
    backspace      = {
       'indent', 'eol', 'start',           -- Asegurarse de que el backspace(<-) funcione
    },
