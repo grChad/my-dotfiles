@@ -7,7 +7,7 @@ local opt = { noremap = true, silent = true }
 keymap('n', '<Leader>ed', ':e ~/.config/nvim/init.lua<CR>', opt)
 
 -- Use F5 para refrescar el archivo de configuracion init.lua
-keymap({'n', 'v', 'i' }, '<F5>', ':source ~/.config/nvim/init.lua<CR>', noremap)
+--keymap({'n', 'v', 'i' }, '<F5>', ':source ~/.config/nvim/init.lua<CR>', noremap)
 
 -- Moverse entre ventanas como en 'Tmux'
 keymap('n', '<C-h>', '<C-w>h', silent)
@@ -23,10 +23,10 @@ keymap('v', 'K', ":move '<-2<CR>gv-gv", silent)
 keymap('v', 'J', ":move '>+1<CR>gv-gv", silent)
 
 -- Desabilitar la navegacion con las flechas de direcciones
-keymap({ 'n', 'v' }, '<up>', '<nop>', opt)
-keymap({ 'n', 'v' }, '<down>', '<nop>', opt)
-keymap({ 'n', 'v' }, '<left>', '<nop>', opt)
-keymap({ 'n', 'v' }, '<right>', '<nop>', opt)
+--keymap({ 'n', 'v' }, '<up>', '<nop>', opt)
+--keymap({ 'n', 'v' }, '<down>', '<nop>', opt)
+--keymap({ 'n', 'v' }, '<left>', '<nop>', opt)
+--keymap({ 'n', 'v' }, '<right>', '<nop>', opt)
 
 -- Guardar y salir
 keymap('n', 'W', ':wq<CR>', opt)
@@ -108,4 +108,4 @@ keymap('n', '<Leader>r', ':NvimTreeRefresh<CR>', opt)
 keymap('n', '<Leader>b', '<Plug>(easymotion-s2)', { noremap = true })
 
 -- Comment Box
-keymap({ 'n', 'v' }, "<Leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", { silent = true })
+--keymap({ 'n', 'v' }, "<Leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", { silent = true })
