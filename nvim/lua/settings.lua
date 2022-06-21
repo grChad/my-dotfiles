@@ -5,7 +5,7 @@ local options = {
    encoding       = "utf-8",              -- Codificacion mostrada
    fileencoding   = "utf-8",              -- Codificación escrita en el archivo
    clipboard      = {
-      'unnamed,unnamedplus',              -- Copiar y pegar en portapapeles
+      'unnamed', 'unnamedplus',              -- Copiar y pegar en portapapeles
    },
 
    expandtab      = true,                 -- Usa espacios en lugar de tabulaciones

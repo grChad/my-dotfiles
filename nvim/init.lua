@@ -11,11 +11,11 @@ if impatient_ok then impatient.enable_profile() end
 -- PERFORMANCE: Para que no sea compatible con 'vi', pero no de golpe
 if vim.opt.compatible == true then vim.opt.compatible = false end
 
-require('settings') -- configuracones 'sets'
+require('settings')              -- configuracion de sets
 require ('packages') -- plugins
-require 'maps' -- keyboard shortcuts
+require('mappings')              -- atajos de teclado.
 vim.cmd('source $HOME/.config/nvim/lua/keys.vim')
-require ('autocmd') -- Automatizaciones
+require('autocmds')              -- Auto-comandos.
 require 'utils' -- others
 
 -- Colour overrides
