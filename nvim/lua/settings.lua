@@ -74,13 +74,13 @@ vim.opt.formatoptions:remove('c');
 vim.opt.formatoptions:remove('r');
 vim.opt.formatoptions:remove('o');
 
-local globals = {
+local global_var = {
    fillchars               = 'fold:\\ ',  -- Rellene los caracteres necesarios para los pliegues
    mapleader               = ' ',         -- Map leader
    speeddating_no_mappings = 1,           -- Deshabilitar asignaciones predeterminadas para citas rápidas
    tex_flavor              = 'latex'      -- Tratar archivos .tex como LaTex y no como Tex
 }
 
-for k, v in pairs(globals) do
+for k, v in pairs(global_var) do
    vim.g[k] = v
 end
