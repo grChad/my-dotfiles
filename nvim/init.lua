@@ -13,6 +13,7 @@ if vim.opt.compatible == true then vim.opt.compatible = false end
 
 require('settings')              -- configuracion de sets
 require('packer_commands')       -- Comandos para Packer & call plugins
+require('colorscheme')           -- Modificar la visualizacion del IDE
 require('mappings')              -- atajos de teclado.
 vim.cmd('source $HOME/.config/nvim/lua/keys.vim')
 require('autocmds')              -- Auto-comandos.
