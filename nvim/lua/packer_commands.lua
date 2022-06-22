@@ -1,7 +1,7 @@
-local create_command = vim.api.nvim_create_user_command
+local new_command = vim.api.nvim_create_user_command
 
-create_command('PackerInstall', 'packadd packer.nvim | lua require("plugins").install()', {})
-create_command('PackerUpdate', 'packadd packer.nvim | lua require("plugins").update()', {})
-create_command('PackerSync', 'packadd packer.nvim | lua require("plugins").sync()', {})
-create_command('PackerClean', 'packadd packer.nvim | lua require("plugins").clean()', {})
-create_command('PackerCompile', 'packadd packer.nvim | lua require("plugins").compile()', {})
+new_command('PackerInstall', 'packadd packer.nvim | lua require("plugins").install()', {})
+new_command('PackerUpdate', 'packadd packer.nvim | lua require("plugins").update()', {})
+new_command('PackerSync', 'packadd packer.nvim | lua require("plugins").sync()', {})
+new_command('PackerClean', 'packadd packer.nvim | lua require("plugins").clean()', {})
+new_command('PackerCompile', 'packadd packer.nvim | lua require("plugins").compile()', {})
