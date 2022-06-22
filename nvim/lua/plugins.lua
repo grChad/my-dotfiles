@@ -51,8 +51,8 @@ return require('packer').startup({
       -- Tree file manager ------------------------------------------------------
       use {
          'kyazdani42/nvim-tree.lua',
-         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-         config = function() require ('configs.nvim-tree') end,
+         requires = { 'kyazdani42/nvim-web-devicons' },
+         config = function() require ('configs.tree') end,
       }
 
       -- IDE and complementos ---------------------------------------------------
