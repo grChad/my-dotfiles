@@ -142,3 +142,8 @@ require'nvim-tree'.setup {
       require_confirm = true              -- Aviso para aceptar la eliminacion del elemento.
    }
 }
+
+-- NOTE: color de Folder y FolderName de NvimTRee
+vim.cmd('highlight NvimTreeFolderIcon guifg=goldenrod')
+vim.cmd('highlight NvimTreeFolderName guifg=goldenrod')
+vim.cmd('highlight NvimTreeOpenedFolderName guifg=sienna')
