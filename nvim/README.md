@@ -1,7 +1,7 @@
-# Configuracion Personal <img style="width: 25px" src="./assent/Nvim.png">
+# Configuracion Personal <img style="height: 30px; background-color: #F3D9B4; border-radius: 3px" src="../assets/Nvim-complete.png">
 ## Requisitos Linux
 * **NVim 0.7.0**: Compilar desde **[HitHub/Nvim](https://github.com/neovim/neovim)**, o descargar la version **.deb**
-* **NodeJs**: Download desde el repositorio **[Distributions Binary](https://github.com/nodesource/distributions/blob/master/README.md)** una version **stable**. Requisito tener **Curl** instalado.
+* **NodeJs**: Seguir esta **[guia](../other-settings/node.md)**
   - Para **Fedora**, es mejor instalarlo desde **[Package Snap](https://snapcraft.io/node)**.
 * **Git**: **[Official Page](https://git-scm.com/)**.
 ``` bash
