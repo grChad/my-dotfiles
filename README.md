@@ -12,9 +12,10 @@ y en otras hay que instalarlas:
 <img style="height:15px" src="./assets/nodejs-icon.png"> **NodeJs:** Siga esta [**guia**](./other-settings/node.md) recomendada.
 
 
-<img style="height:20px" src="./assets/kitty.svg"> **Kitty:** Emulador de terminal que usa la **GPU** del sistema:
+<img style="height:17px" src="./assets/kitty.svg"> **Kitty:** Emulador de terminal que usa la **GPU** del sistema:
 * <code>**sudo { apt, dnf } install kitty**</code>, para mas detalles [**sitio oficial**](https://sw.kovidgoyal.net/kitty/).
+* mi configuracion para ciegos esta [**aqui**](./kitty)
 
-<img style="height:15px" src="./assets/shell-icon.png"> **ZSH:**
+<img style="height:12px" src="./assets/shell-icon.png"> **ZSH:**
 Shell para **GNU/LINUX**, para mas detalles visite [**Z shell**](https://zsh.sourceforge.io/).
-* La instalación y mis configuraciones para **zshrc** y **zimrc** estan [**aqui**](./zsh/README.md)
+* La instalación y mis configuraciones para **.zshrc** y **.zimrc** estan [**aqui**](./zsh)
