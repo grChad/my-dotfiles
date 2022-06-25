@@ -122,8 +122,6 @@ keymap('n', '<down>', ':resize -5<CR>', opt)
 -- Scap in mode Insert and Visual
 keymap('i', 'kj', '<esc>', opt)
 keymap('i', 'KJ', '<esc>', opt)
-keymap('v', 'kj', '<esc>', opt)
-keymap('v', 'KJ', '<esc>', opt)
 
 -- Guardar el archivo en mode 'N' and "I"
 keymap('n', '<Leader>w', ':w<CR>', silent)
