@@ -7,7 +7,7 @@
 
 **Git** <img style="width:15px" src="./assets/git-icon.png">: Biene por defecto en <img style="width: 15px" src="./assets/fedora-linux-icon.png"> **Fedora**
 y en otras hay que instalarlas:
-* **forks de Debian** <img style="height: 15px" src="./assets/debian-icon.png"> <code>**Sudo apt install git**</code> o revise el [**sitio oficial**](https://git-scm.com/).
+* **forks de Debian** <img style="height: 15px" src="./assets/debian-icon.png"> <code>**sudo apt install git**</code> o revise el [**sitio oficial**](https://git-scm.com/).
 
 **NodeJs** <img style="height:15px" src="./assets/nodejs-icon.png">: Siga esta [**guia**](./other-settings/node.md) recomendada.
 
@@ -25,7 +25,7 @@ Shell para **GNU/LINUX**, para mas detalles visite [**Z shell**](https://zsh.sou
 Mi configuracion para ciegos esta [**Aqui**](./nvim)
 
 **Vs-Code** <img style="height: 15px" src="./assets/visual-studio-code-icon.png">:
-Mi confiracion se encuantra [**Aqui**](./vs-code)
+Mi confiracion se encuentra [**Aqui**](./vs-code)
 
 ## Otros:
 * Como crear un enlaze simbolico

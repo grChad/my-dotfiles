@@ -19,7 +19,7 @@ Ninguna particion **sdb** esta montada pero si lo estubiese se desmonta asi:
 ### Gravar la ISO
 La parte mas interesante:
   ```bash
-  sudo** dd if=path/to/xxxx.iso of=/dev/sdb bs=4M status=progress
+  sudo dd if=path/to/xxxx.iso of=/dev/sdb bs=4M status=progress
   ```
 * **dd**: El comando para gravar desponible en **Linux**, (mac & windows no se).
 * **if**: ruta de la **ISO** en su sistema, ejemplo: <code>**$HOME/Documentos/Fedora-Workstation-Live-x86_64-36-1.5.iso**</code>
