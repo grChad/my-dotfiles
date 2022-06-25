@@ -31,7 +31,7 @@ Mi confiracion se encuantra [**Aqui**](./vs-code)
 * Como crear un enlaze simbolico
 * Problemas con el Wifi
 * Instalar Latex
-* Grabar una iso desde terminal
+* Grabar una iso desde terminal [**here**](./other-settings/gravarISO.md)
 * Comandos para Youtube.
 * comandos para UNIX
 * Comandos para Terminal
