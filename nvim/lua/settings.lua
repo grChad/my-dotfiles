@@ -4,9 +4,7 @@ local options = {
    mouse          = 'nvi',                -- Habilitar el Mouse, pero no en el CMD
    encoding       = 'utf-8',              -- Codificacion mostrada
    fileencoding   = 'utf-8',              -- Codificación escrita en el archivo
-   clipboard      = {
-      'unnamed', 'unnamedplus',              -- Copiar y pegar en portapapeles
-   },
+   clipboard      = 'unnamedplus',        -- Copiar y pegar en portapapeles
 
    expandtab      = true,                 -- Usa espacios en lugar de tabulaciones
    smartindent    = true,                 -- Sangría inteligente
