@@ -9,8 +9,8 @@
 * sudo make install
    - Se instalara por default en */usr/local*
 
-## [Correccion de Problemas] 
-* [coc.nvim] Error on execute python script: request error nvim_comand - 
+## [Correccion de Problemas]
+* [coc.nvim] Error on execute python script: request error nvim_comand -
 Vim(pyxfile):E319: No "python3" provider found.
 * aparece al iniciar nvim
 * solucion 1: al inicio de la configuracion de coc.vim agregar:
@@ -33,3 +33,5 @@ Vim(pyxfile):E319: No "python3" provider found.
    - nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>pj
 * tambien esta este trabajo para cuando tenga un problema similar con el
    clipboard: <https://github.com/jasonccox/vim-wayland-clipboard>
+
+* **Clipbard en x11**: para Pop-Os se instala **xclip** <code>**sudo apt install xclip**</code>
