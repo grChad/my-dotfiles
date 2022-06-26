@@ -60,6 +60,8 @@ Mejor dicho, un autocompletado de **sudo**. No te pasa que terminas de escribir 
 
 <img src="../assets/captura-chown.png">
 
+Por ultimo lo llamamos a nuestro archivo **.zshrc** <code>**source /usr/share/zsh-sudo/sudo.plugin.zsh**</code>
+
 Asi al olvidarnos del **sudo**, solo tendremos que presionar **<esc\>** por 2 veces seguidas...
 
 ## Tema PowerLevel10K
