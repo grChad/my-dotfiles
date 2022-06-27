@@ -30,3 +30,5 @@ v18.4.0
 $ node --version > .node-version
 ```
 Tambien tendra que agregar lo siguiente a **.zshrc**: <code>**eval "$(fnm env --use-on-cd)"**</code>. Para otros casos como **bash** y **fish** revisar en el [**repositorio de fnm**](https://github.com/Schniz/fnm).
+
+Tabien puede revisar este [**articulo**](https://www.freecodecamp.org/news/fnm-fast-node-manager/), mas completo.
