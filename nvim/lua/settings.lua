@@ -35,7 +35,7 @@ local options = {
    ignorecase     = true,                 -- Necesario para smartcase
    smartcase      = true,                 -- Caso de usos en la búsqueda
 
-   signcolumn     = 'yes:2',              -- Columna de signos, con un extra
+   signcolumn     = 'yes',              -- Columna de signos, con un extra
    termguicolors  = true,                 -- Para personalizar el editor
    cursorline     = true,                 -- Resalta la linea donde esta el cursor
    emoji          = false,                -- visualizar emojis

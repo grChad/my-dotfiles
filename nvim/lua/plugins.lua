@@ -15,10 +15,7 @@ return require('packer').startup({
       use { "wbthomason/packer.nvim" }
 
       -- Theme for Nvim ---------------------------------------------------------
-      use {
-         'ful1e5/onedark.nvim',
-         config = function() require ('configs.onedark') end
-      }
+      use { 'ful1e5/onedark.nvim' }
 
       -- Dependencies -----------------------------------------------------------
       use {
