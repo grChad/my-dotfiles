@@ -101,7 +101,7 @@ dashboard.section.buttons.val = {
   button("SPC / u", '  ' .. " " .. "Actualizar Plugins", "<cmd>PackerSync<CR>", {}),
   button("SPC / i", '  ' .. " " .. "Instalar PLugins", "<cmd>PackerInstall<CR>", {}),
   button("SPC / c", '  ' .. " " .. "Configuracion", "<cmd>e $MYVIMRC<CR>", {}),
-  button("-", '  ' .. " " .. "Exit", "<cmd>Salir<CR>", {}),
+  button("-", '  ' .. " " .. "Exit", "<cmd>exit<CR>", {}),
 }
 
 -- ╭──────────────────────────────────────────────────────────╮
