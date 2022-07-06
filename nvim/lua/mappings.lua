@@ -1,5 +1,4 @@
 local keymap = vim.api.nvim_set_keymap
-local noremap = { noremap = true }
 local silent = { silent = true }
 local opt = { noremap = true, silent = true }
 
@@ -23,10 +22,14 @@ keymap('v', 'K', ":move '<-2<CR>gv-gv", silent)
 keymap('v', 'J', ":move '>+1<CR>gv-gv", silent)
 
 -- Desabilitar la navegacion con las flechas de direcciones
---keymap({ 'n', 'v' }, '<up>', '<nop>', opt)
---keymap({ 'n', 'v' }, '<down>', '<nop>', opt)
---keymap({ 'n', 'v' }, '<left>', '<nop>', opt)
---keymap({ 'n', 'v' }, '<right>', '<nop>', opt)
+keymap('n', '<up>', '<nop>', opt)
+keymap('v', '<up>', '<nop>', opt)
+keymap('n', '<down>', '<nop>', opt)
+keymap('v', '<down>', '<nop>', opt)
+keymap('n', '<left>', '<nop>', opt)
+keymap('v', '<left>', '<nop>', opt)
+keymap('n', '<right>', '<nop>', opt)
+keymap('v', '<right>', '<nop>', opt)
 
 -- Guardar y salir
 keymap('n', 'W', ':wq<CR>', opt)
@@ -54,8 +57,8 @@ keymap('n', '<Leader>;', '$a;', opt)
 -- Redimencionar los splits con los teclados de direcciones
 keymap('n', '<right>', ':vertical resize +5<CR>', opt)
 keymap('n', '<left>', ':vertical resize -5<CR>', opt)
-keymap('n', '<up>', ':resize +5<CR>', opt)
-keymap('n', '<down>', ':resize -5<CR>', opt)
+keymap('n', '<up>', ':resize -5<CR>', opt)
+keymap('n', '<down>', ':resize +5<CR>', opt)
 
 -- Scap in mode Insert and Visual
 keymap('i', 'kj', '<esc>', opt)
@@ -102,10 +105,10 @@ keymap('n', '<Leader>m', ':MarkdownPreviewToggle<CR>', { noremap = true })
 
 -- Administrador de ficheros del Plug Nvim-tree
 keymap('n', '<Leader><tab>', ':NvimTreeToggle<CR>', opt)
-keymap('n', '<Leader>r', ':NvimTreeRefresh<CR>', opt)
 
 -- easymotion
 keymap('n', '<Leader>b', '<Plug>(easymotion-s2)', { noremap = true })
 
 -- Comment Box
---keymap({ 'n', 'v' }, "<Leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", { silent = true })
+keymap('n', "<Leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", { silent = true })
+keymap('v', "<Leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", { silent = true })

@@ -11,8 +11,8 @@ if impatient_ok then impatient.enable_profile() end
 -- PERFORMANCE: Para que no sea compatible con 'vi', pero no de golpe
 if vim.opt.compatible == true then vim.opt.compatible = false end
 
-require('settings')              -- configuracion de sets
 require('packer_commands')       -- Comandos para Packer & call plugins
+require('settings')              -- configuracion de sets
 require('colorscheme')           -- Modificar la visualizacion del IDE
 require('mappings')              -- atajos de teclado.
 vim.cmd('source $HOME/.config/nvim/lua/keys.vim')
