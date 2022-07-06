@@ -88,6 +88,7 @@ return require('packer').startup({
          'norcalli/nvim-colorizer.lua',
          config = function () require ('configs.colorizer') end
       }
+      use { 'airblade/vim-rooter' }
 
       -- lsp and cmp ------------------------------------------------------------
       use {
