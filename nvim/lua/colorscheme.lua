@@ -2,7 +2,6 @@ require('onedark').setup({
    dark_float = false,                -- Ventanas flotantes mas oscuras
    hide_inactive_statusline = true,   -- Nvim Tree background, mas oscuro
    dark_sidebar = true,               -- Linea de numeros y signos mas oscuras
-   highlight_linenumber = true,       -- linea de numeros y signos mas oscuras.
 
    overrides = function ()
       return {
@@ -16,4 +15,4 @@ vim.highlight.create('NormalFloat', { guibg='none', guifg='none' }, false)
 vim.highlight.create('FloatBorder', { guibg='none' }, false)
 vim.highlight.create('WhichKeyFloat', { guibg='none' }, false)
 vim.highlight.create('BufferTabpageFill', { guibg='none' }, false)
-vim.highlight.create('VertSplit', { guifg='#5C6370', guibg='#21252B' }, false)
+vim.highlight.create('VertSplit', { guifg='#5C6370' }, false)
