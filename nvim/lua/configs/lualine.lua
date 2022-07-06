@@ -61,9 +61,9 @@ require('lualine').setup {
                elseif str == 'INSERT' then return 'פֿ ' .. str
                elseif str == 'VISUAL' or str == 'V-LINE' then return ' ' .. str
                elseif str == 'REPLACE' then return '﯒ ' .. str
-               elseif str == 'COMMAND' then return 'גּ ' .. str
+               elseif str == 'COMMAND' then return ' ' .. str
                elseif str == 'SELECT' then return '濾' .. str
-               elseif str == 'TERMINAL' then return ' ' .. str
+               elseif str == 'TERMINAL' then return ' ' .. str
                else return ' ' .. str end
             end,
          }
