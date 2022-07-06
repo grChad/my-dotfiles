@@ -131,10 +131,6 @@ return require('packer').startup({
       }
       use { 'KabbAmine/vCoolor.vim' }           -- palet of colors
       use { 'editorconfig/editorconfig-vim' }   -- normalize files
-      use { -- Para moverse por las linear buscando en el cmd por :Number
-         'nacro90/numb.nvim',
-         config = function() require('numb').setup() end
-      }
       use { 'rafamadriz/friendly-snippets' }
       use {
          "L3MON4D3/LuaSnip",
