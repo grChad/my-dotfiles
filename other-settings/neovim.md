@@ -1,3 +1,12 @@
+# Sobre Nvim <img style="height: 25px" src="../assets/Nvim.png">
+## Formas de instalar
+por repositorio, por lo menos en **Debean**:
+```shell
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt-get update
+sudo apt-get install neovim
+```
+
 ## Primero complir con todos los requisitos
 * Install git **apt install git, dnf install git, pacman -Sy git...**
 * Para compilar el proyecto se tendran que instalar las dependencias.
@@ -19,6 +28,7 @@ Vim(pyxfile):E319: No "python3" provider found.
    - cd
    - sudo dnf install pip
    - python3 -m pip install pynvim
+
 
 ## Problemas no relacionados con nvim:
 * no se podica copiar y pegar fuera de nvim usando wayland. Pase por mucho para encontrar el error.
