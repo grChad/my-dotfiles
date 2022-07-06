@@ -1,8 +1,5 @@
--- Import Icons del fichero /lua/icons.lua
-local icon_status_ok, icon = pcall(require, 'lua.icons')
-if not icon_status_ok then
-   return
-end
+local nvim_tree_events = require('nvim-tree.events')
+local bufferline_state = require('bufferline.state')
 
 -- ╭──────────────────────────────────────────────────────────╮
 -- │  HACK: Variables de aceso rapido y keymaps custom        │
@@ -46,27 +43,32 @@ local keymappings = {
 }
 
 -- NOTE: Configuracion de NvimTree
-require'nvim-tree'.setup {
+require'nvim-tree'.setup ({
+   disable_netrw      = false,
+   hijack_netrw       = true,
+   open_on_setup      = false,
+   ignore_ft_on_setup = {},
    open_on_tab        = false,            -- Abre el arbol cuando se cambia de buffer o se abro uno
    hijack_cursor      = true,             -- para tener el cursor un espacio después del nombre
-   sort_by            = 'name',           -- Como se ordena en directorio: 'name', 'case_sensitive', 'modification_time', 'extension'
+   sort_by            = 'case_sensitive', -- Como se ordena en directorio: 'name', 'case_sensitive', 'modification_time', 'extension'
    update_cwd         = true,             -- Cambiar el directorio raiz del arbol en DirChanged
+   hijack_unnamed_buffer_when_opening = false,
    respect_buf_cwd    = true,             -- Cambiar el CWD de NvimTree al nuevo buffer al abrir NvimTree
 
    diagnostics = {                        -- Diagnosticos del LSP
       enable = true,                      -- Habilitar el diagnostico
       icons  = {                          -- Iconos Custom
-         hint    = icon.hint,
-         info    = icon.info,
-         warning = icon.warningTriangle,
-         error   = icon.error,
+         hint    = '',
+         info    = '',
+         warning = '',
+         error   = '',
       }
    },
    renderer = {
       add_trailing = true,                -- Agrega '/' al final del folder
       group_empty = false,                -- Compactar Carpetas que solo tienen una carpeta, Problema al agregar o renombrar, por eso lo puse false
       highlight_git = true,               -- Habilitar el resaltado de Git.
-      highlight_opened_files = 'all',     -- Resaltado del archivo si este esta abierto. 'none', 'icon', 'name', 'all'
+      highlight_opened_files = 'name',     -- Resaltado del archivo si este esta abierto. 'none', 'icon', 'name', 'all'
       root_folder_modifier = table.concat { ':t:gs?$?/..', string.rep('            ', 1), string.rep(' ', 500), '?:gs?^??' },
       indent_markers = {                  -- Indentado
          enable = true,                   -- Habilitar el indentado
@@ -79,19 +81,25 @@ require'nvim-tree'.setup {
       icons = {                           -- Iconos de carpetas, Git
          glyphs = {
             git = {                       -- Iconos de estados de Git
-               unstaged = icon.gitChange,
-               staged = icon.checkSquare,
-               unmerged = icon.gitUnmerged,
-               renamed = icon.rename,
-               untracked = icon.gitAdd,
-               deleted = icon.gitRemove,
-               ignored = icon.gitIgnore,
+               unstaged = '',
+               staged = '',
+               unmerged = '',
+               renamed = '➜',
+               untracked = '',
+               deleted = '',
+               ignored = '◌',
             },
          }
       }
    },
    update_focused_file = {
       enable      = true,                 -- Actualizar el archivo enfocado en 'BufEnter'
+      update_cwd  = true,
+      ignore_list = {}
+   },
+   system_open = {
+      cmd = '',
+      args = {}
    },
    filters = {
       dotfiles = false,                   -- Nom mostrar archivos ocultos, Alternar con 'H' -> toggle_dotfiles
@@ -110,8 +118,8 @@ require'nvim-tree'.setup {
       use_system_clipboard = true,        -- Para usar el portapales
       change_dir = {
          enable = true,                   -- Cambiar el directorio de trabajo al bambiar de directorio
-         global = true,                   -- cambiar de directorio con :cd
-         restrict_above_cwd = true,       -- Restringir cambiar a un directorio superior
+         global = false,                   -- cambiar de directorio con :cd
+         restrict_above_cwd = false,       -- Restringir cambiar a un directorio superior
       },
       open_file = {
          quit_on_open = true,             -- Cierra la ventana de NvimTree al seleccionar un elemento
@@ -141,9 +149,17 @@ require'nvim-tree'.setup {
       cmd = 'trash',                      -- Comando para eliminal elementos, default=>'gio trash'
       require_confirm = true              -- Aviso para aceptar la eliminacion del elemento.
    }
-}
+})
 
 -- NOTE: color de Folder y FolderName de NvimTRee
 vim.cmd('highlight NvimTreeFolderIcon guifg=goldenrod')
 vim.cmd('highlight NvimTreeFolderName guifg=goldenrod')
 vim.cmd('highlight NvimTreeOpenedFolderName guifg=sienna')
+
+nvim_tree_events.on_tree_open(function ()
+   bufferline_state.set_offset(TREE_WIDTH, string.rep(' ', 4) .. 'Explorador de archivos')
+end)
+
+nvim_tree_events.on_tree_close(function ()
+   bufferline_state.set_offset(0)
+end)

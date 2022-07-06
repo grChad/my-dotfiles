@@ -1,8 +1,3 @@
-local icon_status_ok, icon = pcall(require, 'lua.icons')
-if not icon_status_ok then
-   return
-end
-
 -- NOTE: Configuracion de Barbar
 vim.g.bufferline = {
    animation               = true,       -- Enable/disable Animacion
@@ -13,11 +8,11 @@ vim.g.bufferline = {
    exclude_ft              = {'qf'},     -- Excluir algun fileType
    icons                   = 'both',     -- para 'both', muestra el indice del buffer y el icono del fileType
    icon_custom_colors      = false,      -- en false, toma por default de 'web-devicons'
-   icon_separator_active   = icon.separator_left, -- Icono de separacion activo
-   icon_separator_inactive = icon.separator,      -- Icono de separacion Inactivo
-   icon_close_tab          = icon.close,          -- Icono para cerrar el buffer
-   icon_close_tab_modified = icon.gitChange,      -- Icono cuando se modifica el buffer
-   icon_pinned             = icon.pinned,         -- No se en que se usa.
+   icon_separator_active   = ' ', -- Icono de separacion activo
+   icon_separator_inactive = '|',      -- Icono de separacion Inactivo
+   icon_close_tab          = '',          -- Icono para cerrar el buffer
+   icon_close_tab_modified = '',      -- Icono cuando se modifica el buffer
+   icon_pinned             = '車',         -- No se en que se usa.
    insert_at_end           = false,      -- Insertar buffer al final de la lista
    maximum_padding         = 0,          -- Padding maximo por buffer
    maximum_length          = 30,         -- Width maximo por buffer
