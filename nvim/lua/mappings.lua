@@ -1,114 +1,136 @@
-local keymap = vim.api.nvim_set_keymap
+-- ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┓
+-- NOTE: Variables: Simplifican los redundante
+
+local map = vim.api.nvim_set_keymap
 local silent = { silent = true }
 local opt = { noremap = true, silent = true }
 
--- Abrir al archivo de configuracion.
-keymap('n', '<Leader>ed', ':e ~/.config/nvim/init.lua<CR>', opt)
+-- ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┛
 
--- Use F5 para refrescar el archivo de configuracion init.lua
---keymap({'n', 'v', 'i' }, '<F5>', ':source ~/.config/nvim/init.lua<CR>', noremap)
+-- Llamar al archivo de configuracion.
+map('n', '<Leader>ed', ':e ~/.config/nvim/init.lua<CR>', opt)
+-- +--------------------------------------------------------------------+
 
 -- Moverse entre ventanas como en 'Tmux'
-keymap('n', '<C-h>', '<C-w>h', silent)
-keymap('n', '<C-j>', '<C-w>j', silent)
-keymap('n', '<C-k>', '<C-w>k', silent)
-keymap('n', '<C-l>', '<C-w>l', silent)
+map('n', '<C-h>', '<C-w>h', silent)
+map('n', '<C-j>', '<C-w>j', silent)
+map('n', '<C-k>', '<C-w>k', silent)
+map('n', '<C-l>', '<C-w>l', silent)
+-- +--------------------------------------------------------------------+
 
 -- Moverse al primer caracter de la linea.
-keymap('n', 'H', '^', silent)
+map('n', 'H', '^', silent)
+-- +--------------------------------------------------------------------+
 
 -- mover el texto seleccionado Verticalmente en mode 'V'
-keymap('v', 'K', ":move '<-2<CR>gv-gv", silent)
-keymap('v', 'J', ":move '>+1<CR>gv-gv", silent)
+map('v', 'K', ":move '<-2<CR>gv-gv", silent)
+map('v', 'J', ":move '>+1<CR>gv-gv", silent)
+-- +--------------------------------------------------------------------+
 
 -- Desabilitar la navegacion con las flechas de direcciones
-keymap('n', '<up>', '<nop>', opt)
-keymap('v', '<up>', '<nop>', opt)
-keymap('n', '<down>', '<nop>', opt)
-keymap('v', '<down>', '<nop>', opt)
-keymap('n', '<left>', '<nop>', opt)
-keymap('v', '<left>', '<nop>', opt)
-keymap('n', '<right>', '<nop>', opt)
-keymap('v', '<right>', '<nop>', opt)
+map('n', '<up>', '<nop>', opt)
+map('v', '<up>', '<nop>', opt)
+map('n', '<down>', '<nop>', opt)
+map('v', '<down>', '<nop>', opt)
+map('n', '<left>', '<nop>', opt)
+map('v', '<left>', '<nop>', opt)
+map('n', '<right>', '<nop>', opt)
+map('v', '<right>', '<nop>', opt)
+-- +--------------------------------------------------------------------+
 
--- Guardar y salir
-keymap('n', 'W', ':wq<CR>', opt)
-
--- Salir
-keymap('n', 'Q', ':q<CR>', opt)
+-- Salir de la ventana
+map('n', 'Q', ':q<CR>', opt)
+-- +--------------------------------------------------------------------+
 
 -- Mover el indentado Horizontalmente en mode 'V'
-keymap('v', '<', '<gv', silent)
-keymap('v', '>', '>gv', silent)
+map('v', '<', '<gv', silent)
+map('v', '>', '>gv', silent)
+-- +--------------------------------------------------------------------+
 
 -- Copiar hasta el final de la linea
-keymap('n', 'Y', 'y$', opt)
+map('n', 'Y', 'y$', opt)
+-- +--------------------------------------------------------------------+
 
 -- Moverse mas rapido abajo y arriba
-keymap('n', 'D', '5j', opt)
-keymap('n', 'E', '5k', opt)
+map('n', 'D', '5j', opt)
+map('n', 'E', '5k', opt)
+-- +--------------------------------------------------------------------+
 
 -- Limpiar el resultado de busqueda
-keymap('n', 'm', ':nohl<CR>', opt)
+map('n', 'm', ':nohl<CR>', opt)
+-- +--------------------------------------------------------------------+
 
 -- Agregar el ';' al final de la linea seleccionada
-keymap('n', '<Leader>;', '$a;', opt)
+map('n', '<Leader>;', '$a;', opt)
+-- +--------------------------------------------------------------------+
 
--- Redimencionar los splits con los teclados de direcciones
-keymap('n', '<right>', ':vertical resize +5<CR>', opt)
-keymap('n', '<left>', ':vertical resize -5<CR>', opt)
-keymap('n', '<up>', ':resize -5<CR>', opt)
-keymap('n', '<down>', ':resize +5<CR>', opt)
+-- Redimencionar ventanas con teclado de direcciones
+map('n', '<right>', ':vertical resize +5<CR>', opt)
+map('n', '<left>', ':vertical resize -5<CR>', opt)
+map('n', '<up>', ':resize -5<CR>', opt)
+map('n', '<down>', ':resize +5<CR>', opt)
+-- +--------------------------------------------------------------------+
 
 -- Scap in mode Insert and Visual
-keymap('i', 'kj', '<esc>', opt)
-keymap('i', 'KJ', '<esc>', opt)
-keymap('v', 'kj', '<esc>', opt)
-keymap('v', 'KJ', '<esc>', opt)
+map('i', 'kj', '<esc>', opt)
+map('i', 'KJ', '<esc>', opt)
+-- +--------------------------------------------------------------------+
 
 -- Escapar del mode 'I', en modo 'visual' me daba un bug en el cursor
-keymap('i', 'kj', '<esc>', opt)
-keymap('i', 'KJ', '<esc>', opt)
+map('i', 'kj', '<esc>', opt)
+map('i', 'KJ', '<esc>', opt)
+-- +--------------------------------------------------------------------+
 
--- ╭──────────────────────────────────────────────────────────╮
--- │  NOTE: Buffers                                           │
--- ╰──────────────────────────────────────────────────────────╯
--- Guardar el archivo en mode 'N' and "I"
-keymap('n', '<Leader>w', ':w<CR>', silent)
-keymap('i', '<C-s>', '<ESC> :w<CR>', silent)
-
--- eliminar un buffer
-keymap('n', '<Leader>q', ':BufferClose<CR>', silent)
-
--- moverse entre buffers
-keymap('n', '<Leader>k', ':BufferNext<CR>', silent)
-keymap('n', '<Leader>j', ':BufferPrevious<CR>', silent)
-
--- Moverse entre los buffers con barbar.nvim
-keymap('n', '<Leader>1', ':BufferGoto 1<CR>', silent)
-keymap('n', '<Leader>2', ':BufferGoto 2<CR>', silent)
-keymap('n', '<Leader>3', ':BufferGoto 3<CR>', silent)
-keymap('n', '<Leader>4', ':BufferGoto 4<CR>', silent)
-keymap('n', '<Leader>5', ':BufferGoto 5<CR>', silent)
-keymap('n', '<Leader>6', ':BufferGoto 6<CR>', silent)
-keymap('n', '<Leader>7', ':BufferGoto 7<CR>', silent)
-keymap('n', '<Leader>8', ':BufferGoto 8<CR>', silent)
-keymap('n', '<Leader>9', ':BufferGoto 9<CR>', silent)
-
--- vertical split
-keymap('n', '<Leader>ve', ':vsp<CR>', opt)
--- horizontal split
-keymap('n', '<Leader>ho', ':sp<CR>', opt)
+-- ┌                                                                    ┐
+-- │                           NOTE: Buffers                            │
+-- └                                                                    ┘
+-- (1) Guardar el archivo en mode 'N' and "I"
+map('n', '<Leader>w', ':w<CR>', silent)
+map('i', '<C-s>', '<ESC> :w<CR>', silent)
+-- +--------------------------------------------------------------------+
+-- (2) eliminar un buffer
+map('n', '<Leader>q', ':BufferClose<CR>', silent)
+-- +--------------------------------------------------------------------+
+-- (3) moverse entre buffers
+map('n', '<Leader>k', ':BufferNext<CR>', silent)
+map('n', '<Leader>j', ':BufferPrevious<CR>', silent)
+-- +--------------------------------------------------------------------+
+-- (5) Split Vertical y Horizontal
+map('n', '<Leader>ve', ':vsp<CR>', opt)
+map('n', '<Leader>ho', ':sp<CR>', opt)
+-- +--------------------------------------------------------------------+
+-- (4) Moverse entre los buffers con barbar.nvim
+map('n', '<Leader>1', ':BufferGoto 1<CR>', silent)
+map('n', '<Leader>2', ':BufferGoto 2<CR>', silent)
+map('n', '<Leader>3', ':BufferGoto 3<CR>', silent)
+map('n', '<Leader>4', ':BufferGoto 4<CR>', silent)
+map('n', '<Leader>5', ':BufferGoto 5<CR>', silent)
+map('n', '<Leader>6', ':BufferGoto 6<CR>', silent)
+map('n', '<Leader>7', ':BufferGoto 7<CR>', silent)
+map('n', '<Leader>8', ':BufferGoto 8<CR>', silent)
+map('n', '<Leader>9', ':BufferGoto 9<CR>', silent)
+-- +--------------------------------------------------------------------+
 
 -- Preview MarkDown
-keymap('n', '<Leader>m', ':MarkdownPreviewToggle<CR>', { noremap = true })
+map('n', '<Leader>m', ':MarkdownPreviewToggle<CR>', { noremap = true })
+-- +--------------------------------------------------------------------+
 
--- Administrador de ficheros del Plug Nvim-tree
-keymap('n', '<Leader><tab>', ':NvimTreeToggle<CR>', opt)
+-- Nvim-tree Toggle
+-- > los demas comandos estan el lua/configs/tree.lua
+map('n', '<Leader><tab>', ':NvimTreeToggle<CR>', opt)
+-- +--------------------------------------------------------------------+
 
 -- easymotion
-keymap('n', '<Leader>b', '<Plug>(easymotion-s2)', { noremap = true })
+map('n', '<Leader>b', '<Plug>(easymotion-s2)', { noremap = true })
+-- +--------------------------------------------------------------------+
 
--- Comment Box
-keymap('n', "<Leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", { silent = true })
-keymap('v', "<Leader>ac", "<cmd>lua require('comment-box').lbox()<CR>", { silent = true })
+-- ┌                                                                    ┐
+-- │                         NOTE: Comment Box                          │
+-- └                                                                    ┘
+map('n', '<Leader>ac', "<cmd>lua require('comment-box').cbox(5)<CR>", silent)
+map('v', '<Leader>ac', "<cmd>lua require('comment-box').cbox(5)<CR>", silent)
+map('n', '<Leader>an', "<cmd>lua require('comment-box').cbox(18)<CR>", silent)
+map('v', '<Leader>an', "<cmd>lua require('comment-box').cbox(18)<CR>", silent)
+map('n', '<Leader>al', "<cmd>lua require('comment-box').line(10)<CR>", silent)
+map('v', '<Leader>al', "<cmd>lua require('comment-box').line(10)<CR>", silent)
+-- +--------------------------------------------------------------------+
