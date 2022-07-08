@@ -49,6 +49,7 @@ require('lualine').setup {
       component_separators = '|',
       section_separators = { left = '', right = '' },
       globalstatus = 3, -- para tener todos los estados de los buffers en un solo lugar, nvim 0.7
+      disabled_filetypes = { 'NvimTree'}
    },
    sections = {
       lualine_a = {
@@ -63,7 +64,7 @@ require('lualine').setup {
                elseif str == 'REPLACE' then return '﯒ ' .. str
                elseif str == 'COMMAND' then return ' ' .. str
                elseif str == 'SELECT' then return '濾' .. str
-               elseif str == 'TERMINAL' then return '  ' .. str
+               elseif str == 'TERMINAL' then return ' ' .. str
                else return ' ' .. str end
             end,
          }
@@ -108,5 +109,5 @@ require('lualine').setup {
       lualine_z = { 'location' },
    },
    tabline = {},
-   extensions = { 'nvim-tree' },
+   extensions = { },
 }
