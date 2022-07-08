@@ -1,12 +1,34 @@
-local nvim_tree_events = require('nvim-tree.events')
-local bufferline_state = require('bufferline.state')
+local events = require('nvim-tree.events')
+local state_bf = require('bufferline.state')
 
--- ╭──────────────────────────────────────────────────────────╮
--- │  HACK: Variables de aceso rapido y keymaps custom        │
--- ╰──────────────────────────────────────────────────────────╯
+-- HACK: Variables de aceso rapido y keymaps custom
 local TREE_WIDTH = 33       -- Ancho de la ventana NvimTree
 local view_side = 'left'    -- direccion de la ventana NvimTree
+-- +--------------------------------------------------------------------+
 
+-- iconos personalizados
+local icons_custom = {
+   diagnostics = {
+      hint    = '',
+      info    = '',
+      warning = '',
+      error   = '',
+   },
+   git = {
+      unstaged = '',
+      staged = '',
+      unmerged = '',
+      renamed = '➜',
+      untracked = '',
+      deleted = '',
+      ignored = '◌',
+   },
+   indents = {
+      corner = '╰ ',
+   }
+}
+
+-- Atajos de teclado dentro de NvimTree
 local keymappings = {
    { key = {'<CR>', 'o', '<2-LeftMouse>'}, action = 'edit' },
    { key = {'O'},                          action = 'edit_no_picker' },
@@ -41,6 +63,7 @@ local keymappings = {
    { key = 'W',                            action = 'collapse_all' },
    { key = 'S',                            action = 'search_node' }
 }
+-- +--------------------------------------------------------------------+
 
 -- NOTE: Configuracion de NvimTree
 require'nvim-tree'.setup ({
@@ -57,38 +80,21 @@ require'nvim-tree'.setup ({
 
    diagnostics = {                        -- Diagnosticos del LSP
       enable = true,                      -- Habilitar el diagnostico
-      icons  = {                          -- Iconos Custom
-         hint    = '',
-         info    = '',
-         warning = '',
-         error   = '',
-      }
+      icons  = icons_custom.diagnostics   -- Iconos de Diagnosticos
    },
    renderer = {
       add_trailing = true,                -- Agrega '/' al final del folder
       group_empty = false,                -- Compactar Carpetas que solo tienen una carpeta, Problema al agregar o renombrar, por eso lo puse false
       highlight_git = true,               -- Habilitar el resaltado de Git.
       highlight_opened_files = 'name',     -- Resaltado del archivo si este esta abierto. 'none', 'icon', 'name', 'all'
-      root_folder_modifier = table.concat { ':t:gs?$?/..', string.rep('            ', 1), string.rep(' ', 500), '?:gs?^??' },
+      root_folder_modifier = ':~',
       indent_markers = {                  -- Indentado
          enable = true,                   -- Habilitar el indentado
-         icons = {                        -- Iconos para el indentado Custom
-            corner = '╰ ',
-            edge = '│ ',
-            none = '  ',
-         },
+         icons = icons_custom.indents     -- Iconos para el indentado Custom
       },
       icons = {                           -- Iconos de carpetas, Git
          glyphs = {
-            git = {                       -- Iconos de estados de Git
-               unstaged = '',
-               staged = '',
-               unmerged = '',
-               renamed = '➜',
-               untracked = '',
-               deleted = '',
-               ignored = '◌',
-            },
+            git = icons_custom.git        -- Iconos de estados de Git
          }
       }
    },
@@ -150,16 +156,17 @@ require'nvim-tree'.setup ({
       require_confirm = true              -- Aviso para aceptar la eliminacion del elemento.
    }
 })
+-- +--------------------------------------------------------------------+
 
--- NOTE: color de Folder y FolderName de NvimTRee
-vim.cmd('highlight NvimTreeFolderIcon guifg=goldenrod')
-vim.cmd('highlight NvimTreeFolderName guifg=goldenrod')
-vim.cmd('highlight NvimTreeOpenedFolderName guifg=sienna')
-
-nvim_tree_events.on_tree_open(function ()
-   bufferline_state.set_offset(TREE_WIDTH, string.rep(' ', 4) .. 'Explorador de archivos')
+-- ┌                                                                    ┐
+-- │          Agregar titulo custom al explorador de archivos           │
+-- └                                                                    ┘
+events.on_tree_open(function ()
+   state_bf.set_offset(TREE_WIDTH + 4, string.rep(' ', 9) .. '  NvimTree ')
+   vim.opt.cmdheight = 0
 end)
 
-nvim_tree_events.on_tree_close(function ()
-   bufferline_state.set_offset(0)
+events.on_tree_close(function ()
+   state_bf.set_offset(0)
+   vim.opt.cmdheight = 1
 end)
