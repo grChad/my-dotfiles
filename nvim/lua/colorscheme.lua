@@ -13,12 +13,13 @@ require('onedark').setup({
 -- +--------------------------------------------------------------------+
 -- Colores personalizablas
 local colors = {
-   title_nvimtree     = '#FFA630',
-   border_primary     = '#61AFEF',
-   border_gray        = '#5C6370',
-   folder_icon        = '#DAA520',
-   folder_name_close  = '#DAA520',
-   folder_name_open   = '#A0522D',
+   nvimtree_title       = '#FFA630',
+   nvimtree_root_folder = '#E86671',
+   primary              = '#61AFEF',
+   border_gray          = '#5C6370',
+   folder_icon          = '#DAA520',
+   folder_name_close    = '#DAA520',
+   folder_name_open     = '#A0522D',
 }
 
 -- +--------------------------------------------------------------------+
@@ -33,12 +34,13 @@ create('BufferTabpageFill', { guibg='none' }, false)
 -- ┌                                                                    ┐
 -- │            HACK: NvimTree Color de Folder y FolderName             │
 -- └                                                                    ┘
-create('BufferOffset', { guifg= colors.title_nvimtree }, true);
+create('BufferOffset', { guifg= colors.nvimtree_title }, true);
 vim.cmd('highlight NvimTreeFolderIcon guifg=' .. colors.folder_icon)
 vim.cmd('highlight NvimTreeFolderName guifg=' .. colors.folder_name_close)
 vim.cmd('highlight NvimTreeOpenedFolderName guifg=' .. colors.folder_name_open)
-vim.cmd('highlight NvimTreeIndentMarker guifg=' .. colors.border_primary)
+vim.cmd('highlight NvimTreeIndentMarker guifg=' .. colors.primary)
+vim.cmd('highlight NvimTreeRootFolder guifg=' .. colors.nvimtree_root_folder)
 
-create('VertSplit', { guifg = colors.border_primary }, false)
-vim.cmd('highlight WinSeparator guibg=None guifg=' .. colors.border_primary)
+create('VertSplit', { guifg = colors.primary }, false)
+vim.cmd('highlight WinSeparator guibg=None guifg=' .. colors.primary)
 -- +--------------------------------------------------------------------+
