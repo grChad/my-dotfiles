@@ -1,5 +1,26 @@
+-- Highlight al copiar algo
+vim.api.nvim_create_autocmd('TextYankPost', { callback = function()
+   vim.highlight.on_yank({ higroup = 'IncSearch', timeout = 200 })
+end })
+
+-- Desabilitar el Diagnostico en 'node_modules(0 es el buffer actual)'
+vim.api.nvim_create_autocmd('BufRead', {
+   pattern = '*/node_modules/*', command = 'lua vim.diagnostic.disable(0)'
+})
+vim.api.nvim_create_autocmd("BufNewFile", {
+   pattern = '*/node_modules/*', command = 'lua vim.diagnostic.disable(0)'
+})
+
+-- Revision ortografica en cierto tipo de archivos: (en ingles)
+vim.api.nvim_create_autocmd({'BufRead', 'BufNewFile'}, {
+   pattern = { '*.txt', '*.md', '*.tex' },
+   command = 'setlocal spell'
+})
+-- +--------------------------------------------------------------------+
+
 local augroups = {}
 
+-- NOTE: Eliminar linear porteriores al guardar, al final de la linea y al final del documento
 augroups.buf_write_pre = {
    mkdir_before_saving = {
       event = {"BufWritePre", "FileWritePre"},
@@ -12,59 +33,30 @@ augroups.buf_write_pre = {
       pattern = "*",
       -- NOTE: Replace vimscript function
       command = [[
-         let current_pos = getpos(".")
-         silent! %s/\v\s+$|\n+%$//e
-         silent! call setpos(".", current_pos)
-      ]],
+            let current_pos = getpos(".")
+            silent! %s/\v\s+$|\n+%$//e
+            silent! call setpos(".", current_pos)
+        ]],
    },
 }
 
-augroups.filetype_behaviour = {
-   remove_colorcolumn = {
-      event = "FileType",
-      pattern = {"fugitive*", "git"},
-      callback = function ()
-         vim.opt_local.colorcolumn = ""
-      end,
-   },
-}
-
-augroups.misc = {
-   highlight_yank = {
-      event = "TextYankPost",
-      pattern = "*",
-      callback = function ()
-         vim.highlight.on_yank{higroup="IncSearch", timeout=400, on_visual=true}
-      end,
-   },
-   unlist_terminal = {
-      event = "TermOpen",
-      pattern = "*",
-      callback = function ()
-         vim.opt_local.buflisted = false
-      end
-   },
-}
-
+-- NOTE: Para agregar el texto con wrap y con tabulacion.
 augroups.prose = {
    wrap = {
-      event = "FileType",
-      pattern = {"markdown", "tex", 'json'},
+      event = 'Filetype',
+      pattern = {'markdown', 'tex', 'html' },
       callback = function ()
          vim.opt_local.wrap = true
-         vim.cmd([[let &showbreak='\t']])
+         vim.opt_local.breakindentopt = 'shift:0'
       end,
    },
-}
-
-augroups.quit = {
-   quit_with_q = {
-      event = "FileType",
-      pattern = {"checkhealth", "fugitive", "git*", "help", "lspinfo"},
+   wrap_showbreak = {
+      event = 'Filetype',
+      pattern = { 'json', 'css', 'scss' },
       callback = function ()
-         -- vim.api.nvim_win_close(0, true) -- NOTE: Replace vim command with this
-         vim.api.nvim_buf_set_keymap(0, "n", "q", "<cmd>close!<cr>", {noremap = true, silent = true})
-      end
+         vim.opt_local.wrap = true
+         vim.opt_local.breakindentopt = 'shift:2'
+      end,
    }
 }
 
