@@ -4,7 +4,9 @@ local options = {
    mouse          = 'nvi',                -- Habilitar el Mouse, pero no en el CMD
    encoding       = 'utf-8',              -- Codificacion mostrada
    fileencoding   = 'utf-8',              -- Codificación escrita en el archivo
-   clipboard      = 'unnamedplus',        -- Copiar y pegar en portapapeles
+   clipboard      = {
+      'unnamed', 'unnamedplus',              -- Copiar y pegar en portapapeles
+   },
 
    expandtab      = true,                 -- Usa espacios en lugar de tabulaciones
    smartindent    = true,                 -- Sangría inteligente
@@ -14,8 +16,11 @@ local options = {
    tabstop        = 2,                    -- Espacios por cada Tab
 
    wrap           = false,                -- Texto en una sola linea
-   writebackup    = false,                -- No se requiere(nose)
    linebreak      = true,                 -- Romper la linea si la palabra no alcanza.
+   breakindent    = true,                 -- Para tener un indentado igual en los saltos de linea por (wrap)
+   spelllang      = 'es',                 -- Establecer el idioma del corrector ortografico, por defecto es en 'ingles'
+   spellsuggest   = 'best,9',             -- Muestra las 9 mejores opciones de correccion.
+   writebackup    = false,                -- No se requiere(nose)
    updatetime     = 200,                  -- Completado mas rapida
    timeoutlen     = 400,
 
@@ -71,6 +76,7 @@ vim.opt.shortmess:append('c');
 vim.opt.formatoptions:remove('c');
 vim.opt.formatoptions:remove('r');
 vim.opt.formatoptions:remove('o');
+-- +--------------------------------------------------------------------+
 
 local global_var = {
    fillchars               = 'fold:\\ ',  -- Rellene los caracteres necesarios para los pliegues
