@@ -1,13 +1,5 @@
 require 'colorizer'.setup (
-   {
-      'html',
-      'css',
-      'javascript',
-      'typescript',
-      'typescriptreact',
-      'javascriptreact',
-      'lua'
-   },
+   {'*';},
    {
       RGB      = true;         -- #RGB hex codes
       RRGGBB   = true;         -- #RRGGBB hex codes
