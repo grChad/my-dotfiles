@@ -1,10 +1,9 @@
-
 -- ┏╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┓
 -- ╏              init.lua by Gabriel Rivera -> GabrielRIP              ╏
+-- ╏                 > Credito: ecosse3/nvim                            ╏
 -- ╏                 > Nvim la mas actual Stable o Dev                  ╏
 -- ╏            > Language Servers: comprobar lsp y linters             ╏
 -- ┗╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┛
-
 
 -- +--------------------------------------------------------------------+
 -- PERFORMANCE: Acelera la carga de modulos Lua en Nvim
@@ -16,13 +15,17 @@ if impatient_ok then impatient.enable_profile() end
 if vim.opt.compatible == true then vim.opt.compatible = false end
 -- +--------------------------------------------------------------------+
 
+require('packer_commands')
+require('globals')
+require('config')
+require('settings')
+require('colorscheme')
+require('keymappings')
+vim.cmd('source $HOME/.config/nvim/lua/keys.vim')
+require('autocmds')
+require('functions')
 
--- ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┓
-require('packer_commands')       -- Comandos para Packer & call plugins ╏
-require('settings')              -- configuracion de sets               ╏
-require('colorscheme')           -- Modificar la visualizacion del IDE  ╏
-require('mappings')              -- atajos de teclado.                  ╏
-vim.cmd('source $HOME/.config/nvim/lua/keys.vim') -- por adaptar        ╏
-require('autocmds')              -- Auto-comandos.                      ╏
-require 'utils'                  -- others                              ╏
--- ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┛
+require('lsp.setup')
+require('lsp.functions')
+
+require('snippets.react')

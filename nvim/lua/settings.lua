@@ -76,7 +76,6 @@ vim.opt.shortmess:append('c');
 vim.opt.formatoptions:remove('c');
 vim.opt.formatoptions:remove('r');
 vim.opt.formatoptions:remove('o');
--- +--------------------------------------------------------------------+
 
 local global_var = {
    fillchars               = 'fold:\\ ',  -- Rellene los caracteres necesarios para los pliegues

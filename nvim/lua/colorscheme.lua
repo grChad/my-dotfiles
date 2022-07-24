@@ -1,15 +1,3 @@
-require('onedark').setup({
-   dark_float = false,                -- Ventanas flotantes mas oscuras
-   hide_inactive_statusline = true,   -- Nvim Tree background, mas oscuro
-   dark_sidebar = true,               -- Linea de numeros y signos mas oscuras
-
-   overrides = function ()            -- Para obtener colores inversos al seleccionar
-      return {
-         Visual = { style = 'inverse' }
-      }
-   end,
-   dev = true,
-})
 
 -- ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┓
 local v_create = vim.highlight.create
@@ -57,11 +45,11 @@ v_create('CursorLineNR', { guifg = colors.first_color }, false)
 v_link('LineNr', 'Comment', false)
 -- +--------------------------------------------------------------------+
 
--- Telescope
--- vim.highlight.link('TelescopeTitle', 'EcovimSecondary', true);
--- vim.highlight.create('TelescopeNormal', { guibg = "None", guifg = "None" }, false);
--- vim.highlight.create('TelescopeBorder', { guibg = "None" }, false);
--- vim.highlight.link('TelescopeMatching', 'Constant', true);
+ -- -- Telescope
+ -- vim.highlight.link('TelescopeTitle', 'EcovimSecondary', true);
+ -- vim.highlight.create('TelescopeNormal', { guibg = "None", guifg = "None" }, false);
+ -- vim.highlight.create('TelescopeBorder', { guibg = "None" }, false);
+ -- vim.highlight.link('TelescopeMatching', 'Constant', true);
 -- +--------------------------------------------------------------------+
 
 -- Misc
