@@ -129,11 +129,8 @@ return require('packer').startup({
          config = function() require('plugins.lualine') end
       }
       use {
-         'b0o/incline.nvim',
-         event = 'BufReadPre',
-         config = function()
-            require('incline').setup()
-         end,
+         'ldelossa/buffertag',
+         config = function() require('buffertag').enable() end
       }
       -- +--------------------------------------------------------------------+
       -- (10) General
