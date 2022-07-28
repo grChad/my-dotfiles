@@ -28,7 +28,7 @@ return require('packer').startup({
       }
       -- +--------------------------------------------------------------------+
       -- (3) Themes
-      use { 'ful1e5/onedark.nvim' }
+      use { "catppuccin/nvim", as = "catppuccin" }
       -- +--------------------------------------------------------------------+
       -- (4) Treesitter
       use {
@@ -111,11 +111,6 @@ return require('packer').startup({
          after = 'nvim-treesitter'
       }
       use { 'jose-elias-alvarez/typescript.nvim' }
-
-      use {
-         'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
-         config = function() require ( "lsp_lines" ).setup () end
-      }
       -- +--------------------------------------------------------------------+
       -- (9) Buffer and Bar state
       use { -- Buffer
@@ -171,7 +166,6 @@ return require('packer').startup({
          disable = not EcoVim.plugins.zen.enabled }
       use { 'ggandor/lightspeed.nvim' }
       use { 'antoinemadec/FixCursorHold.nvim' } -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
-      use { 'rcarriga/nvim-notify' }
       use {
          'vuki656/package-info.nvim',
          event = 'BufEnter package.json',
