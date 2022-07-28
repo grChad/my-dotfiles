@@ -38,7 +38,7 @@ endfunction
 noremap <leader>lo :call RunOther()<Cr>
 
 " Para formatear con prettier
-noremap <leader>pr :silent !npx prettier --write %<CR>
+noremap <leader>p :silent !npx prettier --write %<CR>
 
 " Para eliminar el encadenamiento de sangrias en js
 let g:javascript_opfirst = 1
