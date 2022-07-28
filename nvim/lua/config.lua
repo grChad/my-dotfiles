@@ -24,6 +24,6 @@ EcoVim = {
       path = 'relative' -- absolute/relative
    },
    lsp = {
-      virtual_text = false, -- para el plugin de diagnostics
+      virtual_text = true, -- para el plugin de diagnostics
    },
 }
