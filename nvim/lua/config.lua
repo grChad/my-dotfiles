@@ -1,7 +1,6 @@
 local icons = require('icons')
 
 EcoVim = {
-   colorscheme = 'onedark',
    ui = {
       float = {
          border = 'rounded'
@@ -25,19 +24,6 @@ EcoVim = {
       path = 'relative' -- absolute/relative
    },
    lsp = {
-      virtual_text = false,
+      virtual_text = false, -- para el plugin de diagnostics
    },
 }
-
-require('onedark').setup({
-   dark_float = false,                   -- Ventanas flotantes mas oscuras
-   hide_inactive_statusline = true,
-   dark_sidebar = true,                  -- NvimTree background, poco mas oscuro
-
-   overrides = function()
-      return {
-         Visual = { style = 'inverse' }
-      }
-   end,
-   dev = true,
-})

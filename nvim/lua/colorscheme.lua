@@ -1,3 +1,5 @@
+-- Habilitar el tema 'onedark'
+require('onedark').setup()
 
 -- ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┓
 local v_create = vim.highlight.create
