@@ -1,5 +1,27 @@
--- Habilitar el tema 'onedark'
-require('onedark').setup()
+-- Theme 'catppuccin'
+-- > Latte: es el thema claro
+-- > frappe, macchiato, mocha: van desde poco oscuro hasta muy oscuro.
+vim.g.catppuccin_flavour = 'frappe'
+require("catppuccin").setup({
+   styles = {
+      numbers = { 'bold' },
+      booleans = { 'bold' },
+   },
+   integrations = {
+      native_lsp = {
+			enabled = true,
+			virtual_text = {
+				errors = {},
+				hints = {},
+				warnings = {},
+				information = {},
+			},
+      },
+      barbar = true,
+      ts_rainbow = true,
+   }
+})
+vim.cmd [[colorscheme catppuccin]]
 
 -- ╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍╍┓
 local v_create = vim.highlight.create
@@ -38,9 +60,6 @@ vim.cmd('highlight NvimTreeIndentMarker guifg=' .. colors.second_color)
 v_create('VertSplit', { guifg = colors.second_color }, false)
 -- +--------------------------------------------------------------------+
 
--- separador de Splits
-vim.cmd('highlight WinSeparator guibg=None guifg=' .. colors.second_color)
--- +--------------------------------------------------------------------+
 
 -- barra de numeros
 v_create('CursorLineNR', { guifg = colors.first_color }, false)
