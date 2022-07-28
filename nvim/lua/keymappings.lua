@@ -49,6 +49,12 @@ map('i', 'KJ', '<esc>', opts)
 -- Copiar hasta el final de la linea
 map('n', 'Y', 'y$', opts)
 
+-- Copiar todo el documento
+map('n', '<Leader>y', ':%y<CR>')
+
+-- Borrar y copiar todo el documento
+map('n', '<Leader>x', ':%d<CR>')
+
 -- Moverse mas rapido abajo y arriba
 map('n', 'D', '5j', opts)
 map('n', 'E', '5k', opts)
