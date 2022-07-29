@@ -14,10 +14,19 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 })
 
 -- Revision ortografica en cierto tipo de archivos: (en ingles)
-vim.api.nvim_create_autocmd({'BufRead', 'BufNewFile'}, {
+vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
    pattern = { '*.txt', '*.md', '*.tex' },
    command = 'setlocal spell'
 })
+
+-- Para que el FileType se formatee an ingresar al buffer
+vim.api.nvim_create_autocmd('BufWritePre', {
+   pattern = {
+      '*.json', '*.js', '*.jsx', '*.ts', '*.tsx', '*.lua', '*.vim', '*.md'
+   },
+   command = 'lua vim.lsp.buf.format(nil, 1000)'
+})
+
 -- +--------------------------------------------------------------------+
 
 -- Winbar (for nvim 0.8+)
@@ -80,7 +89,7 @@ local augroups = {}
 -- NOTE: Eliminar linear porteriores al guardar, al final de la linea y al final del documento
 augroups.buf_write_pre = {
    mkdir_before_saving = {
-      event = {"BufWritePre", "FileWritePre"},
+      event = { "BufWritePre", "FileWritePre" },
       pattern = "*",
       -- NOTE: Replace vimscript function
       command = [[ silent! call mkdir(expand("<afile>:p:h"), "p") ]],
@@ -101,8 +110,8 @@ augroups.buf_write_pre = {
 augroups.prose = {
    wrap = {
       event = 'Filetype',
-      pattern = {'markdown', 'tex', 'html' },
-      callback = function ()
+      pattern = { 'markdown', 'tex', 'html' },
+      callback = function()
          vim.opt_local.wrap = true
          vim.opt_local.breakindentopt = 'shift:0'
       end,
@@ -110,7 +119,7 @@ augroups.prose = {
    wrap_showbreak = {
       event = 'Filetype',
       pattern = { 'json', 'css', 'scss' },
-      callback = function ()
+      callback = function()
          vim.opt_local.wrap = true
          vim.opt_local.breakindentopt = 'shift:2'
       end,
@@ -122,7 +131,7 @@ augroups.indent_spaces = {
    three_space = {
       event = 'Filetype',
       pattern = { 'lua', 'vim' },
-      callback = function ()
+      callback = function()
          vim.opt_local.tabstop = 3
          vim.opt_local.shiftwidth = 3
       end
@@ -130,7 +139,7 @@ augroups.indent_spaces = {
    four_space = {
       event = 'Filetype',
       pattern = { 'xml', 'groovy' },
-      callback = function ()
+      callback = function()
          vim.opt_local.tabstop = 4
          vim.opt_local.shiftwidth = 4
       end
@@ -142,7 +151,7 @@ augroups.javascript_custom = {
    sangria = {
       event = 'Filetype',
       pattern = { 'javascript' },
-      callback = function ()
+      callback = function()
          vim.cmd([[let g:javascript_opfirst = 1]])
       end
    }
@@ -150,7 +159,7 @@ augroups.javascript_custom = {
 }
 
 for group, commands in pairs(augroups) do
-   local augroup = vim.api.nvim_create_augroup("AU_"..group, {clear = true})
+   local augroup = vim.api.nvim_create_augroup("AU_" .. group, { clear = true })
 
    for _, opts in pairs(commands) do
       local event = opts.event
