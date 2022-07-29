@@ -21,7 +21,6 @@ require('config')
 require('settings')
 require('colorscheme')
 require('keymappings')
-vim.cmd('source $HOME/.config/nvim/lua/keys.vim')
 require('autocmds')
 require('functions')
 

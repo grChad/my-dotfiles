@@ -166,3 +166,6 @@ map({ 'n', 'v' }, '<Leader>al', "<cmd>lua require('comment-box').line(10)<CR>", 
 
 -- Traductor de Pantran
 map({ 'n', 'v' }, '<Leader>tr', ':Pantran mode=append target=es<CR>', opts)
+
+-- Para formatear con Prettier
+map('n', '<leader>p', ':silent !npx prettier --write %<CR>')
