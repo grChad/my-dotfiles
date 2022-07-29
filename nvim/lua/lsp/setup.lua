@@ -26,7 +26,8 @@ local lspconfig = require("lspconfig")
 local handlers = {
    ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = EcoVim.ui.float.border }),
    ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = EcoVim.ui.float.border }),
-   ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = EcoVim.lsp.virtual_text }),
+   ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics,
+      { virtual_text = EcoVim.lsp.virtual_text }),
 }
 
 local function on_attach(client, bufnr)
@@ -77,16 +78,21 @@ lspconfig.sumneko_lua.setup {
    settings = require('lsp.servers.sumneko_lua').settings,
 }
 
+lspconfig.pyright.setup {
+   on_attach = on_attach,
+   handlers = handlers,
+   settings = require('lsp.servers.pyright').settings,
+}
+
 lspconfig.rust_analyzer.setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    handlers = handlers,
-    settings = require('lsp.servers.rust_analyzer').settings
+   on_attach = on_attach,
+   capabilities = capabilities,
+   handlers = handlers,
+   settings = require('lsp.servers.rust_analyzer').settings
 }
 
 local other_servers = {
-   'cssls', 'graphql', 'html', 'emmet_ls', 'stylelint_lsp', 'pyright',
-   'svelte', 'vimls', 'jsonls'
+   'cssls', 'graphql', 'html', 'emmet_ls', 'stylelint_lsp', 'svelte', 'vimls', 'jsonls'
 }
 
 for _, server in ipairs(other_servers) do
