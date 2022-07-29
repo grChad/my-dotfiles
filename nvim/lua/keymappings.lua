@@ -11,9 +11,6 @@ map('n', '<C-l>', '<C-w>l', silent)
 -- Moverse al primer caracter de la linea.
 map('n', 'H', '^', silent)
 
--- formatear el documento para que se acomode a la sangria
-map('n', '<C-f>', 'gg=G<CR>', silent)
-
 -- mover el texto seleccionado Verticalmente en mode 'V'
 map('v', 'K', ":move '<-2<CR>gv-gv", silent)
 map('v', 'J', ":move '>+1<CR>gv-gv", silent)
