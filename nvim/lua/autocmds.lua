@@ -137,6 +137,18 @@ augroups.indent_spaces = {
    }
 }
 
+-- Para eliminar el encadenamiento de sangrias en js
+augroups.javascript_custom = {
+   sangria = {
+      event = 'Filetype',
+      pattern = { 'javascript' },
+      callback = function ()
+         vim.cmd([[let g:javascript_opfirst = 1]])
+      end
+   }
+
+}
+
 for group, commands in pairs(augroups) do
    local augroup = vim.api.nvim_create_augroup("AU_"..group, {clear = true})
 
