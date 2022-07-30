@@ -22,7 +22,8 @@ vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
 -- Para que el FileType se formatee an ingresar al buffer
 vim.api.nvim_create_autocmd('BufWritePre', {
    pattern = {
-      '*.json', '*.js', '*.jsx', '*.ts', '*.tsx', '*.lua', '*.vim', '*.md'
+      '*.json', '*.js', '*.jsx', '*.ts', '*.tsx', '*.lua', '*.vim', '*.md',
+      '*.svelte'
    },
    command = 'lua vim.lsp.buf.format(nil, 1000)'
 })
