@@ -2,6 +2,8 @@ local map = vim.keymap.set
 local silent = { silent = true }
 local opts = { noremap = true, silent = true }
 
+-- llamar al archivo de configuracion
+map('n', '<Leader>/', '<cmd>e $MYVIMRC<CR>', silent)
 -- Moverse entre ventanas como en 'Tmux'
 map('n', '<C-h>', '<C-w>h', silent)
 map('n', '<C-j>', '<C-w>j', silent)
