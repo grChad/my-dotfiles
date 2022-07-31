@@ -35,3 +35,4 @@ Mi confiracion se encuentra [**Aqui**](./vs-code)
 * Comandos para Youtube.
 * comandos para UNIX
 * Comandos para Terminal
+* Herramientas para la [**_terminal_**](./other-settings/apps_for_terminal.md)
