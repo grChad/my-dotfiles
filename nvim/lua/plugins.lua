@@ -123,10 +123,10 @@ return require('packer').startup({
          requires = { 'kyazdani42/nvim-web-devicons', opt = true },
          config = function() require('plugins.lualine') end
       }
-      use {
-         'ldelossa/buffertag',
-         config = function() require('buffertag').enable() end
-      }
+      -- use {
+      --    'ldelossa/buffertag',
+      --    config = function() require('buffertag').enable() end
+      -- }
       -- +--------------------------------------------------------------------+
       -- (10) General
       use { 'AndrewRadev/switch.vim' }
@@ -187,7 +187,7 @@ return require('packer').startup({
       }
       use {
          'Shatur/neovim-session-manager',
-         config =function() require('plugins.session-manager') end
+         config = function() require('plugins.session-manager') end
       }
       use { 'kylechui/nvim-surround', config = function() require("nvim-surround").setup({}) end }
       -- +--------------------------------------------------------------------+
