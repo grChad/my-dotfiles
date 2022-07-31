@@ -1,26 +1,27 @@
+local add_cmd = vim.api.nvim_create_autocmd
 -- Highlight al copiar algo
-vim.api.nvim_create_autocmd('TextYankPost', { callback = function()
+add_cmd('TextYankPost', { callback = function()
    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = 200 })
 end })
 
 -- Desabilitar el Diagnostico en 'node_modules(0 es el buffer actual)'
-vim.api.nvim_create_autocmd('BufRead', {
+add_cmd('BufRead', {
    pattern = '*/node_modules/*',
    command = 'lua vim.diagnostic.disable(0)'
 })
-vim.api.nvim_create_autocmd("BufNewFile", {
+add_cmd("BufNewFile", {
    pattern = '*/node_modules/*',
    command = 'lua vim.diagnostic.disable(0)'
 })
 
 -- Revision ortografica en cierto tipo de archivos: (en ingles)
-vim.api.nvim_create_autocmd({ 'BufRead', 'BufNewFile' }, {
+add_cmd({ 'BufRead', 'BufNewFile' }, {
    pattern = { '*.txt', '*.md', '*.tex' },
    command = 'setlocal spell'
 })
 
--- Para que el FileType se formatee an ingresar al buffer
-vim.api.nvim_create_autocmd('BufWritePre', {
+-- Para formatear el archivo al guardar
+add_cmd('BufWritePre', {
    pattern = {
       '*.json', '*.js', '*.jsx', '*.ts', '*.tsx', '*.lua', '*.vim', '*.md',
       '*.svelte'
@@ -32,7 +33,7 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 
 -- Winbar (for nvim 0.8+)
 if vim.fn.has('nvim-0.8') == 1 then
-   vim.api.nvim_create_autocmd({ "CursorMoved", "BufWinEnter", "BufFilePost" }, {
+   add_cmd({ "CursorMoved", "BufWinEnter", "BufFilePost" }, {
       callback = function()
          local winbar_filetype_exclude = {
             "help",
@@ -63,7 +64,7 @@ if vim.fn.has('nvim-0.8') == 1 then
          end
 
          if vim.bo.filetype == 'GitBlame' then
-            local hl_group = "EcovimSecondary"
+            local hl_group = "FirstColor"
             vim.opt_local.winbar = " " .. "%#" .. hl_group .. "#" .. require('icons').git .. "Blame" .. "%*"
             return
          end
@@ -166,6 +167,6 @@ for group, commands in pairs(augroups) do
       local event = opts.event
       opts.event = nil
       opts.group = augroup
-      vim.api.nvim_create_autocmd(event, opts)
+      add_cmd(event, opts)
    end
 end

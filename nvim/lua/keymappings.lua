@@ -22,7 +22,7 @@ map({ 'n', 'v' }, '<left>', '<nop>', opts)
 map({ 'n', 'v' }, '<right>', '<nop>', opts)
 
 -- agreglar la sangria del documento.
-map('n', '<C-=>', 'gg=G<CR>', opts)
+map('n', '<C-f>', 'gg=G<CR>', opts)
 
 -- Redimencionar los splits con los teclados de direcciones
 map('n', '<right>', ':vertical resize +5<CR>', opts)
@@ -65,7 +65,8 @@ map('n', '<C-p>', "<CMD>lua require('plugins.telescope').project_files()<CR>")
 map('n', 'm', ':nohl<CR>', opts)
 
 -- Encontrar palabra/archivo en el proyecto
-map('n', '<Leader>pf', "<CMD>lua require('plugins.telescope').project_files({ default_text = vim.fn.expand('<cword>'), initial_mode = 'normal' })<CR>")
+map('n', '<Leader>pf',
+   "<CMD>lua require('plugins.telescope').project_files({ default_text = vim.fn.expand('<cword>'), initial_mode = 'normal' })<CR>")
 map('n', '<Leader>pw', "<CMD>lua require('telescope.builtin').grep_string({ initial_mode = 'normal' })<CR>")
 
 -- Git
@@ -131,7 +132,8 @@ map('x', 'ga', '<Plug>(EasyAlign)', silent)
 
 -- Invocar manualmente speeddating en caso de switch.vim no funcione
 map('n', '<C-a>', ':if !switch#Switch() <bar> call speeddating#increment(v:count1) <bar> endif<CR>', silent)
-map('n', '<C-x>', ":if !switch#Switch({'reverse': 1}) <bar> call speeddating#increment(-v:count1) <bar> endif<CR>", silent)
+map('n', '<C-x>', ":if !switch#Switch({'reverse': 1}) <bar> call speeddating#increment(-v:count1) <bar> endif<CR>",
+   silent)
 
 -- Enlaces abiertos bajo cursor en el navegador con gx
 if vim.fn.has('macunix') == 1 then

@@ -17,6 +17,7 @@ M.filename = function()
    local default_file_icon = ""
    local default_file_icon_color = ""
 
+
    if not isempty(filename) then
       extension = vim.fn.expand "%:e"
 
@@ -32,6 +33,23 @@ M.filename = function()
       local hl_group = "FileIconColor" .. extension
 
       vim.api.nvim_set_hl(0, hl_group, { fg = file_icon_color })
+      -- logica
+      -- local enabled = false
+      -- local bg_current = '#0074d9'
+      -- local bg_others = '#2C2E38'
+      -- function Toggle()
+      --    if enabled then
+      --       enabled = false
+      --       vim.api.nvim_set_hl(0, 'WinBar', { bg = bg_current })
+      --    else
+      --       enabled = true
+      --       vim.api.nvim_set_hl(0, 'WinBarNC', { bg = bg_others })
+      --       vim.api.nvim_set_hl(0, hl_group, { fg = file_icon_color, bg = bg_others })
+      --    end
+      -- end
+      --
+      -- vim.api.nvim_create_autocmd({ 'BufRead', 'BufFilePre' }, { callback = function() Toggle() end })
+
       if file_icon == nil then
          file_icon = default_file_icon
          file_icon_color = default_file_icon_color
