@@ -24,7 +24,7 @@ local options = {
    updatetime   = 200, -- Completado mas rapida
    timeoutlen   = 400,
 
-   cmdheight  = 0, -- Altura de la Terminal CMD
+   cmdheight  = 1, -- Altura de la Terminal CMD
    inccommand = 'split', -- Muestra incrementalmente los efectos de los comandos, abre split (ideal para reemplazar)
    showmode   = false, -- CMD message -- INSERTAR -- NORMAL -- ...
    history    = 50, -- Numero de comandos a recordar en una tabla
