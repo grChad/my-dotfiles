@@ -170,3 +170,9 @@ map({ 'n', 'v' }, '<Leader>tr', ':Pantran mode=append target=es<CR>', opts)
 
 -- Para formatear con Prettier
 map('n', '<leader>p', ':silent !npx prettier --write %<CR>')
+
+-- Toggle para ZenMode
+map('n', '<Leader>z', ':ZenMode<CR>', silent)
+
+-- Toggle para MarkdownPreview
+map('n', '<leader>m', ':MarkdownPreview<CR>', silent)
