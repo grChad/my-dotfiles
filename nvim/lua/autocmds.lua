@@ -149,12 +149,19 @@ augroups.indent_spaces = {
 }
 
 -- Para eliminar el encadenamiento de sangrias en js
-augroups.javascript_custom = {
+augroups.for_language = {
    sangria = {
       event = 'Filetype',
       pattern = { 'javascript' },
       callback = function()
          vim.cmd([[let g:javascript_opfirst = 1]])
+      end
+   },
+   for_markdown = {
+      event = 'Filetype',
+      pattern = { 'markdown' },
+      callback = function()
+         vim.cmd([[let g:mkdp_auto_close = 0]])
       end
    }
 
