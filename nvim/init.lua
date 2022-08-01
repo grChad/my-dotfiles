@@ -16,7 +16,6 @@ if vim.opt.compatible == true then vim.opt.compatible = false end
 -- +--------------------------------------------------------------------+
 
 require('packer_commands')
-require('buffertag').setup()
 require('globals')
 require('config')
 require('settings')
