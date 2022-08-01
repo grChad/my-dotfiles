@@ -152,6 +152,7 @@ return require('packer').startup({
       use {
          'akinsho/nvim-toggleterm.lua',
          branch = 'main',
+         tag = 'v2.*',
          config = function() require('plugins.toggleterm') end
       }
       use { 'tpope/vim-repeat' }
@@ -164,8 +165,11 @@ return require('packer').startup({
          config = function() require('plugins.zen') end,
          disable = not EcoVim.plugins.zen.enabled
       }
-      use { 'folke/twilight.nvim', config = function() require("twilight").setup {} end,
-         disable = not EcoVim.plugins.zen.enabled }
+      use {
+         'folke/twilight.nvim',
+         config = function() require("twilight").setup({ context = 15 }) end,
+         disable = not EcoVim.plugins.zen.enabled
+      }
       use { 'ggandor/lightspeed.nvim' }
       use { 'antoinemadec/FixCursorHold.nvim' } -- Needed while issue https://github.com/neovim/neovim/issues/12587 is still open
       use {
