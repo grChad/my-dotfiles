@@ -16,7 +16,8 @@ require('zen-mode').setup {
          -- cursorcolumn = false, -- disable cursor column
          -- foldcolumn = "0", -- disable fold column
          -- list = false, -- disable whitespace characters
-      }, },
+      },
+   },
    plugins = {
       -- disable some global vim options (vim.o...)
       -- comment the lines to not apply the options
@@ -41,8 +42,6 @@ require('zen-mode').setup {
    -- callback where you can add custom code when the Zen window opens
    on_open = function()
       require('gitsigns.actions').toggle_current_line_blame()
-      require("indent_blankline.commands").disable()
-      vim.opt.relativenumber = false
       require('hlargs').disable()
       require('gitsigns.actions').refresh()
    end,
@@ -50,8 +49,6 @@ require('zen-mode').setup {
    -- callback where you can add custom code when the Zen window closes
    on_close = function()
       require('gitsigns.actions').toggle_current_line_blame()
-      require("indent_blankline.commands").enable()
-      vim.opt.relativenumber = true
       require('hlargs').enable()
       require('gitsigns.actions').refresh()
    end,
