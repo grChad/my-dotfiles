@@ -123,10 +123,12 @@ return require('packer').startup({
          requires = { 'kyazdani42/nvim-web-devicons', opt = true },
          config = function() require('plugins.lualine') end
       }
-      -- use {
-      --    'ldelossa/buffertag',
-      --    config = function() require('buffertag').enable() end
-      -- }
+      use {
+         'GabrielRIP/bufferSplitSimple',
+         config = function()
+            require('buffer-split-simple').setup()
+         end
+      }
       -- +--------------------------------------------------------------------+
       -- (10) General
       use { 'AndrewRadev/switch.vim' }
