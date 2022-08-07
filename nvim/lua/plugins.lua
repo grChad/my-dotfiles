@@ -14,6 +14,7 @@ return require('packer').startup({
       -- (1) Packer plugin manager
       use 'wbthomason/packer.nvim'
       -- +--------------------------------------------------------------------+
+
       -- (2) Necesarios para cargar primero
       use { 'lewis6991/impatient.nvim' }
       use { 'nathom/filetype.nvim' }
@@ -27,9 +28,11 @@ return require('packer').startup({
          config = function() require('plugins.alpha') end
       }
       -- +--------------------------------------------------------------------+
+
       -- (3) Themes
-      use { "catppuccin/nvim", as = "catppuccin" }
+      use { 'catppuccin/nvim', as = 'catppuccin' }
       -- +--------------------------------------------------------------------+
+
       -- (4) Treesitter
       use {
          'nvim-treesitter/nvim-treesitter',
@@ -48,6 +51,7 @@ return require('packer').startup({
          config = function() require('hlargs').setup() end
       }
       -- +--------------------------------------------------------------------+
+
       -- (5) Navigating (Telescope/Tree/Refactor)
       use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
       use {
@@ -66,10 +70,12 @@ return require('packer').startup({
          config = function() require('plugins.tree') end
       }
       -- +--------------------------------------------------------------------+
+
       -- (6) LSP Base
       use { 'williamboman/nvim-lsp-installer' }
       use { 'neovim/nvim-lspconfig' }
       -- +--------------------------------------------------------------------+
+
       -- (7) LSP Cmp
       use {
          'hrsh7th/nvim-cmp',
@@ -96,6 +102,7 @@ return require('packer').startup({
       }
       use { 'saadparwaiz1/cmp_luasnip', after = 'cmp-npm' }
       -- +--------------------------------------------------------------------+
+
       -- (8) LSP Addons
       use {
          'stevearc/dressing.nvim',
@@ -112,6 +119,7 @@ return require('packer').startup({
       }
       use { 'jose-elias-alvarez/typescript.nvim' }
       -- +--------------------------------------------------------------------+
+
       -- (9) Buffer and Bar state
       use { -- Buffer
          'romgrk/barbar.nvim',
@@ -130,6 +138,7 @@ return require('packer').startup({
          end
       }
       -- +--------------------------------------------------------------------+
+
       -- (10) General
       use { 'AndrewRadev/switch.vim' }
       use { 'AndrewRadev/splitjoin.vim' }
@@ -197,6 +206,7 @@ return require('packer').startup({
       }
       use { 'kylechui/nvim-surround', config = function() require("nvim-surround").setup({}) end }
       -- +--------------------------------------------------------------------+
+
       -- (11) Snippets & Language & Syntax
       use {
          'windwp/nvim-autopairs',
@@ -224,6 +234,7 @@ return require('packer').startup({
          after = 'cmp_luasnip'
       }
       -- +--------------------------------------------------------------------+
+
       -- (12) Git
       use { 'lewis6991/gitsigns.nvim',
          requires = { 'nvim-lua/plenary.nvim' },
@@ -244,6 +255,7 @@ return require('packer').startup({
       }
       use { 'kdheepak/lazygit.nvim' }
       -- +--------------------------------------------------------------------+
+
       -- (13) Testing
       use {
          'rcarriga/neotest',
