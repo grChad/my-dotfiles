@@ -53,17 +53,13 @@ Primero me salio un error que decia:
 /usr/bin/ld: cannot find -lstdc++
 collect2: error: ld returned 1 exit status
 ```
-- Para locucionarlo instale lo siguiente:
-  ```shell
-  sudo dnf install libstdc++-static
-  ```
+- Para locucionarlo instale lo siguiente: <code>**sudo dnf install libstdc++-static**</code>
+
 Luego me dio otro error:
 ```shell
 Gcc error: gcc: error tryin to exec
 'cc1': execvp: No such file or directory
 ```
-- Y se soluciono instalando lo siguiente:
-  ```shell
-  sudo dnf install gcc-c++
-  ```
+- Y se soluciono instalando lo siguiente: <code>**sudo dnf install gcc-c++**</code>
+
   ... end.
