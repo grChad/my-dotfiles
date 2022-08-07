@@ -30,7 +30,7 @@ Vim(pyxfile):E319: No "python3" provider found.
    - python3 -m pip install pynvim
 
 
-## Problemas no relacionados con nvim:
+## Problemas no relacionados con Nvim:
 * no se podica copiar y pegar fuera de nvim usando wayland. Pase por mucho para encontrar el error.
 * la solucion fue ejecutar:
    - echo 'some text' | wl-copy
@@ -44,4 +44,26 @@ Vim(pyxfile):E319: No "python3" provider found.
 * tambien esta este trabajo para cuando tenga un problema similar con el
    clipboard: <https://github.com/jasonccox/vim-wayland-clipboard>
 
-* **Clipbard en x11**: para Pop-Os se instala **xclip** <code>**sudo apt install xclip**</code>
+* **Clipbard en x11**: para Pop-Os se instala **xclip** <code>**sudo apt install xclip**</code>.
+
+## Problemas relacionados con Nvim:
+### Problema con la conpilacion de NvimTreeSitter
+Primero me salio un error que decia:
+```shell
+/usr/bin/ld: cannot find -lstdc++
+collect2: error: ld returned 1 exit status
+```
+- Para locucionarlo instale lo siguiente:
+  ```shell
+  sudo dnf install libstdc++-static
+  ```
+Luego me dio otro error:
+```shell
+Gcc error: gcc: error tryin to exec
+'cc1': execvp: No such file or directory
+```
+- Y se soluciono instalando lo siguiente:
+  ```shell
+  sudo dnf install gcc-c++
+  ```
+  ... end.
