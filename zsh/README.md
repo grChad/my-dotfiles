@@ -3,7 +3,14 @@
 
 Llamamos a **zsh** desde la terminal <code>**zsh**</code> y elegimos una opcion de configuracion y generamos el archivo **.zshrc**.
 
-Nos aseguramos de que **zsh** este por defecto en el **shell**: <code>**chsh -s $(which zsh)**</code>
+Como aseguramos de que **zsh** este por defecto en el **shell**.
+
+Primero nos aseguramos de estas en bash. <code>**bash**</code>, luego:
+
+```shell
+sudo usermod --shell /usr/bin/zsh root
+sudo usermod --shell /usr/bin/zsh user
+```
 
 Cerramos la sesion para ver el resultado: <code>**kill-9 -1**</code>
 
