@@ -11,7 +11,15 @@ return {
       config = function() require('custom.plugins.set.devicons') end
    },
    ['nvim-treesitter/nvim-treesitter'] = {
-      config = function() require('custom.plugins.set.tressiter') end
+      module = "nvim-treesitter",
+      setup = function()
+         require("core.lazy_load").on_file_open "nvim-treesitter"
+      end,
+      cmd = require("core.lazy_load").treesitter_cmds,
+      run = ":TSUpdate",
+      config = function()
+         require('custom.plugins.set.tressiter')
+      end
    },
    ['goolord/alpha-nvim'] = { disable = false },
    ['m-demare/hlargs.nvim'] = {

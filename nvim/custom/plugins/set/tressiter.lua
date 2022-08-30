@@ -1,11 +1,19 @@
-require 'nvim-treesitter.configs'.setup {
-   ensure_installed = 'all', -- one of "all", or a list of languages
-   ignore_install = { 'haskell', 'phpdoc', 'html', 'css', 'scss' },
+local present, treesitter = pcall(require, "nvim-treesitter.configs")
+
+if not present then
+   return
+end
+
+require("base46").load_highlight "treesitter"
+
+local options = {
+   ensure_installed = {
+      'lua', 'javascript', 'typescript', 'markdown', 'markdown_inline'
+   },
    highlight = {
       enable = true,
+      use_languagetree = true,
       disable = { 'html', 'css', 'scss' }
-      -- disable = { "c", "rust" },  -- list of language that will be disabled
-      -- additional_vim_regex_highlighting = false,
    },
 
    indent = {
@@ -25,54 +33,9 @@ require 'nvim-treesitter.configs'.setup {
       enable = true,
       enable_autocmd = false,
    },
-
-   textobjects = {
-      move = {
-         enable = true,
-         set_jumps = true, -- whether to set jumps in the jumplist
-         goto_next_start = {
-            ["]]"] = "@function.outer",
-            ["]m"] = "@class.outer",
-         },
-         goto_next_end = {
-            ["]["] = "@function.outer",
-            ["]M"] = "@class.outer",
-         },
-         goto_previous_start = {
-            ["[["] = "@function.outer",
-            ["[m"] = "@class.outer",
-         },
-         goto_previous_end = {
-            ["[]"] = "@function.outer",
-            ["[M"] = "@class.outer",
-         },
-      },
-      select = {
-         enable = true,
-
-         -- Automatically jump forward to textobj, similar to targets.vim
-         lookahead = true,
-
-         keymaps = {
-            -- You can use the capture groups defined in textobjects.scm
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
-            ["ac"] = "@class.outer",
-            ["ic"] = "@class.inner",
-         },
-      },
-      swap = {
-         enable = true,
-         swap_next = {
-            ["~"] = "@parameter.inner",
-         },
-      },
-   },
-
-   textsubjects = {
-      enable = true,
-      keymaps = {
-         ['<cr>'] = 'textsubjects-smart', -- works in visual mode
-      }
-   },
 }
+
+-- check for any override
+options = require("core.utils").load_override(options, "nvim-treesitter/nvim-treesitter")
+
+treesitter.setup(options)
