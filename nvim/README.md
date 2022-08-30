@@ -26,7 +26,7 @@ Luego guardas y sales. Al ingresar **`:PackerSync`**, Esto instalara los plugins
 + **kyazdani42/nvim-tree.lua**: configuracion a mi gusto, tambien en color.
 + **kyazdani42/nvim-web-devicons**: se personaliza tanto los iconos y los colores de algunos iconos.
 
-<div style="text-align: center"><img src="../assets/image-NvimTree.png"></div>
+<p align="center"><img src="../assets/image-NvimTree.png"></p>
 
 + **nvim-treesitter/nvim-treesitter**: para agregar alguna configuracion.
 + **goolord/alpha-nvim**: se habilita.
