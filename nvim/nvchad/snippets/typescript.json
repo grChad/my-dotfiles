@@ -1,0 +1,17 @@
+{
+   "Console log": {
+      "prefix": "cl",
+      "body": [
+         "console.log(${1})",
+         "${2}"
+      ],
+      "description": "console log Custom"
+   },
+   "Function Array": {
+      "prefix": "funag",
+      "body": [
+         "const ${1:var} = (${2:param}) => {${3}}"
+      ],
+      "description": "Funcion Array General"
+   }
+}
