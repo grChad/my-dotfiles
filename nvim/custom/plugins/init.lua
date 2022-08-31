@@ -33,15 +33,6 @@ return {
       config = function() require('custom.plugins.set.dressing') end
    },
    ['ggandor/lightspeed.nvim'] = { event = 'BufRead' },
-   ['iamcco/markdown-preview.nvim'] = {
-      run = "cd app && npm install",
-      ft = "markdown",
-      config = function()
-         vim.g.mkdp_auto_start = 1
-         vim.g.mkdp_auto_close = 0
-         vim.keymap.set('n', '<leader>m', ':MarkdownPreview<CR>')
-      end,
-   },
    ['KabbAmine/vCoolor.vim'] = {},
    ['mrshmllow/document-color.nvim'] = {}, -- for tailwind
    -- LSP: config
@@ -63,4 +54,17 @@ return {
          require('luasnip.loaders.from_vscode').lazy_load({ paths = { './lua/custom/snippets/' } })
       end
    },
+   -- para markdown
+   ['iamcco/markdown-preview.nvim'] = {
+      run = "cd app && npm install",
+      ft = "markdown",
+      config = function()
+         vim.g.mkdp_auto_start = 1
+         vim.g.mkdp_auto_close = 0
+         vim.keymap.set('n', '<leader>m', ':MarkdownPreview<CR>')
+      end,
+   },
+   ['gaoDean/autolist.nvim'] = {
+      config = function() require('autolist').setup({}) end
+   }
 }

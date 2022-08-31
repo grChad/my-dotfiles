@@ -15,12 +15,13 @@ Luego guardas y sales. Al ingresar **`:PackerSync`**, Esto instalara los plugins
 + **windwp/nvim-ts-autotag**: De lo mas util para renombrar etiquetas de **_html_**, ya sea dentro de html, js, o donde detecte su sintaxis.
 + **stevearc/dressing.nvim**: Ventana flotante para mejor experiencia renombrando variables del codigo, en nvim-tree, telescope...
 + **ggandor/lightspeed.nvim**: Para moverte a traves del codigo mas rapido.
-+ **iamcco/markdown-preview.nvim**: Para previsualizar codigo de markdown a travez del navegador. Impresindible.
 + **KabbAmine/vCoolor.vim**: Para usar paleta de colores y su selector dentro del editor.
 + **mrshmllow/document-color.nvim**: Pigmento de colores para **_tailwind_**.
 + **jose-elias-alvarez/typescript.nvim**: Complemento lsp, para **_typescript_**.
 + **williamboman/mason.nvim**: Administrador de packetes para nvim. Administra servidores LSP, DAP, linters, formateadores.
 + **williamboman/mason-lspconfig.nvim**: El instalador automatico de **_mason.nvim_**.
++ **iamcco/markdown-preview.nvim**: Para previsualizar codigo de markdown a travez del navegador. Impresindible.
++ **gaoDean/autolist.nvim**: Auto-completado de listas inteligentes para **_markdown_**, indispensable...
 
 ### plugins modificados
 + **kyazdani42/nvim-tree.lua**: configuracion a mi gusto, tambien en color.
@@ -34,7 +35,7 @@ Luego guardas y sales. Al ingresar **`:PackerSync`**, Esto instalara los plugins
 + **L3MON4D3/LuaSnip**: Para agregar una ruta de snippets custom como **_vsCode_**.
 
 ### plugins desabilitados
-+ **NvChad/ui**: Mas preciso, **tabufline**, que es uno de los 2 complementos(?), dentro de **ui**, Para ser reemplazado por **_barbar_**.
++ **NvChad/ui**: Mas preciso, **tabufline**, que es uno de los 2 complementos **(?)**, dentro de **ui**, Para ser reemplazado por **_barbar_**.
 
 ## Lunarvim
 > .. en proceso.
