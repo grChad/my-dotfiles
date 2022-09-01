@@ -57,7 +57,7 @@ if typescript_ok then
 end
 
 lspconfig.tailwindcss.setup {
-   root_dir = lspconfig.util.root_pattern('tailwind.config.js'),
+   -- root_dir = lspconfig.util.root_pattern('tailwind.config.js'),
    capabilities = require('custom.plugins.lsp.servers.tailwindcss').capabilities,
    filetypes = require('custom.plugins.lsp.servers.tailwindcss').filetypes,
    handlers = handlers,

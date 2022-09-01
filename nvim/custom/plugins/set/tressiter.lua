@@ -8,7 +8,7 @@ require("base46").load_highlight "treesitter"
 
 local options = {
    ensure_installed = {
-      'lua', 'javascript', 'typescript', 'markdown', 'markdown_inline'
+      'lua', 'javascript', 'typescript', 'markdown', 'markdown_inline', 'svelte'
    },
    highlight = {
       enable = true,

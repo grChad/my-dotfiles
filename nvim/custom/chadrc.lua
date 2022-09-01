@@ -6,22 +6,21 @@ local M = {}
 -- example of changing theme:
 
 M.ui = {
-   theme = "palenight"
+   theme = 'palenight',
+   -- transparency = true,
 }
+
+local pluginConfs = require 'custom.plugins.override'
 
 M.plugins = {
    user = require('custom.plugins'),
    remove = {},
    override = {
-      ["NvChad/ui"] = {
-         tabufline = {
-            enabled = false,
-            lazyload = true,
-            overriden_modules = nil,
-         },
-      }
+      ['NvChad/ui'] = pluginConfs.uiChad,
+      ['nvim-treesitter/nvim-treesitter'] = pluginConfs.treesitter,
    },
 }
+
 M.mappings = require('custom.mappings')
 
 return M

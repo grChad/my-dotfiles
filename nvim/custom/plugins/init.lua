@@ -1,30 +1,13 @@
 return {
-   ['romgrk/barbar.nvim'] = {
-      config = function()
-         require('custom.plugins.set.barbar')
-      end
-   },
    ['kyazdani42/nvim-tree.lua'] = {
       config = function() require('custom.plugins.set.tree') end,
    },
    ['kyazdani42/nvim-web-devicons'] = {
       config = function() require('custom.plugins.set.devicons') end
    },
-   ['nvim-treesitter/nvim-treesitter'] = {
-      module = "nvim-treesitter",
-      setup = function()
-         require("core.lazy_load").on_file_open "nvim-treesitter"
-      end,
-      cmd = require("core.lazy_load").treesitter_cmds,
-      run = ":TSUpdate",
-      config = function()
-         require('custom.plugins.set.tressiter')
-      end
-   },
    ['goolord/alpha-nvim'] = { disable = false },
    ['m-demare/hlargs.nvim'] = {
       config = function() require('hlargs').setup() end,
-      -- after = { 'nvim-treesitter' }
    },
    ['windwp/nvim-ts-autotag'] = {
       config = function() require('nvim-ts-autotag').setup() end,
