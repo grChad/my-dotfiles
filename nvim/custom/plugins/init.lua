@@ -1,4 +1,7 @@
 return {
+   ['romgrk/barbar.nvim'] = {
+      config = function() require('custom.plugins.set.barbar') end
+   },
    ['kyazdani42/nvim-tree.lua'] = {
       config = function() require('custom.plugins.set.tree') end,
    },
@@ -6,6 +9,9 @@ return {
       config = function() require('custom.plugins.set.devicons') end
    },
    ['goolord/alpha-nvim'] = { disable = false },
+   ['lukas-reineke/indent-blankline.nvim'] = {
+      config = function() require('custom.plugins.set.indent') end
+   },
    ['m-demare/hlargs.nvim'] = {
       config = function() require('hlargs').setup() end,
    },
@@ -16,6 +22,9 @@ return {
       config = function() require('custom.plugins.set.dressing') end
    },
    ['ggandor/lightspeed.nvim'] = { event = 'BufRead' },
+   ['NvChad/nvim-colorizer.lua'] = {
+      config = function() require('custom.plugins.set.colorizer') end
+   },
    ['KabbAmine/vCoolor.vim'] = {},
    ['mrshmllow/document-color.nvim'] = {}, -- for tailwind
    -- LSP: config
