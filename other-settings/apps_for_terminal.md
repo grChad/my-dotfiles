@@ -15,11 +15,35 @@ Aunque también funciona con:
 ### usar
 Tan facil como  colocar en la **_terminal_**, <code>**grex hola mola**</code> y obtendrias algo como <code>**^\[hl]ola$**</code>, que es la expresion regular.
 
-<img src="../assets/image-grex-terminal.png">
+<p align="center"><img src="../assets/image-grex-terminal.png"></p>
 
 También podrías tener las coincidencias en un archivo y buscar a través de ellas:
 <code>**grex -f file.txt**</code> y obtener el mismo resultado.
 
-<img src="../assets/image-grex-file.png">
+<p align="center"><img src="../assets/image-grex-file.png"></p>
 
 Para mas informacion en el **_GitHub_** de [**grex**](https://github.com/pemistahl/grex).
+
+## pfetch
+Es una bonita herramienta de información del sistema escrita en POSIX sh. Utilizando funciones integradas en el propio lenguaje
+
+### Install Unix/Linux
++ con [_wget_](https://www.gnu.org/software/wget/?) o con [_git_](https://git-scm.com/), **Solo elige uno!**
+```shell
+wget https://github.com/dylanaraps/pfetch/archive/master.zip
+git clone https://github.com/dylanaraps/pfetch.git
+```
+
+Si usaste _wget_, tienes que descomprimir el archivo **.zip**
+```shell
+unzip master.zip
+```
+
+Instale el binario usando el comando install:
+```shell
+sudo install pfetch-master/pfetch /usr/local/bin/
+```
+
+Ahora prueve con el comando **_pfetch_**.
+
+<p align="center"><img src="../assets/image-pfetch.png"></p>
