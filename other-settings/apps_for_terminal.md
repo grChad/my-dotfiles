@@ -47,3 +47,9 @@ sudo install pfetch-master/pfetch /usr/local/bin/
 Ahora prueve con el comando **_pfetch_**.
 
 <p align="center"><img src="../assets/image-pfetch.png"></p>
+
+## winehq
+Wine permite correr software de _Windows_ en **_linux_**. Con Wine se puede instalar y correr aplicaciones igual que se hacia en _windows_ y la puedes descargar desde [**_aqui_**](https://wiki.winehq.org/Download).
+
+### uso
+Dar click en un programa **.exe** de _windows_ y solo eso, claro que al inicio pueda necesitar instalar otros programas...
