@@ -1,10 +1,10 @@
-local M = {}
-
 local silent = { silent = true }
 local noremap = { noremap = true }
 local opts = { noremap = true, silent = true }
 
 function Cmd(str) return '<cmd>' .. str .. '<CR>' end
+
+local M = {}
 
 M.general = {
    n = {
@@ -12,8 +12,8 @@ M.general = {
       ['m'] = {Cmd('nohl'), 'Descomentar'}
    },
    i = {
-      ['kj'] = { '<esc>', 'Escap', { silent = true } },
-      ['KJ'] = { '<esc>', 'Escap', { silent = true } },
+      ['kj'] = { '<esc>', 'Escap', silent },
+      ['KJ'] = { '<esc>', 'Escap', silent },
    }
 }
 
