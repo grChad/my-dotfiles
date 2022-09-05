@@ -4,6 +4,7 @@ vim.opt.breakindent = true
 vim.opt.hidden = true
 vim.opt.writebackup = false
 vim.opt.pumheight = 10
+vim.opt.colorcolumn:append('80')
 
 local map = vim.keymap.set
 local silent = { silent = true }
