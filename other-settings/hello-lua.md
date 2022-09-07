@@ -2,18 +2,34 @@
 
 Lua es un lenguaje de secuencias de comando potente, eficiente, liviano e integrable. Es compatible con la programación de procedimientos, la programación orientada a objetos, la programación funcional, la programación basada en datos y la descripción de datos.
 
-Lua combina una sintaxis de procedimiento simple con poderosas construcciones de descripción de datos basadas en matrices asociativas y semántica extensible....
+Ademas está implementado como una biblioteca escrita en **C** limpio (esto es, en el subconjunto común de ANSI **C** y **C++**).
 
+> **Nota:** Esta guia se basa en la version [**Lua 5.1**](https://www.lua.org/manual/5.1/es/)
+<!------------------------------------------------------------------------- -->
 
-## Hola Mundo
-Como cualquier lenguaje, para iniciarse se suele escribir un 'Hello World', como no tengo creatividad hare lo mismo.
+## Contenido
+##### [Hola Mundo](#1-hola-mundo)
+
+##### [Gramatica de Lua](#2-gramatica-de-lua)
+1. [**Comentarios**](#2-1-los-comentarios)
+2. [**Convecciones lexicas**](#2-2-convecciones-lexicas)
+<!------------------------------------------------------------------------- -->
+
+## 1 Hola Mundo
+Como cualquier lenguaje, para iniciarse se suele escribir un 'Hello World', como no tengo creatividad hare lo mismo. En su editor favorito coloque los siguiente.
 ```lua
 print('Hello World')
 ```
 Al ejecutar esto en tu terminal obtendras:
 <p align="center"><img src="../assets/lua/image-hello.png"></p>
 
-## Los comentarios
+**print()** se usa para visualizar codigo en la terminal, el equivalente al modulo _console_ de **javascript** `console.log(), console.warn(), console.info()..` o `println!()` de **rust**.
+<!------------------------------------------------------------------------- -->
+
+## 2 Gramatica de Lua
+Esta sección describe el léxico, la sintaxis y la semántica de Lua. En otras palabras, esta sección describe qué elementos (tokens) son válidos, cómo deben combinarse y qué significa su combinación.
+
+### 2-1 Los comentarios
 La sintaxis para comentar en **Lua** es **'-'** doble.
 ```lua
 -- Comentarios en una línea
@@ -33,6 +49,37 @@ print('Hola Gabriel') -- Pintar Hola Gabriel
 <p align="center"><img src="../assets/lua/image-hola-gabriel.png"></p>
 
 Los comentarios solo sirven como anotacion, de una tarea, describir un error, un Hack... Pero el interprete de **Lua** simplemente los ignora
+
+### 2-2 Convecciones lexicas
+Para el caso de las variables y como se declara, estas pueden tener letras, digitos, guiones bajo(underscore), pero no puede comezar por un digito.
+```lua
+local variable1 = nil
+local _variable2 = false
+local Variable_3 = 'todo ok'
+_G.Variable_Global = 'Soy Genial'
+_G.GlobalCamelCase = 'Soy más Genial'
+
+-- declarar en cadena
+local valor_1, valor_2, valor_3 = 'valor1', true, 3425
+```
+Todo genial. Pero **Noooo!!**, como en cualquier lenguage y tienes que saberlo, existen palabras reservadas o _keywords_ y no pueden ser usadas en variables.
+<p align="center"><img src="../assets/lua/image-keywords-01.png"></p>
+
+Las **keywords**, son identificadores reservados y predefinidos que tienen un significado para el interprete de un lenguage, en este caso **Lua**.
+
+Lo bueno es que no son muchas y las puedes memorizar.
+<p align="center"><img src="../assets/lua/image-keywords-02.png"></p>
+
+Para **Lua**, las mayusculas y minusculas son palabras diferences, con lo que **`while`** es diferente de **While**, y se puede usar para declarar una variable, pero por buenas practicas no lo hagas. Otro punto es que no puedes declarar:
+```lua
+local _VARIABLE = 'Soy un hack' -- Nooooo!!
+```
+Ya que **`_MAYUSCULAS`**, tambian estan reservadas para variables globales internar de **Lua**.
+
+Ahora veamos los simbolos o caracteres que usaremos:
+<p align="center"><img src="../assets/lua/image-characters.png"></p>
+
+
 
 ## Variables
 Las variables son espacios en memoria que almacenan valores. Hay 3 tipos de variables en **lua**: variables globales, variables locales y cambios de tablas (segun la documentacion). Solo veremos los 2 primeros.
