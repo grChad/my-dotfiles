@@ -13,7 +13,7 @@ mason_lsp.setup({
    ensure_installed = {
       'html-lsp', 'css-lsp', 'emmet-ls', 'typescript-language-server', 'eslint-lsp',
       'stylelint-lsp', 'json-lsp', 'lua-language-server', 'tailwindcss-language-server',
-      'pyright', 'svelte-language-server', 'rust-analyzer',
+      'pyright', 'svelte-language-server', 'rust-analyzer', 'marksman',
       'chrome-debug-adapter', 'node-debug2-adapter'
    },
    automatic_installation = true,
@@ -107,7 +107,7 @@ lspconfig.emmet_ls.setup {
    handlers = handlers,
 }
 
-local servers = { 'html', 'cssls', 'svelte', 'jsonls' }
+local servers = { 'html', 'cssls', 'svelte', 'jsonls', 'marksman' }
 
 for _, lsp in ipairs(servers) do
    lspconfig[lsp].setup {
