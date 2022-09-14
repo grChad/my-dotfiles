@@ -13,7 +13,8 @@ mason_lsp.setup({
    ensure_installed = {
       'html-lsp', 'css-lsp', 'emmet-ls', 'typescript-language-server', 'eslint-lsp',
       'stylelint-lsp', 'json-lsp', 'lua-language-server', 'tailwindcss-language-server',
-      'pyright', 'svelte-language-server', 'rust-analyzer', 'marksman',
+      'pyright', 'svelte-language-server', 'rust-analyzer', 'marksman', 'yaml-language-server',
+      'clangd',
       'chrome-debug-adapter', 'node-debug2-adapter'
    },
    automatic_installation = true,
@@ -28,9 +29,23 @@ map('n', ']d', "<cmd>lua vim.diagnostic.goto_next({ float = { border = 'rounded'
 map('n', '[d', "<cmd>lua vim.diagnostic.goto_prev({ float = { border = 'rounded', max_width = 100 }})<CR>", opts)
 -- map('n', '<space>q', vim.diagnostic.setloclist, opts)
 
+local utils = require "core.utils"
 local function on_attach(client, bufnr)
+  if vim.g.vim_version > 7 then
+    -- nightly
+    client.server_capabilities.documentFormattingProvider = true
+    client.server_capabilities.documentRangeFormattingProvider = true
+  else
+    -- stable
     client.resolved_capabilities.document_formatting = true
     client.resolved_capabilities.document_range_formatting = true
+  end
+
+  utils.load_mappings("lspconfig", { buffer = bufnr })
+
+  if client.server_capabilities.signatureHelpProvider then
+    require("nvchad_ui.signature").setup(client)
+  end
 end
 
 local capabilities = require("plugins.configs.lspconfig").capabilities
@@ -40,7 +55,6 @@ local handlers = {
    ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' }),
    ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = true }),
 }
-
 
 local lspconfig = require('lspconfig')
 -- Config lsp servers
@@ -107,7 +121,14 @@ lspconfig.emmet_ls.setup {
    handlers = handlers,
 }
 
-local servers = { 'html', 'cssls', 'svelte', 'jsonls', 'marksman' }
+lspconfig.yamlls.setup {
+   on_attach = on_attach,
+   capabilities = capabilities,
+   handlers = handlers,
+   settings = require('custom.plugins.lsp.servers.yaml')
+}
+
+local servers = { 'html', 'cssls', 'svelte', 'jsonls', 'marksman', 'clangd' }
 
 for _, lsp in ipairs(servers) do
    lspconfig[lsp].setup {

@@ -31,21 +31,12 @@ return {
    ['jose-elias-alvarez/typescript.nvim'] = {}, -- for lsp and tsserver
    ['neovim/nvim-lspconfig'] = {
       config = function()
-         require 'custom.plugins.lsp'
+         require('plugins.configs.lspconfig')
+         require('custom.plugins.lsp')
       end,
    },
    ['williamboman/mason.nvim'] = {},
    ['williamboman/mason-lspconfig.nvim'] = {},
-   ['L3MON4D3/LuaSnip'] = {
-      config = function()
-         require('luasnip').config.set_config({
-            history = true,
-            updateevents = 'TextChanged,TextChangedI',
-         })
-         require('luasnip.loaders.from_vscode').lazy_load()
-         require('luasnip.loaders.from_vscode').lazy_load({ paths = { './lua/custom/snippets/' } })
-      end
-   },
    -- para markdown
    ['iamcco/markdown-preview.nvim'] = {
       run = "cd app && npm install",

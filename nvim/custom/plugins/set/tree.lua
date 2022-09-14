@@ -97,8 +97,8 @@ renderer = {
    highlight_opened_files = 'name', -- Resaltado del archivo si este esta abierto. 'none', 'icon', 'name', 'all'
    root_folder_modifier = ':~',
    indent_markers = { -- Indentado
-   enable = false, -- Habilitar el indentado
-   -- icons = icons_custom.indents -- Iconos para el indentado Custom
+   enable = true, -- Habilitar el indentado
+   icons = icons_custom.indents -- Iconos para el indentado Custom
 },
 icons = { -- Iconos de carpetas, Git
 show = {
