@@ -6,7 +6,7 @@ local M = {}
 -- example of changing theme:
 
 M.ui = {
-   theme = 'palenight',
+   theme = "catppuccin",
    -- transparency = true,
 }
 
@@ -18,6 +18,7 @@ M.plugins = {
    override = {
       ['NvChad/ui'] = pluginConfs.uiChad,
       ['nvim-treesitter/nvim-treesitter'] = pluginConfs.treesitter,
+      ['hrsh7th/nvim-cmp'] = pluginConfs.cmp_change,
    },
 }
 
