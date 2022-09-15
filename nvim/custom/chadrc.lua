@@ -19,6 +19,8 @@ M.plugins = {
       ['NvChad/ui'] = pluginConfs.uiChad,
       ['nvim-treesitter/nvim-treesitter'] = pluginConfs.treesitter,
       ['hrsh7th/nvim-cmp'] = pluginConfs.cmp_change,
+      ['lewis6991/gitsigns.nvim'] = pluginConfs.git_signs,
+      ['kyazdani42/nvim-web-devicons'] = pluginConfs.devicons,
    },
 }
 
