@@ -1,6 +1,8 @@
-require 'colorizer'.setup(
-   { '*', '!html', '!json' },
-   {
+require 'colorizer'.setup({
+   filetypes = {
+      '*', '!json', '!md'
+   },
+   user_default_options = {
       RGB      = true; -- #RGB hex codes
       RRGGBB   = true; -- #RRGGBB hex codes
       RRGGBBAA = true; -- #RRGGBBAA hex codes
@@ -10,6 +12,7 @@ require 'colorizer'.setup(
       css_fn   = true; -- Enable all CSS *functions*: rgb_fn, hsl_fn
 
       -- Available modes: foreground, background, virtualtext
-      mode = 'background'
+      mode = 'background',
+      tailwind = false,
    }
-)
+})
