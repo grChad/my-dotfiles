@@ -58,4 +58,17 @@ M.cmp_change = {
    },
 }
 
+M.git_signs = {
+   signs = {
+      add          = { hl = 'GitSignsAdd', text = '▎', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
+      change       = { hl = 'GitSignsChange', text = '▎', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+   },
+}
+
+M.devicons = {
+   set_icon = require('custom.plugins.set.deviconos')
+}
+
+
+
 return M
