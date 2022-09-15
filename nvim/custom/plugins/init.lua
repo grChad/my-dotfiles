@@ -5,9 +5,6 @@ return {
    ['kyazdani42/nvim-tree.lua'] = {
       config = function() require('custom.plugins.set.tree') end,
    },
-   ['kyazdani42/nvim-web-devicons'] = {
-      config = function() require('custom.plugins.set.devicons') end
-   },
    ['goolord/alpha-nvim'] = { disable = false },
    ['lukas-reineke/indent-blankline.nvim'] = {
       config = function() require('custom.plugins.set.indent') end
