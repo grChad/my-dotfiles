@@ -22,7 +22,7 @@ local colors = {
 -- │        Desde aqui, se personalizan los iconos de cualquier         │
 -- │              tipo de archivo 'FileType' o extencion.               │
 -- └                                                                    ┘
-return {
+require('nvim-web-devicons').set_icon {
    c = {
       icon = '', color = colors.c, name = 'c'
    },

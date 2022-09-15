@@ -65,10 +65,4 @@ M.git_signs = {
    },
 }
 
-M.devicons = {
-   set_icon = require('custom.plugins.set.deviconos')
-}
-
-
-
 return M
