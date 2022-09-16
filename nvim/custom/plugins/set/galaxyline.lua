@@ -244,8 +244,8 @@ end
 table.insert(gls.mid, {
    LeftLspClient = {
       condition = HideInWidthComplete,
-      provider = function() return leftBracket end,
-      highlight = { colors.bg, colors.bg_2 }
+      provider = function() return ' ' end,
+      highlight = { colors.bg, colors.bg }
    }
 })
 
@@ -262,8 +262,8 @@ table.insert(gls.mid, {
 table.insert(gls.mid, {
    RightLspClient = {
       condition = HideInWidthComplete,
-      provider = function() return rightBracket end,
-      highlight = { colors.bg, colors.bg_2 }
+      provider = function() return ' ' end,
+      highlight = { colors.bg, colors.bg }
    }
 })
 
@@ -349,7 +349,7 @@ table.insert(gls.right, {
    }
 })
 
--- Posicion deo cursor en el documento
+-- Posicion del cursor en el documento
 table.insert(gls.right, {
    SeparatorLeftPosition = {
       provider = function()
