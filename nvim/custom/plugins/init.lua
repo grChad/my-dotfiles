@@ -1,6 +1,12 @@
 return {
+   ['NvChad/ui'] = {
+      config = function() return end
+   },
    ['romgrk/barbar.nvim'] = {
       config = function() require('custom.plugins.set.barbar') end
+   },
+   ['glepnir/galaxyline.nvim'] = {
+      config = function() require('custom.plugins.set.galaxyline') end
    },
    ['kyazdani42/nvim-tree.lua'] = {
       config = function() require('custom.plugins.set.tree') end,
@@ -30,10 +36,11 @@ return {
    -- LSP: config
    ['jose-elias-alvarez/typescript.nvim'] = {}, -- for lsp and tsserver
    ['neovim/nvim-lspconfig'] = {
-      config = function()
-         require('plugins.configs.lspconfig')
-         require('custom.plugins.lsp')
+      opt = true,
+      setup = function()
+         require("core.lazy_load").on_file_open('nvim-lspconfig')
       end,
+      config = function() require('custom.plugins.lsp') end,
    },
    ['williamboman/mason.nvim'] = {},
    ['williamboman/mason-lspconfig.nvim'] = {},

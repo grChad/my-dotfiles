@@ -29,23 +29,16 @@ map('n', ']d', "<cmd>lua vim.diagnostic.goto_next({ float = { border = 'rounded'
 map('n', '[d', "<cmd>lua vim.diagnostic.goto_prev({ float = { border = 'rounded', max_width = 100 }})<CR>", opts)
 -- map('n', '<space>q', vim.diagnostic.setloclist, opts)
 
-local utils = require "core.utils"
 local function on_attach(client, bufnr)
-  if vim.g.vim_version > 7 then
-    -- nightly
-    client.server_capabilities.documentFormattingProvider = true
-    client.server_capabilities.documentRangeFormattingProvider = true
-  else
-    -- stable
-    client.resolved_capabilities.document_formatting = true
-    client.resolved_capabilities.document_range_formatting = true
-  end
-
-  utils.load_mappings("lspconfig", { buffer = bufnr })
-
-  if client.server_capabilities.signatureHelpProvider then
-    require("nvchad_ui.signature").setup(client)
-  end
+   if vim.g.vim_version > 7 then
+      -- nightly
+      client.server_capabilities.documentFormattingProvider = true
+      client.server_capabilities.documentRangeFormattingProvider = true
+   else
+      -- stable
+      client.resolved_capabilities.document_formatting = true
+      client.resolved_capabilities.document_range_formatting = true
+   end
 end
 
 local capabilities = require("plugins.configs.lspconfig").capabilities
