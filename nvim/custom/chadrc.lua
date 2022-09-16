@@ -13,10 +13,9 @@ M.ui = {
 local pluginConfs = require 'custom.plugins.override'
 
 M.plugins = {
-   user = require('custom.plugins'),
    remove = {},
+   user = require('custom.plugins'),
    override = {
-      ['NvChad/ui'] = pluginConfs.uiChad,
       ['nvim-treesitter/nvim-treesitter'] = pluginConfs.treesitter,
       ['hrsh7th/nvim-cmp'] = pluginConfs.cmp_change,
       ['lewis6991/gitsigns.nvim'] = pluginConfs.git_signs,

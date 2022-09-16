@@ -1,6 +1,5 @@
 -- settings generals
 vim.g.luasnippets_path = "./lua/custom/snippets/"
-   --       require('luasnip.loaders.from_vscode').lazy_load({ paths = { './lua/custom/snippets/' } })
 
 -- settings locals
 vim.opt.wrap = false
