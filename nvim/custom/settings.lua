@@ -10,6 +10,7 @@ vim.opt.hidden = true
 vim.opt.writebackup = false
 vim.opt.pumheight = 10
 vim.opt.colorcolumn:append('80')
+vim.opt.laststatus = 2
 -- vim.opt.spelllang    = 'es,cjk' -- Establecer el idioma del corrector ortografico, por defecto es en 'ingles'
 -- vim.opt.spellsuggest = 'best,9' -- Muestra las 9 mejores opciones de correccion.
 vim.opt.inccommand = 'split'
