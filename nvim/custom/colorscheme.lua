@@ -32,10 +32,9 @@ if vim.fn.has("nvim-0.8") then
    api_nvim_set(0, 'BufferOffset', { fg = colors.first_color });
    vim.cmd('highlight NvimTreeRootFolder guifg=' .. colors.fourth_color)
    vim.cmd('highlight NvimTreeFolderIcon guifg=' .. colors.folder_icon)
-   --vim.cmd('highlight NvimTreeFolderName guifg=' .. colors.folder_name_close)
    vim.cmd('highlight NvimTreeOpenedFolderName guifg=' .. colors.folder_name)
    vim.cmd('highlight NvimTreeIndentMarker guifg=' .. '#464B5E')
-   -- api_nvim_set(0, 'VertSplit', { fg = colors.second_color })
+   api_nvim_set(0, 'VertSplit', { bg = "None", fg = "#16161e" });
    -- +--------------------------------------------------------------------+
 
    -- barra de numeros
@@ -48,7 +47,7 @@ if vim.fn.has("nvim-0.8") then
    api_nvim_set(0, 'FloatBorder', { bg = "None", fg = "#488DFF" });
    api_nvim_set(0, 'WhichKeyFloat', { bg = "None", fg = "#488DFF" });
    api_nvim_set(0, 'BufferTabpageFill', { fg = "None" });
-   api_nvim_set(0, 'VertSplit', { bg = "None", fg = "#16161e" });
+   api_nvim_set(0, 'WinSeparator', { bg = "None", fg = "#16161e" });
    api_nvim_set(0, 'BqfPreviewBorder', { link = 'FloatBorder' })
 
    -- Telescope
