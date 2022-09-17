@@ -86,30 +86,30 @@ require 'nvim-tree'.setup({
    respect_buf_cwd                    = true, -- Cambiar el CWD de NvimTree al nuevo buffer al abrir NvimTree
 
    diagnostics = { -- Diagnosticos del LSP
-   enable = true, -- Habilitar el diagnostico
-   icons  = icons_custom.diagnostics -- Iconos de Diagnosticos
-},
+      enable = true, -- Habilitar el diagnostico
+      icons  = icons_custom.diagnostics -- Iconos de Diagnosticos
+   },
 
-renderer = {
-   add_trailing = true, -- Agrega '/' al final del folder
-   group_empty = false, -- Compactar Carpetas que solo tienen una carpeta, Problema al agregar o renombrar, por eso lo puse false
-   highlight_git = true, -- Habilitar el resaltado de Git.
-   highlight_opened_files = 'name', -- Resaltado del archivo si este esta abierto. 'none', 'icon', 'name', 'all'
-   root_folder_modifier = ':~',
-   indent_markers = { -- Indentado
-   enable = true, -- Habilitar el indentado
-   icons = icons_custom.indents -- Iconos para el indentado Custom
-},
-icons = { -- Iconos de carpetas, Git
-show = {
-   file = true,
-   folder = true,
-   folder_arrow = false, -- muestra un icono si el folder esta abierto, pero ocupa mas espacio
-   git = true,
-},
-glyphs = {
-   git = icons_custom.git -- Iconos de estados de Git
-}
+   renderer = {
+      add_trailing = true, -- Agrega '/' al final del folder
+      group_empty = false, -- Compactar Carpetas que solo tienen una carpeta, Problema al agregar o renombrar, por eso lo puse false
+      highlight_git = true, -- Habilitar el resaltado de Git.
+      highlight_opened_files = 'name', -- Resaltado del archivo si este esta abierto. 'none', 'icon', 'name', 'all'
+      root_folder_modifier = ':~',
+      indent_markers = { -- Indentado
+         enable = true, -- Habilitar el indentado
+         icons = icons_custom.indents -- Iconos para el indentado Custom
+      },
+      icons = { -- Iconos de carpetas, Git
+         show = {
+            file = true,
+            folder = true,
+            folder_arrow = false, -- muestra un icono si el folder esta abierto, pero ocupa mas espacio
+            git = true,
+         },
+         glyphs = {
+            git = icons_custom.git -- Iconos de estados de Git
+         }
       }
    },
 
@@ -125,35 +125,35 @@ glyphs = {
    filters = {
       dotfiles = true, -- Nom mostrar archivos ocultos, Alternar con 'H' -> toggle_dotfiles
       custom = { -- Filtra archivos o ficheros
-      '.swp', '.pyc', '.git', 'node_modules', '.cache',
-      '.watchmanconfig', '.ruby-version', 'Gemfile', '.flowconfig',
-      'buckconfig', '.bundle', '__tests__', 'style.css.map'
-   }
-},
-git = {
-   enable = true, -- Habilita el uso de git
-   ignore = false, -- Ignora los archivos dentro de '.gitignore' require git.enable = true
-   timeout = 500, -- Mata el proceso de git si tarda demasiado, default 400ms
-},
-actions = {
-   use_system_clipboard = true, -- Para usar el portapales
-   change_dir = {
-      enable = true, -- Cambiar el directorio de trabajo al bambiar de directorio
-      global = false, -- cambiar de directorio con :cd
-      restrict_above_cwd = false, -- Restringir cambiar a un directorio superior
+         '.swp', '.pyc', '.git', 'node_modules', '.cache',
+         '.watchmanconfig', '.ruby-version', 'Gemfile', '.flowconfig',
+         'buckconfig', '.bundle', '__tests__', 'style.css.map'
+      }
    },
-   open_file = {
-      quit_on_open = Open_Widht(), -- Cierra la ventana de NvimTree al seleccionar un elemento
-      resize_window = true, -- Redimencionar Ventana
-      window_picker = {
-         enable = true, -- Para abrir archivos en otro buffer diferente al de NvimTree
-         chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
-         exclude = { -- No seleccionar la lista
-         filetype = { 'notify', 'packer', 'qf', 'diff', 'fugitive', 'fugitiveblame' },
-         buftype = { 'nofile', 'terminal', 'help' },
+   git = {
+      enable = true, -- Habilita el uso de git
+      ignore = false, -- Ignora los archivos dentro de '.gitignore' require git.enable = true
+      timeout = 500, -- Mata el proceso de git si tarda demasiado, default 400ms
+   },
+   actions = {
+      use_system_clipboard = true, -- Para usar el portapales
+      change_dir = {
+         enable = true, -- Cambiar el directorio de trabajo al bambiar de directorio
+         global = false, -- cambiar de directorio con :cd
+         restrict_above_cwd = false, -- Restringir cambiar a un directorio superior
       },
-   },
-},
+      open_file = {
+         quit_on_open = Open_Widht(), -- Cierra la ventana de NvimTree al seleccionar un elemento
+         resize_window = true, -- Redimencionar Ventana
+         window_picker = {
+            enable = true, -- Para abrir archivos en otro buffer diferente al de NvimTree
+            chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890',
+            exclude = { -- No seleccionar la lista
+               filetype = { 'notify', 'packer', 'qf', 'diff', 'fugitive', 'fugitiveblame' },
+               buftype = { 'nofile', 'terminal', 'help' },
+            },
+         },
+      },
    },
    view = {
       width = TREE_WIDTH, -- Ancha de la ventana
