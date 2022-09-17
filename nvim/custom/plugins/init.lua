@@ -14,10 +14,7 @@ return {
    ['kyazdani42/nvim-web-devicons'] = {
       config = function() require('custom.plugins.set.devicons') end
    },
-   ['goolord/alpha-nvim'] = {
-      disable = false,
-      config = function () require('custom.plugins.set.alpha') end
-   },
+   ['goolord/alpha-nvim'] = { disable = false },
    ['lukas-reineke/indent-blankline.nvim'] = {
       config = function() require('custom.plugins.set.indent') end
    },
