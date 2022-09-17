@@ -41,6 +41,7 @@ if vim.fn.has("nvim-0.8") then
    -- barra de numeros
    api_nvim_set(0, 'CursorLineNR', { fg = colors.first_color })
    api_nvim_set(0, 'LineNr', { fg = '#606681' })
+   -- api_nvim_set(0, 'CursorLine', { bg = '#5D6169'})
 
    -- Floats/Windows
    api_nvim_set(0, 'NormalFloat', { bg = "None", fg = "None" });
@@ -60,6 +61,8 @@ if vim.fn.has("nvim-0.8") then
    api_nvim_set(0, 'GitSignsCurrentLineBlame', { link = 'Comment' });
    api_nvim_set(0, 'Boolean', { fg = '#F7768E' });
    api_nvim_set(0, 'Comment', { fg = colors.text_commentary })
+   vim.cmd('highlight StatusLine guibg=' .. '#494C5E')
+   vim.cmd('highlight CursorLine guibg=' .. '#36383F')
 
    -- Completado de colores cmp
    local highlights = {

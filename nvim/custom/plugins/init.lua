@@ -6,6 +6,7 @@ return {
       config = function() require('custom.plugins.set.barbar') end
    },
    ['glepnir/galaxyline.nvim'] = {
+      after = 'base46',
       config = function() require('custom.plugins.set.galaxyline') end
    },
    ['kyazdani42/nvim-tree.lua'] = {

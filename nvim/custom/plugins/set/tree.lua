@@ -12,27 +12,25 @@ function Open_Widht()
 end
 
 -- +--------------------------------------------------------------------+
-
+local iconos = require('custom.iconos')
 -- iconos personalizados
 local icons_custom = {
    diagnostics = {
-      hint    = '',
-      info    = '',
-      warning = '',
-      error   = '',
+      hint    = iconos.diagnostic.hint,
+      info    = iconos.diagnostic.info,
+      warning = iconos.diagnostic.warning,
+      error   = iconos.diagnostic.error,
    },
    git = {
-      unstaged = '',
-      staged = '',
-      unmerged = '',
+      unstaged = iconos.git.modifier,
+      staged = iconos.git.check,
+      unmerged = iconos.git.unmerged,
       renamed = '➜',
-      untracked = '',
-      deleted = '',
+      untracked = iconos.git.add,
+      deleted = iconos.git.remove,
       ignored = '◌',
    },
-   indents = {
-      corner = '╰',
-   }
+   indents = { corner = iconos.others.curve }
 }
 
 -- Atajos de teclado dentro de NvimTree

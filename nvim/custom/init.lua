@@ -5,6 +5,6 @@
 -- settings.
 require('custom.settings')
 require('custom.autocmds')
-require('custom.colorscheme')
+-- require('custom.colorscheme')
 require('custom.fix_and_formats')
 -- globals.

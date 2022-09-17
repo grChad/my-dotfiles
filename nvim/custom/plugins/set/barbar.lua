@@ -1,9 +1,10 @@
+local iconos = require('custom.iconos')
 local icons = {
-   separator      = '|',
-   separator_left = ' ',
-   close          = '',
-   gitChange      = '',
-   pinned         = '車',
+   separator      = iconos.separators.line.favorite,
+   separator_left = iconos.separators.round.left .. ' ',
+   close          = iconos.others.close,
+   gitChange      = iconos.git.modifier,
+   pinned         = iconos.others.pinned,
 }
 
 -- NOTE: Configuracion de Barbar
