@@ -56,7 +56,7 @@ local color_base46 = require('base46').get_theme_tb('base_30')
 
 local colors = {
    bg         = '#1D2024';
-   bg_2       = '#494C5E',
+   bg_2       = '#34384C',
    text_dark  = '#181818',
    text_light = '#C5C5C5',
    text_lsp   = '#F2C260',

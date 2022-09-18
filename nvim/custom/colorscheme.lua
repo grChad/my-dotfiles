@@ -30,11 +30,27 @@ if vim.fn.has("nvim-0.8") then
    -- │                  tambien el separador de ventana                   │
    -- └                                                                    ┘
    api_nvim_set(0, 'BufferOffset', { fg = colors.first_color });
-   vim.cmd('highlight NvimTreeRootFolder guifg=' .. colors.fourth_color)
+   vim.cmd('highlight NvimTreeRootFolder guifg=' .. colors.fourth_color .. ' guibg=' .. '#DDD9D6')
    vim.cmd('highlight NvimTreeFolderIcon guifg=' .. colors.folder_icon)
    vim.cmd('highlight NvimTreeOpenedFolderName guifg=' .. colors.folder_name)
    vim.cmd('highlight NvimTreeIndentMarker guifg=' .. '#464B5E')
    api_nvim_set(0, 'VertSplit', { bg = "None", fg = "#16161e" });
+   -- +--------------------------------------------------------------------+
+   -- para el plugin barbar
+   api_nvim_set(0, 'BufferCurrent', { bg = '#1D2024', fg= '#ffffff'})
+   api_nvim_set(0, 'BufferCurrentIndex', { bg = '#569CD6', fg = '#181818'})
+   api_nvim_set(0, 'BufferCurrentSign', { bg = '#34384C', fg = '#569CD6'})
+   api_nvim_set(0, 'BufferCurrentMod', { bg = '#1D2024', fg = '#E2B55A'})
+
+   api_nvim_set(0, 'BufferVisible', { bg = '#1D2024', fg = '#C5C5C5'})
+   api_nvim_set(0, 'BufferVisibleIndex', { bg = '#79dac8', fg = '#181818'})
+   api_nvim_set(0, 'BufferVisibleSign', { bg = '#34384C', fg = '#79dac8'})
+   api_nvim_set(0, 'BufferVisibleMod', { bg = '#1D2024', fg = '#E2B55A'})
+
+   api_nvim_set(0, 'BufferInactive', { bg = '#303030', fg = '#C5C5C5'})
+   api_nvim_set(0, 'BufferInactiveIndex', { bg = '#303030', fg = '#ffffff'})
+   api_nvim_set(0, 'BufferInactiveSign', { bg = '#303030'})
+   api_nvim_set(0, 'BufferVisibleMod', { bg = '#303030', fg = '#E2B55A'})
    -- +--------------------------------------------------------------------+
 
    -- barra de numeros
@@ -60,7 +76,7 @@ if vim.fn.has("nvim-0.8") then
    api_nvim_set(0, 'GitSignsCurrentLineBlame', { link = 'Comment' });
    api_nvim_set(0, 'Boolean', { fg = '#F7768E' });
    api_nvim_set(0, 'Comment', { fg = colors.text_commentary })
-   vim.cmd('highlight StatusLine guibg=' .. '#494C5E')
+   vim.cmd('highlight StatusLine guibg=' .. '#34384C')
    vim.cmd('highlight CursorLine guibg=' .. '#36383F')
 
    -- Completado de colores cmp
