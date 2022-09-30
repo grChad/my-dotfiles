@@ -1,25 +1,18 @@
+require('custom.plugins.lsp.util').mason()
+require('custom.plugins.lsp.util').icons_lsp()
+
 -- Setup installer & lsp configs
 local typescript_ok, typescript = pcall(require, 'typescript')
-local mason_ok, mason = pcall(require, 'mason')
-local mason_lsp_ok, mason_lsp = pcall(require, 'mason-lspconfig')
+local present, lspconfig = pcall(require, 'lspconfig')
 
-if not mason_ok or not mason_lsp_ok then
+if not present then
    return
 end
 
-mason.setup({ ui = { border = 'rounded' } })
-
-mason_lsp.setup({
-   ensure_installed = {
-      'html-lsp', 'css-lsp', 'emmet-ls', 'typescript-language-server', 'eslint-lsp',
-      'stylelint-lsp', 'json-lsp', 'lua-language-server', 'tailwindcss-language-server',
-      'pyright', 'svelte-language-server', 'rust-analyzer', 'marksman', 'yaml-language-server',
-      'clangd',
-      'chrome-debug-adapter', 'node-debug2-adapter'
-   },
-   automatic_installation = true,
-})
-
+local on_attach = require('custom.plugins.lsp.util').on_attach
+-- local capabilities = require('custom.plugins.lsp.util').capabilities
+local capabilities = require('plugins.configs.lspconfig').capabilities
+local handlers = require('custom.plugins.lsp.util').handlers
 
 -- Atajo para los diagnosticos
 local map = vim.keymap.set
@@ -29,27 +22,6 @@ map('n', ']d', "<cmd>lua vim.diagnostic.goto_next({ float = { border = 'rounded'
 map('n', '[d', "<cmd>lua vim.diagnostic.goto_prev({ float = { border = 'rounded', max_width = 100 }})<CR>", opts)
 -- map('n', '<space>q', vim.diagnostic.setloclist, opts)
 
-local function on_attach(client, bufnr)
-   if vim.g.vim_version > 7 then
-      -- nightly
-      client.server_capabilities.documentFormattingProvider = true
-      client.server_capabilities.documentRangeFormattingProvider = true
-   else
-      -- stable
-      client.resolved_capabilities.document_formatting = true
-      client.resolved_capabilities.document_range_formatting = true
-   end
-end
-
-local capabilities = require("plugins.configs.lspconfig").capabilities
-
-local handlers = {
-   ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' }),
-   ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' }),
-   ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = true }),
-}
-
-local lspconfig = require('lspconfig')
 -- Config lsp servers
 if typescript_ok then
    typescript.setup({
@@ -82,6 +54,7 @@ lspconfig.eslint.setup {
 }
 
 lspconfig.sumneko_lua.setup {
+   root_dir = lspconfig.util.root_pattern('.luarc.json', '.luacheckrc', '.stylua.toml', 'stylua.toml', 'selene.toml', '.git'),
    handlers = handlers,
    on_attach = on_attach,
    settings = require('custom.plugins.lsp.servers.sumneko_lua').settings,

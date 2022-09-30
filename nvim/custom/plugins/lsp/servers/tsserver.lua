@@ -42,6 +42,22 @@ if cmp_nvim_lsp_ok then
 end
 
 local on_attach = function(client, bufnr)
+  if client.server_capabilities.documentHighlightProvider then
+    vim.api.nvim_create_augroup('lsp_document_highlight', { clear = true })
+    vim.api.nvim_clear_autocmds({ buffer = bufnr, group = 'lsp_document_highlight' })
+    vim.api.nvim_create_autocmd('CursorHold', {
+      callback = vim.lsp.buf.document_highlight,
+      buffer = bufnr,
+      group = 'lsp_document_highlight',
+      desc = 'Document Highlight',
+    })
+    vim.api.nvim_create_autocmd('CursorMoved', {
+      callback = vim.lsp.buf.clear_references,
+      buffer = bufnr,
+      group = 'lsp_document_highlight',
+      desc = 'Clear All the References',
+    })
+  end
   -- Modifying a server's capabilities is not recommended and is no longer
   -- necessary thanks to the `vim.lsp.buf.format` API introduced in Neovim
   -- 0.8. Users with Neovim 0.7 needs to uncomment below lines to make tsserver formatting work (or keep using eslint).

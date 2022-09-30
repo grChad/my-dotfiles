@@ -74,7 +74,7 @@ Para **Lua**, las mayusculas y minusculas son palabras diferences, con lo que **
 ```lua
 local _VARIABLE = 'Soy un hack' -- Nooooo!!
 ```
-Ya que **`_MAYUSCULAS`**, tambian estan reservadas para variables globales internar de **Lua**.
+Ya que **`MAYUSCULAS`**, tambian estan reservadas para variables globales internar de **Lua**.
 
 Ahora veamos los simbolos o caracteres que usaremos:
 <p align="center"><img src="../assets/lua/image-characters.png"></p>
@@ -97,7 +97,7 @@ print(nombre .. ' Tiene ' .. edad .. ' años de edad')
 <p align="center"><img src="../assets/lua/image-variables-01.png"></p>
 
 * las variables mal definidas o _undedined_ tendran como valor **nil**, un equivalente a **null**.
-* las variables tendran un ambito **global** siempre que no se declare explicitamente como **local**. Asi pudes usar **`_G.`** como prefijo o **no usarlo!!!**
+* las variables tendran un ambito **global** siempre que no se declare explicitamente como **local**. Asi pudes usar **`G.`** como prefijo o **no usarlo!!!**
 * Una valiable **global** se declara con mayuscula <code>**Bien_definida**</code>, no es obligatorio pero si tienes linter este se quejara. <code></code>
 
 ## Tipos de datos
