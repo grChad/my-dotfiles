@@ -7,7 +7,7 @@ M.settings = {
          ["../path/relative/to/file.yml"] = "/.github/workflows/*",
          ["/path/from/root/of/project"] = "/.github/workflows/*",
       },
-   }
+   },
 }
 
 return M
