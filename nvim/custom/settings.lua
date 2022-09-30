@@ -25,5 +25,3 @@ map("n", "<C-p>", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", silent)
 map("v", "<C-p>", "<cmd>'<.'>lua vim.lsp.buf.range_formatting()<CR>", silent)
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", silent)
 map("n", "L", "<cmd>lua vim.lsp.buf.signature_help()<CR>", silent)
-
-map("n", "<leader>p", ":silent !npx prettier --write %<CR>")
