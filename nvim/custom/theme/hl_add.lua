@@ -45,28 +45,31 @@ return {
    -- Others
 
    -- ------------------------ for Treesitter ------------------------------------------------
-   ["@text"] = { fg = cp.text }, -- For strings considerated text in a markup language.
-   ["@variable"] = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
-   ["@variable.builtin"] = { fg = cp.lavender }, -- Variable names that are defined by the languages, like this or self.
-   ["@keyword"] = { fg = cp.pink_1 }, -- For keywords that don't fall in previous categories.
-   ["@function"] = { fg = cp.blue_1, italic = true, bold = true }, -- For function (calls and definitions).
+   TSText = { fg = cp.text }, -- For strings considerated text in a markup language.
+   TSVariable = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
+   TSVariableBuiltin = { fg = cp.lavender }, -- Variable names that are defined by the languages, like this or self.
+   TSKeyword = { fg = cp.pink_1 }, -- For keywords that don't fall in previous categories.
+   TSFunction = { fg = cp.blue_1, italic = true, bold = true }, -- For function (calls and definitions).
+   TSURI = { fg = cp.blue_3, underline = true },
 
    -- Markdown
-   ["@text.reference"] = { fg = cp.red_2 }, -- references
-   ["@text.emphasis"] = { fg = cp.peach, italic = true }, -- bold
-   ["@text.strong"] = { fg = cp.peach, bold = true }, -- italic
-   ["@text.literal"] = { fg = cp.whiteSmoke }, -- used for inline code in markdown and for doc in python (""")
-   ["@punctuation.special.markdown"] = { fg = cp.teal, bold = true },
-   ["@none.markdown"] = { fg = cp.whitesmoke },
-   ["@text.uri.markdown"] = { fg = cp.blue_1, underline = true },
+   TSTextReference = { fg = cp.blue_2 },
+   TSEmphasis = { fg = cp.peach, italic = true }, -- bold
+   TSStrong = { fg = cp.peach, bold = true },
+   TSLiteral = { fg = cp.whiteSmoke },
+   TSPunctSpecial = { fg = cp.teal, bold = true },
+   TSNone = { fg = cp.whitesmoke },
+   TSInclude = { fg = cp.teal },
+   ["@conceal"] = { fg = cp.red, bold = true },
+   ["@spell"] = { fg = cp.whitesmoke },
 
    -- for html
-   ["@tag.html"] = { fg = cp.red },
+   TSTag = { fg = cp.red },
    ["@tag.delimiter.html"] = { fg = cp.red_1 }, -- Tag delimiter like < > /
    ["@tag.attribute.html"] = { fg = cp.flamingo }, -- atributo de las etiquetas.
    ["@text.title.html"] = { fg = cp.blue_2, bold = true }, -- titles for h1, h2, ... #1, #2...
    ["@text.literal.html"] = { fg = cp.whiteSmoke }, -- used for inline code in markdown and for doc in python (""")
-   ["@text.uri"] = { fg = cp.blue_3, underline = true }, -- urls, links and emails
+   ["@text.uri.html"] = { fg = cp.blue_3, underline = true }, -- urls, links and emails
    ["@constant.html"] = { fg = cp.blue },
 
    -- for Lua
@@ -75,7 +78,7 @@ return {
    ["@keyword.lua"] = { fg = cp.pink_1 }, -- For keywords that don't fall in previous categories.
 
    -- for C++
-   ["@variable.cpp"] = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
+   -- ["@variable.cpp"] = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
    ["@function.cpp"] = { fg = cp.blue_1, italic = true, bold = true }, -- For function (calls and definitions).
    ["@keyword.cpp"] = { fg = cp.pink_1 }, -- For keywords that don't fall in previous categories.
    ["@repeat.cpp"] = { fg = cp.red }, -- For keywords related to loops.
@@ -100,7 +103,7 @@ return {
    ["@error.json"] = {},
 
    -- for python
-   ["@variable.python"] = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
+   -- ["@variable.python"] = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
    ["@function.builtin.python"] = { fg = cp.orange_1 }, -- For builtin functions: table.insert in Lua.
    ["@function.call.python"] = { fg = cp.peach },
 }
