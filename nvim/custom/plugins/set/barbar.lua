@@ -1,12 +1,12 @@
 -- NOTE: Configuracion de Barbar
-local icon = require('custom.iconos')
+local icon = require("custom.iconos")
 
 local icons = {
-  border_left = icon.separators.round.left,
-  separator = icon.separators.line.favorite,
-  closed = icon.others.close,
-  icon_change = icon.git.modifier,
-  icon_pinned = icon.others.pinned,
+   border_left = icon.separators.round.left,
+   separator = icon.separators.line.favorite,
+   closed = icon.others.close,
+   icon_change = icon.git.modifier,
+   icon_pinned = icon.others.pinned,
 }
 
 vim.g.bufferline = {
@@ -15,8 +15,8 @@ vim.g.bufferline = {
    tabpages = true, -- Indicador de pestanas Totales
    closable = true, -- Boton de cerrar y estado
    clickable = true, -- Clickear las pestanias
-   exclude_ft = { 'qf' }, -- Excluir algun fileType
-   icons = 'both', -- para 'both', muestra el indice del buffer y el icono del fileType
+   exclude_ft = { "qf" }, -- Excluir algun fileType
+   icons = "both", -- para 'both', muestra el indice del buffer y el icono del fileType
    icon_custom_colors = false, -- en false, toma por default de 'web-devicons'
    icon_separator_active = icons.border_left, -- Icono de separacion activo
    icon_separator_inactive = icons.separator, -- Icono de separacion Inactivo
@@ -30,5 +30,5 @@ vim.g.bufferline = {
    no_name_title = nil, -- Para nombrar a los buffer sin nombre, default => [Buffer X]
 
    -- Las nuevas letras de los buffers se asignaran en este orden, genial para teclados qwerty
-   letters = 'asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP',
+   letters = "asdfjkl;ghnmxcvbziowerutyqpASDFJKLGHNMXCVBZIOWERUTYQP",
 }
