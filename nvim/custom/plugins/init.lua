@@ -4,6 +4,11 @@ return {
          return
       end,
    },
+   ["nvim-treesitter/nvim-treesitter"] = {
+      config = function()
+         require("custom.plugins.set.treesitter")
+      end,
+   },
    ["romgrk/barbar.nvim"] = {
       config = function()
          require("custom.plugins.set.barbar")
