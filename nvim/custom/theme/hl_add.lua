@@ -1,4 +1,4 @@
-local cp = require("custom.theme.colors")
+local cp = require("custom.utils.colors")
 
 return {
    -- for NvimTree

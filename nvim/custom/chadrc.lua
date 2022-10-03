@@ -1,9 +1,4 @@
--- Just an example, supposed to be placed in /lua/custom/
-
 local M = {}
-
--- make sure you maintain the structure of `core/default_config.lua` here,
--- example of changing theme:
 
 M.ui = {
    theme = "doomchad",
@@ -11,17 +6,11 @@ M.ui = {
    hl_add = require("custom.theme.hl_add"),
 }
 
-local pluginConfs = require("custom.plugins.override")
+-- configuración de plugins: remove, overrides and new plugins
+M.plugins = require("custom.plugins")
+M.plugins.remove = { "nvim-treesitter/nvim-treesitter" } -- provicional
 
-M.plugins = {
-   remove = { "nvim-treesitter/nvim-treesitter" },
-   user = require("custom.plugins"),
-   override = {
-      ["hrsh7th/nvim-cmp"] = pluginConfs.cmp_change,
-      ["lewis6991/gitsigns.nvim"] = pluginConfs.git_signs,
-   },
-}
-
+-- configuración de atajos de teclado
 M.mappings = require("custom.mappings")
 
 return M

@@ -1,9 +1,11 @@
-local icons = require("custom.iconos")
+local User = require("custom.config")
+
 local U = {}
 
 function U.mason()
    local mason_ok, mason = pcall(require, "mason")
    local mason_lsp_ok, mason_lsp = pcall(require, "mason-lspconfig")
+
    if not mason_ok or not mason_lsp_ok then
       return
    end
@@ -37,10 +39,10 @@ end
 
 function U.icons_lsp()
    local signs = {
-      Error = icons.diagnostic.error,
-      Warn = icons.diagnostic.warning,
-      Info = icons.diagnostic.info,
-      Hint = icons.diagnostic.hint,
+      Error = User.icons.diagnostic.error,
+      Warn = User.icons.diagnostic.warning,
+      Info = User.icons.diagnostic.info,
+      Hint = User.icons.diagnostic.hint,
    }
 
    for type, icon in pairs(signs) do
@@ -80,7 +82,6 @@ U.on_attach = function(client, bufnr)
 end
 
 U.capabilities = vim.lsp.protocol.make_client_capabilities()
-
 U.capabilities.textDocument.completion.completionItem = {
    documentationFormat = { "markdown", "plaintext" },
    snippetSupport = true,
@@ -98,6 +99,7 @@ U.capabilities.textDocument.completion.completionItem = {
       },
    },
 }
+
 U.handlers = {
    ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
    ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),

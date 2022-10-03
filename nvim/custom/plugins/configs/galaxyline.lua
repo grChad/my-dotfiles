@@ -1,8 +1,3 @@
--- author: glepnr https://github.com/glepnir
--- date: 2022-07-02
--- License: MIT
-local iconos = require("custom.iconos")
-
 local status_ok, galaxyline = pcall(require, "galaxyline")
 if not status_ok then
    return
@@ -12,10 +7,7 @@ local condition = require("galaxyline.condition")
 local fileinfo = require("galaxyline.provider_fileinfo")
 local gls = galaxyline.section
 galaxyline.short_line_list = { "NvimTree", "vista", "dbui", "packer" }
-
-local leftBracket = iconos.separators.round.left -- Curve.
-local rightBracket = iconos.separators.round.right -- Curve.
-local iconSeparator = iconos.separators.line.favorite
+-- +--------------------------------------------------------------------+
 
 local function highlight(group, fg, bg, gui)
    local cmd = string.format("highlight %s guifg=%s guibg=%s", group, fg, bg)
@@ -51,9 +43,15 @@ local get_lsp_client = function(msg)
       return lsps
    end
 end
+-- +--------------------------------------------------------------------+
+
+local User = require("custom.config")
+
+local leftBracket = User.icons.separators.round.left -- Curve.
+local rightBracket = User.icons.separators.round.right -- Curve.
+local iconSeparator = User.icons.separators.line.favorite
 
 local color_base46 = require("base46").get_theme_tb("base_30")
-local color_custom = require("custom.theme.colors")
 
 local colors = {
    bg = "#1D2024",
@@ -64,9 +62,9 @@ local colors = {
    text_blue = "#51afef",
 
    giticon = "#EF7028",
-   gitAdd = color_custom.green,
-   gitDelete = color_custom.red,
-   gitChange = color_custom.yellow,
+   gitAdd = User.colors.green,
+   gitDelete = User.colors.red,
+   gitChange = User.colors.yellow,
 
    -- lspDiagError = '#F56E6E',
    -- lspDiagWarn  = '#E2B55A',
@@ -216,7 +214,7 @@ table.insert(gls.left, {
 table.insert(gls.left, {
    DiagnosticError = {
       highlight = { colors.lspDiagError, colors.bg },
-      icon = iconos.diagnostic.error .. " ",
+      icon = User.icons.diagnostic.error .. " ",
       provider = "DiagnosticError",
    },
 })
@@ -224,7 +222,7 @@ table.insert(gls.left, {
 table.insert(gls.left, {
    DiagnosticWarn = {
       highlight = { colors.lspDiagWarn, colors.bg },
-      icon = iconos.diagnostic.warning .. " ",
+      icon = User.icons.diagnostic.warning .. " ",
       provider = "DiagnosticWarn",
    },
 })
@@ -232,7 +230,7 @@ table.insert(gls.left, {
 table.insert(gls.left, {
    DiagnosticHint = {
       highlight = { colors.lspDiagHint, colors.bg },
-      icon = iconos.diagnostic.hint .. " ",
+      icon = User.icons.diagnostic.hint .. " ",
       provider = "DiagnosticHint",
    },
 })
@@ -240,7 +238,7 @@ table.insert(gls.left, {
 table.insert(gls.left, {
    DiagnosticInfo = {
       highlight = { colors.lspDiagInfo, colors.bg },
-      icon = iconos.diagnostic.info .. " ",
+      icon = User.icons.diagnostic.info .. " ",
       provider = "DiagnosticInfo",
    },
 })
@@ -306,7 +304,7 @@ table.insert(gls.right, {
 
 table.insert(gls.right, {
    DiffAdd = {
-      icon = iconos.git.add .. " ",
+      icon = User.icons.git.add .. " ",
       provider = "DiffAdd",
       highlight = { colors.gitAdd, colors.bg },
    },
@@ -314,7 +312,7 @@ table.insert(gls.right, {
 
 table.insert(gls.right, {
    DiffModified = {
-      icon = iconos.git.modifier .. " ",
+      icon = User.icons.git.modifier .. " ",
       provider = "DiffModified",
       highlight = { colors.gitChange, colors.bg },
    },
@@ -322,7 +320,7 @@ table.insert(gls.right, {
 
 table.insert(gls.right, {
    DiffRemove = {
-      icon = iconos.git.remove .. " ",
+      icon = User.icons.git.remove .. " ",
       provider = "DiffRemove",
       highlight = { colors.gitDelete, colors.bg },
    },
@@ -332,7 +330,7 @@ table.insert(gls.right, {
 table.insert(gls.right, {
    GitIcon = {
       provider = function()
-         return iconos.git.branch .. " "
+         return User.icons.git.branch .. " "
       end,
       condition = condition.check_git_workspace,
       highlight = { colors.giticon, colors.bg, "bold" },

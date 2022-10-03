@@ -12,12 +12,12 @@ return {
    },
    ["nvim-treesitter/nvim-treesitter"] = { -- reemplazar configuracion
       config = function()
-         require("custom.plugins.set.treesitter")
+         require("custom.plugins.configs.treesitter")
       end,
    },
    ["romgrk/barbar.nvim"] = {
       config = function()
-         require("custom.plugins.set.barbar")
+         require("custom.plugins.configs.barbar")
       end,
    },
    ["GabrielRIP/bufferSplitSimple"] = {
@@ -28,23 +28,23 @@ return {
    ["glepnir/galaxyline.nvim"] = {
       after = "base46",
       config = function()
-         require("custom.plugins.set.galaxyline")
+         require("custom.plugins.configs.galaxyline")
       end,
    },
    ["kyazdani42/nvim-tree.lua"] = {
       config = function()
-         require("custom.plugins.set.tree")
+         require("custom.plugins.configs.tree")
       end,
    },
    ["kyazdani42/nvim-web-devicons"] = {
       config = function()
-         require("custom.plugins.set.devicons")
+         require("custom.plugins.configs.devicons")
       end,
    },
    ["goolord/alpha-nvim"] = { disable = false },
    ["lukas-reineke/indent-blankline.nvim"] = {
       config = function()
-         require("custom.plugins.set.indent")
+         require("custom.plugins.configs.indent")
       end,
    },
    ["m-demare/hlargs.nvim"] = {
@@ -52,15 +52,15 @@ return {
          require("hlargs").setup()
       end,
    },
-   -- ["windwp/nvim-ts-autotag"] = {
-   --    config = function()
-   --       require("nvim-ts-autotag").setup()
-   --    end,
-   -- },
+   ["windwp/nvim-ts-autotag"] = {
+      config = function()
+         require("nvim-ts-autotag").setup()
+      end,
+   },
    ["ggandor/lightspeed.nvim"] = { event = "BufRead" },
    ["NvChad/nvim-colorizer.lua"] = {
       config = function()
-         require("custom.plugins.set.colorizer")
+         require("custom.plugins.configs.colorizer")
       end,
    },
    ["KabbAmine/vCoolor.vim"] = {},

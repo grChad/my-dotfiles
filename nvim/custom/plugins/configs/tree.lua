@@ -4,7 +4,8 @@ if not nvim_tree_ok then
    return
 end
 
-local User = require("custom.configs")
+local User = require("custom.config")
+-- +--------------------------------------------------------------------+
 
 function Open_Widht()
    local winwidth = vim.go.columns
@@ -15,7 +16,6 @@ function Open_Widht()
    end
 end
 
--- +--------------------------------------------------------------------+
 -- iconos personalizados
 local icons_custom = {
    diagnostics = {

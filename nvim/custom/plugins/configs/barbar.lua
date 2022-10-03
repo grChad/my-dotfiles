@@ -1,12 +1,12 @@
 -- NOTE: Configuracion de Barbar
-local icon = require("custom.iconos")
+local User = require("custom.config")
 
 local icons = {
-   border_left = icon.separators.round.left,
-   separator = icon.separators.line.favorite,
-   closed = icon.others.close,
-   icon_change = icon.git.modifier,
-   icon_pinned = icon.others.pinned,
+   border_left = User.icons.separators.round.left,
+   separator = User.icons.separators.line.favorite,
+   closed = User.icons.others.close,
+   icon_change = User.icons.git.modifier,
+   icon_pinned = User.icons.others.pinned,
 }
 
 vim.g.bufferline = {
