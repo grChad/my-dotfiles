@@ -4,7 +4,13 @@ return {
          return
       end,
    },
-   ["nvim-treesitter/nvim-treesitter"] = {
+   ["hrsh7th/nvim-cmp"] = { -- override
+      override_options = require("custom.plugins.override").cmp_change,
+   },
+   ["lewis6991/gitsigns.nvim"] = { -- override
+      override_options = require("custom.plugins.override").git_signs,
+   },
+   ["nvim-treesitter/nvim-treesitter"] = { -- reemplazar configuracion
       config = function()
          require("custom.plugins.set.treesitter")
       end,
