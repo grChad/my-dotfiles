@@ -41,7 +41,9 @@ return {
          require("custom.plugins.configs.devicons")
       end,
    },
-   ["goolord/alpha-nvim"] = { disable = false },
+   ["goolord/alpha-nvim"] = {
+      disable = false,
+   },
    ["lukas-reineke/indent-blankline.nvim"] = {
       config = function()
          require("custom.plugins.configs.indent")
@@ -49,7 +51,10 @@ return {
    },
    ["m-demare/hlargs.nvim"] = {
       config = function()
-         require("hlargs").setup()
+         require("hlargs").setup({
+            color = "#EF9F76",
+            highlight = { fg = "#EF9F76", italic = true, bold = true },
+         })
       end,
    },
    ["windwp/nvim-ts-autotag"] = {
@@ -76,7 +81,7 @@ return {
    },
    ["neovim/nvim-lspconfig"] = {
       config = function()
-         require("plugins.configs.lspconfig")
+         -- require("plugins.configs.lspconfig")
          require("custom.plugins.lsp")
       end,
    },
@@ -89,7 +94,7 @@ return {
       config = function()
          vim.g.mkdp_auto_start = 1
          vim.g.mkdp_auto_close = 0
-         vim.keymap.set("n", "<leader>m", ":MarkdownPreview<CR>")
+         vim.keymap.set("n", "<leader>m", ":MarkdownPreviewToggle<CR>")
       end,
    },
    ["gaoDean/autolist.nvim"] = {

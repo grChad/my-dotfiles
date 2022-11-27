@@ -1,6 +1,9 @@
 require("custom.plugins.lsp.util").mason()
 require("custom.plugins.lsp.util").icons_lsp()
 
+-- theme
+require("base46").load_highlight("lsp")
+
 -- Setup installer & lsp configs
 local typescript_ok, typescript = pcall(require, "typescript")
 local present, lspconfig = pcall(require, "lspconfig")
@@ -10,8 +13,7 @@ if not present then
 end
 
 local on_attach = require("custom.plugins.lsp.util").on_attach
--- local capabilities = require('custom.plugins.lsp.util').capabilities
-local capabilities = require("plugins.configs.lspconfig").capabilities
+local capabilities = require("custom.plugins.lsp.util").capabilities
 local handlers = require("custom.plugins.lsp.util").handlers
 
 -- Atajo para los diagnosticos
@@ -67,47 +69,36 @@ lspconfig.sumneko_lua.setup({
    settings = require("custom.plugins.lsp.servers.sumneko_lua").settings,
 })
 
-lspconfig.rust_analyzer.setup({
-   handlers = handlers,
-   on_attach = on_attach,
-   capabilities = capabilities,
-   settings = require("custom.plugins.lsp.servers.rust_analyzer").settings,
-})
+for _, lsp in ipairs({  "emmet_ls" }) do
+   lspconfig[lsp].setup({
+      capabilities = capabilities,
+      handlers = handlers,
+   })
+end
 
-lspconfig.pyright.setup({
-   handlers = handlers,
-   on_attach = on_attach,
-   capabilities = capabilities,
-   settings = require("custom.plugins.lsp.servers.pyright").settings,
-})
-
-lspconfig.stylelint_lsp.setup({
-   filetypes = { "css", "less", "scss", "sugarss", "vue", "wxss" },
-   capabilities = capabilities,
-   handlers = handlers,
-   on_attach = on_attach,
-   settings = require("custom.plugins.lsp.servers.stylelint").settings,
-})
-
-lspconfig.emmet_ls.setup({
-   filetypes = { "html", "css", "sass", "scss", "less" },
-   capabilities = capabilities,
-   handlers = handlers,
-})
-
-lspconfig.yamlls.setup({
-   on_attach = on_attach,
-   capabilities = capabilities,
-   handlers = handlers,
-   settings = require("custom.plugins.lsp.servers.yaml"),
-})
-
-local servers = { "html", "cssls", "svelte", "jsonls", "marksman", "clangd" }
+local servers = {
+   "html",
+   "cssls",
+   "svelte",
+   "jsonls",
+   "marksman",
+   "clangd",
+   "pyright",
+   "yamlls",
+   "rust_analyzer",
+   "stylelint_lsp",
+}
 
 for _, lsp in ipairs(servers) do
    lspconfig[lsp].setup({
       on_attach = on_attach,
       capabilities = capabilities,
       handlers = handlers,
+      settings = {
+         python = require("custom.plugins.lsp.servers.pyright").settings.python,
+         yaml = require("custom.plugins.lsp.servers.yaml").settings.yaml,
+         Rust = require("custom.plugins.lsp.servers.rust_analyzer").settings.Rust,
+         stylelintplus = require("custom.plugins.lsp.servers.stylelint").settings.stylelintplus,
+      },
    })
 end
