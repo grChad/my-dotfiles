@@ -22,13 +22,12 @@ treesitter.setup({
       "c",
       "svelte",
       "comment",
+      "python",
    },
-
    highlight = {
       enable = true,
       use_languagetree = true,
    },
-
    indent = {
       enable = true,
    },
