@@ -14,24 +14,25 @@ function U.mason()
 
    mason_lsp.setup({
       ensure_installed = {
-         "html-lsp",
-         "css-lsp",
-         "emmet-ls",
-         "typescript-language-server",
-         "eslint-lsp",
-         "stylelint-lsp",
-         "json-lsp",
-         "lua-language-server",
-         "tailwindcss-language-server",
+         "html",
+         "cssls",
+         "emmet_ls",
+         "tsserver",
+         "eslint",
+         "stylelint_lsp",
+         "jsonls",
+         "sumneko_lua",
+         "tailwindcss",
          "pyright",
-         "svelte-language-server",
-         "rust-analyzer",
+         "svelte",
+         "rust_analyzer",
          "marksman",
-         "yaml-language-server",
+         "yamlls",
          "clangd",
 
          -- debug
-         -- 'chrome-debug-adapter', 'node-debug2-adapter'
+         -- "chrome-debug-adapter",
+         -- "node-debug2-adapter",
       },
       automatic_installation = true,
    })
@@ -81,6 +82,7 @@ U.on_attach = function(client, bufnr)
    client.server_capabilities.documentRangeFormattingProvider = true
 end
 
+U.capabilities = require("cmp_nvim_lsp").default_capabilities()
 U.capabilities = vim.lsp.protocol.make_client_capabilities()
 U.capabilities.textDocument.completion.completionItem = {
    documentationFormat = { "markdown", "plaintext" },
