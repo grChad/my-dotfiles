@@ -45,19 +45,25 @@ return {
    -- Others
 
    -- ------------------------ for Treesitter ------------------------------------------------
-   TSText = { fg = cp.text }, -- For strings considerated text in a markup language.
-   TSVariable = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
-   TSVariableBuiltin = { fg = cp.lavender }, -- Variable names that are defined by the languages, like this or self.
-   TSKeyword = { fg = cp.pink_1 }, -- For keywords that don't fall in previous categories.
-   TSFunction = { fg = cp.blue_1, italic = true, bold = true }, -- For function (calls and definitions).
-   TSURI = { fg = cp.blue_3, underline = true },
+   ["@text"] = { fg = cp.text }, -- For strings considerated text in a markup language.
+   ["@text.uri"] = { fg = cp.blue_3, underline = true }, -- urls, links and emails
+   ["@string.regex"] = { fg = cp.teal_2 },
+
+   ["@variable"] = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
+   ["@variable.builtin"] = { fg = cp.lavender }, -- Variable names that are defined by the languages, like this or self.
+   ["@keyword"] = { fg = cp.pink_1 }, -- For keywords that don't fall in previous categories.
+   ["@keyword.function"] = { fg = cp.red_2 },
+   ["@function"] = { fg = cp.blue_1, italic = true, bold = true }, -- For function (calls and definitions).
+
+   ["@constant.builtin"] = { fg = cp.blue },
+   ["@property"] = { fg = cp.teal },
 
    -- Markdown
-   TSTextReference = { fg = cp.blue_2 },
-   TSEmphasis = { fg = cp.peach, italic = true }, -- bold
-   TSStrong = { fg = cp.peach, bold = true },
-   TSLiteral = { fg = cp.whiteSmoke },
-   TSPunctSpecial = { fg = cp.teal, bold = true },
+   ["@text.reference"] = { fg = cp.blue_2 },
+   ["@text.emphasis"] = { fg = cp.peach, italic = true }, -- italic
+   ["@text.strong"] = { fg = cp.peach, bold = true }, -- bold
+   ["@text.literal"] = { fg = cp.whiteSmoke },
+   ["@punctuation.special"] = { fg = cp.teal, bold = true },
    TSNone = { fg = cp.whitesmoke },
    TSInclude = { fg = cp.teal },
    ["@conceal"] = { fg = cp.red, bold = true },
@@ -65,35 +71,32 @@ return {
 
    -- for html
    TSTag = { fg = cp.red },
+   ["@tag"] = { fg = cp.red },
    ["@tag.delimiter.html"] = { fg = cp.red_1 }, -- Tag delimiter like < > /
    ["@tag.attribute.html"] = { fg = cp.flamingo }, -- atributo de las etiquetas.
    ["@text.title.html"] = { fg = cp.blue_2, bold = true }, -- titles for h1, h2, ... #1, #2...
    ["@text.literal.html"] = { fg = cp.whiteSmoke }, -- used for inline code in markdown and for doc in python (""")
-   ["@text.uri.html"] = { fg = cp.blue_3, underline = true }, -- urls, links and emails
    ["@constant.html"] = { fg = cp.blue },
 
    -- for Lua
-   ["@TSFieldkey"] = { fg = cp.teal },
+   ["@field"] = { fg = cp.red },
+   ["@field.key"] = { fg = cp.teal },
    ["@variable.lua"] = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
-   ["@keyword.lua"] = { fg = cp.pink_1 }, -- For keywords that don't fall in previous categories.
 
    -- for C++
    -- ["@variable.cpp"] = { fg = cp.whiteSmoke }, -- Any variable name that does not have another highlighcp.
    ["@function.cpp"] = { fg = cp.blue_1, italic = true, bold = true }, -- For function (calls and definitions).
-   ["@keyword.cpp"] = { fg = cp.pink_1 }, -- For keywords that don't fall in previous categories.
    ["@repeat.cpp"] = { fg = cp.red }, -- For keywords related to loops.
 
    -- for css and Scss
    ["@type.css"] = { fg = cp.red_1 },
-   ["@property.css"] = { fg = cp.teal },
    ["@function.css"] = { underline = false },
    ["@type.scss"] = { fg = cp.red_1 },
-   ["@property.scss"] = { fg = cp.teal },
    ["@string.scss"] = { fg = cp.text },
    ["@function.scss"] = { underline = false },
 
    -- for yaml
-   ["@field.yaml"] = { fg = cp.blue }, -- For fields.
+   ["@field.yaml"] = { fg = cp.red_2 }, -- For fields.
 
    -- for json
    ["@label.json"] = { fg = cp.blue_1 }, -- For labels: label: in C and :label: in Lua.

@@ -2,9 +2,10 @@ local cp = require("custom.utils.colors")
 
 return {
    -- for Editor
-   Comment = { fg = cp.blue },
+   Comment = { fg = cp.overlay1 },
    LineNr = { fg = cp.overlay1 },
-   CursorLine = { bg = "None" },
+   CursorLine = { bg = "NONE" },
+   -- CursorLine = { bg = cp.surface0 },
    SignColumn = { fg = cp.surface1 }, -- column where |signs| are displayed
    SignColumnSB = { bg = cp.crust, fg = cp.surface1 }, -- column where |signs| are displayed
    StatusLine = { fg = cp.text, bg = cp.mantle }, -- status line of current window
@@ -69,4 +70,8 @@ return {
    ["@text.literal"] = { fg = cp.whiteSmoke }, -- used for inline code in markdown and for doc in python (""")
    ["@punctuation.special"] = { fg = cp.teal, bold = true },
    ["@none"] = { fg = cp.whitesmoke },
+
+   LspReferenceText = { fg = "NONE", bg = cp.surface1 }, -- used for highlighting "text" references
+   LspReferenceRead = { fg = "NONE", bg = cp.surface1, bold = true }, -- used for highlighting "read" references
+   LspReferenceWrite = { fg = "NONE", bg = cp.surface1 }, -- used for highlighting "write" references
 }
