@@ -55,6 +55,9 @@ M.special = {
       -- Numero de coincidencias seleccionadas
       ["n"] = { "nzz" .. Cmd("lua require('custom.utils.functions').hl_search(0.1)") },
       ["N"] = { "Nzz" .. Cmd("lua require('custom.utils.functions').hl_search(0.1)") },
+
+      -- Toggle para booleanos: true|false, on|off, yes|no
+      ["<leader>b"] = { Cmd("lua require('custom.utils.functions').toggle_bool()") },
    },
 }
 
