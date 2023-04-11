@@ -1,33 +1,33 @@
 <h1 align="center">
-    <img style="width: 25px" src="./assets/settings.png">
-    My Dotfiles
-    <img style="height: 30px" src="./assets/linux-complete.png">
+  <img style="width: 25px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/settings.png">
+  My Dotfiles
+  <img style="height: 30px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/linux-logo.png">
 </h1>
 
-> Mis configuraciones para un entorno **Linux** que no de pena.
+> Mi configuracion para un entorno **Linux** que no de pena.
 
 ## Requisitos:
 
-**Git** <img style="width:15px" src="./assets/git-icon.png">: Viene por defecto en _fedora_ y en otras hay que instalarlas desde el [sitio oficial](https://git-scm.com/)
+**Git** <img style="width:15px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/git.png">: Viene por defecto en _fedora_ y en otras hay que instalarlas desde el [sitio oficial](https://git-scm.com/)
 
-**NodeJs** <img style="height:15px" src="./assets/nodejs-icon.png">: Siga esta [guia](./other-settings/node.md) recomendada.
+**NodeJs** <img style="height:15px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/nodejs-icon.png">: Siga esta [guia](./other-settings/node.md) recomendada.
 
 **Kitty**<img style="height:17px" src="./assets/kitty.svg">: Emulador de terminal que usa la GPU del sistema:
 
-- <code>**sudo { apt, dnf } install kitty**</code>, para mas detalles [sitio oficial](https://sw.kovidgoyal.net/kitty/).
+- `sudo { apt, dnf } install kitty`, para mas detalles [sitio oficial](https://sw.kovidgoyal.net/kitty/).
 - mi configuración para ciegos esta [aquí](./kitty)
 
-**ZSH** <img style="height:12px" src="./assets/shell-icon.png">:
+**ZSH** <img style="height:12px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/zsh.png">:
 Shell para GNU/LINUX, para mas detalles visite [Z _shell_](https://zsh.sourceforge.io/).
 
-- La instalación y mis configuraciones para **.zshrc** y **.zimrc** estan [aquí](./zsh)
+- La instalación y mis configuraciones para `.zshrc` y `.zimrc` estan [aquí](./zsh)
 
 ## Editor de Código
 
-**Nvim** <img style="height:15px" src="./assets/Nvim.png">: Editor de código de Terminal, fork de vim.
+<img style="height:15px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/nvim-logo.png">: Editor de código de para terminal, fork de **vim**.
 Mi configuración para ciegos esta [aquí](./nvim)
 
-**Vs-Code** <img style="height: 15px" src="./assets/visual-studio-code-icon.png">:
+**Vs-Code** <img style="height: 15px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/vscode.png">:
 Mi confinación se encuentra [aquí](./vs-code)
 
 ## Otros:
