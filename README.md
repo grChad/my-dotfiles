@@ -12,7 +12,7 @@
 
 **NodeJs** <img style="height:15px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/nodejs-icon.png">: Siga esta [guia](./other-settings/node.md) recomendada.
 
-**Kitty**<img style="height:17px" src="./assets/kitty.svg">: Emulador de terminal que usa la GPU del sistema:
+**Kitty**<img style="height:17px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/kitty.svg">: Emulador de terminal que usa la GPU del sistema:
 
 - `sudo { apt, dnf } install kitty`, para mas detalles [sitio oficial](https://sw.kovidgoyal.net/kitty/).
 - mi configuración para ciegos esta [aquí](./kitty)
@@ -24,7 +24,7 @@ Shell para GNU/LINUX, para mas detalles visite [Z _shell_](https://zsh.sourcefor
 
 ## Editor de Código
 
-<img style="height:15px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/nvim-logo.png">: Editor de código de para terminal, fork de **vim**.
+<img style="height:18px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/nvim-logo.png"> : Editor de código de para terminal, fork de **vim**.
 Mi configuración para ciegos esta [aquí](./nvim)
 
 **Vs-Code** <img style="height: 15px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/vscode.png">:
