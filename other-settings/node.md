@@ -1,34 +1,53 @@
-# Node Manager (fnm) </span><img style="height:25px" src="../assets/rust-language.png"> + <img style="height:25px" src="../assets/nodejs.png">
-> Administrador de Versiones para **NodeJs** Construido en **Rust**.
-## Instalación:
-Al momento para **bash, zsh y fish**, dependiento del shell que se usa se agrega o cambia (default: **zsh**).
+<h1 align="center">
+  Node Manager (fnm)
+  <img style="height:25px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/rs-icon.png"> +
+  <img style="height:25px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/nodejs-icon.png">
+</h1>
 
-Mas detalles en [**fnm**](https://github.com/Schniz/fnm).
+> Node Manager (fnm) es un administrador de versiones para **Node.js** construido en **Rust**.
 
-``` bash
+## Instalación
+
+Para instalar _fnm_ en los shells _bash, zsh_ y _fish_, use el siguiente comando de acuerdo al shell que esté utilizando. Para más detalles, consulte la documentación en _fnm_.
+
+```bash
 curl -fsSL https://fnm.vercel.app/install | zsh
 ```
-## Uso:
-Para ver las versiones de <img style="height:15px" src="../assets/nodejs-icon.png"> **node** disponibles: <code>**fnm list-remote**</code> o tambien <code>**fnm ls-remote**</code>.
 
-Las versiones estables (**LTS**) son las versiones pares.
+Mas detalles en [fnm](https://github.com/Schniz/fnm).
 
-Para descargar una version: <code>**fnm install 16**</code>, y se intalara una **LTS**. Para la ultima version a la fecha <code>**fnm install 18**</code> (**Todavia no es LTS**).
+## Uso
 
-Para ver que versiones tenemos en el sistema: <code>**fnm ls**</code>, nos dara una lista como esta:
-``` bash
-* v16.15.1 default
-* v18.4.0
-* system
-```
-Para usar una version diferente: <code>**fnm use 18**</code> y podra usar la version **V18.4.0**..
+Para ver las versiones de Node.js disponibles, ejecute `fnm list-remote` o `fnm ls-remote`. Las versiones estables LTS son las versiones pares.
 
-Para usar una version en un proyecto en **.node-version** o tambien en **.nvmrc**. Ejemplo:
+Para instalar una versión, ejecute `fnm install 16` y se instalará la última versión LTS de la serie v16.
+
+Para ver qué versiones tiene en su sistema, ejecute `fnm ls` nos mostrara algo como esto:
+
+<p align="center"><img src="https://github.com/gr92/my-assets/blob/main/dotfiles/terminal/fnm-ls.png"</p>
+
+Para usar una versión diferente, ejecute `fnm use 18` y podrá utilizar la versión v18.16.0.
+
+Para utilizar una versión en un proyecto específico, agregue la versión que desea usar en el archivo `.node-version` o `.nvmrc`, por ejemplo:
+
 ```bash
-$ node --version
-v18.4.0
-$ node --version > .node-version
+echo '18' >> .nvmrc
 ```
-Tambien tendra que agregar lo siguiente a **.zshrc**: <code>**eval "$(fnm env --use-on-cd)"**</code>. Para otros casos como **bash** y **fish** revisar en el [**repositorio de fnm**](https://github.com/Schniz/fnm).
 
-Tabien puede revisar este [**articulo**](https://www.freecodecamp.org/news/fnm-fast-node-manager/), mas completo.
+Para ser más específico con la versión, especifique en el archivo `.nvmrc`:
+
+```bash
+echo '18.16.0' >> .nvmrc
+```
+
+También deberá agregar `eval "$(fnm env --use-on-cd)"` en su archivo _.zshrc_. Para otros casos como bash y fish, consulte el [repositorio de fnm](https://github.com/Schniz/fnm).
+
+Para más información sobre fnm, consulte este [articulo](https://www.freecodecamp.org/news/fnm-fast-node-manager/).
+
+## Instalación de PNPM
+
+Para instalar PNPM, visite el sitio oficial de [pnpm](https://pnpm.io/), o use el siguiente comando:
+
+```bash
+curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
