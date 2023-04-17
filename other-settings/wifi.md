@@ -1,24 +1,45 @@
-## Para Fedora
-* La version de mi controlador es b43228
-* Se tiene que tener actualizado el equipo: sudo dnf update
-* La unica forma que encontre fue la siguiente.
-   - sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-* comienza a instalarce, son como 28k.
-   - sudo dnf search kmod-wl
-   - sudo dnf info kmod-wl
-   - sudo dnf update 0 sudo yum update 
-   - reiniciar: sudo reboot 0 init6
-   - sudo dnf install kmod-wl
-   - la instalacion se pesa como 63MB.
-* reiniciar por ultima vez: sudo reboot 0 init6
-* se puede verificar con los siguientes comandos:
-   - ifconfig
-   - ip a s
-   - iwconfig
-   - sudo lshw -C network -short
-   - nmcli -f GENERAL,WIFI-PROPERTIES dev show wlp1s0
-* Eso es todo, mas complicado que en debian pero es asi...END...
+## Configuración de Wi-Fi en Fedora
 
-## Para Debian
+Si necesitas configurar el Wi-Fi en tu equipo Fedora, sigue los siguientes pasos:
+
+1. Asegúrate de tener tu equipo actualizado y verifica el controlador que utiliza ejecutando el comando `lspci | grep -i network`.
+
+2. Si utilizas un controlador Broadcom BCM43228 802.11a/b/g/n, necesitas instalar los controladores `broadcom-wl`.
+
+3. Habilita los repositorios libres y no libres de rpmfusion con el siguiente comando:
+
+```shell
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+4. Instala los controladores `broadcom-wl` con el siguiente comando:
+
+```shell
+sudo dnf install broadcom-wl
+```
+
+5. Reinicia tu equipo como un _hack_ ejecutando el siguiente comando:
+
+```shell
+sudo init 6
+```
+
+Después de reiniciar, deberías poder conectarte a Wi-Fi en tu equipo Fedora.
+
+## Configuración de Wi-Fi en Debian
+
+Si necesitas configurar el Wi-Fi en tu equipo Debian, sigue los siguientes pasos:
+
+1. Elimina el controlador `bcmwl-kernel-source` con el siguiente comando:
+
+```shell
 sudo apt remove bcmwl-kernel-source
+```
+
+2. Instala el firmware `b43-installer` con el siguiente comando:
+
+```shell
 sudo apt install firmware-b43-installer
+```
+
+Después de instalar el firmware, deberías poder conectarte a Wi-Fi en tu equipo Debian.
