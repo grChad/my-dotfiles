@@ -181,7 +181,7 @@ def draw_tab(
     if timer_id is None:
         timer_id = add_timer(_redraw_tab_bar, REFRESH_TIME, True)
     name_user = '😼' + os.environ.get("USER", "user").capitalize()
-    date = datetime.now().strftime("%d/%B/%y ")
+    date = datetime.now().strftime("%d/%B/%Y ")
 
     cells = get_battery_cells()
     cells.append((user_color, name_user))
