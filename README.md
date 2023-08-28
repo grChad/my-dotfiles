@@ -75,7 +75,7 @@ Al instalar _Nvim_, esta estará limpia y sin ninguna configuración. Si no sabe
 
 Visual Studio Code (VSCode) es un editor de código fuente gratuito y altamente personalizable desarrollado por Microsoft, escrita en _TypeScript_, popular por su amplia extensibilidad y herramientas integradas para desarrollo.
 
-Mi confinación se encuentra [**aquí**](./vs-code)
+Mi configuración se encuentra [**aquí**](./vs-code)
 
 ### Helix <img height="20px" src="./assets/helix.svg">
 
