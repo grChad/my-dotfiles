@@ -1,0 +1,6 @@
+[[language]]
+name = "markdown"
+
+[language.auto-pairs]
+"*" = "*"
+"_" = "_"

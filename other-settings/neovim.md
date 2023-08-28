@@ -1,13 +1,16 @@
 # Nvim <img style="height: 25px" src="../assets/Nvim.png">
->Neovim es un proyecto que busca refactorizar agresivamente Vim.
+
+> Neovim es un proyecto que busca refactorizar agresivamente Vim.
 
 ## Install
+
 la forma mas practica es <code>**sudo apt install neovim**</code>, en el caso de debian o derivadas, en otros entornos es mas de lo mismo.
 Pero el problema con esto es que encontraremos una version anticuada, por lo menos en Fedora o debian.
 
 Asi que para ello mostrare como instalar la ultima version(inestable) y la estable(actual) en **Ubuntu**(y forks) y **Fedora**.
 
 ### Instalar en Ubuntu <img style="height: 20px" src="../assets/ubuntu.png">
+
 Tanto para la **Stable** como para la **Nightly** es problable que tenga que poder usar <code>**add-apt-repository**</code>. Para ello puede instalarlo con:
 
 ```shell
@@ -28,8 +31,8 @@ sudo apt update
 sudo apt install neovim
 ```
 
-
 ### Instalar en fedora <img style="height: 20px" src="../assets/fedora-linux-icon.png">
+
 > Tengo que asumir que usa una versin superior a 25 de **Fedora**.
 
 La version **Nightly** parece mas facil de obtener, asi que comenzare con ella.
@@ -73,6 +76,7 @@ sudo make install
 ```
 
 ## Problemas con el portapapeles de Nvim:
+
 Para usuarios del compositor grafico X11:
 
 ```shell
@@ -80,6 +84,7 @@ sudo apt install xclip
 ```
 
 Y para usuarios de Wayland, <code>En Fedora 36, ya no necesitaba instalarlo</code>.
+
 ```shell
 sudo dnf isntall wl-clipboard
 ```
@@ -87,18 +92,31 @@ sudo dnf isntall wl-clipboard
 Pero es importante que en su configuracion tenga habilitado el uso del clipboard
 
 ### Problema con la conpilacion de NvimTreeSitter
+
 Primero me salio un error que decia:
+
 ```shell
 /usr/bin/ld: cannot find -lstdc++
 collect2: error: ld returned 1 exit status
 ```
+
 - Para locucionarlo instale lo siguiente: <code>**sudo dnf install libstdc++-static**</code>
 
 Luego me dio otro error:
+
 ```shell
 Gcc error: gcc: error tryin to exec
 'cc1': execvp: No such file or directory
 ```
+
 - Y se soluciono instalando lo siguiente: <code>**sudo dnf install gcc-c++**</code>
 
-  ... end.
+... end.
+
+### ayuda para nvim
+
+Instalando lo siguiente.
+
+```bash
+sudo dnf install aspell-es aspell-en
+```
