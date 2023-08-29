@@ -1,24 +1,22 @@
 <h1 align="center">
   Node Manager (fnm)
-  <img style="height:25px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/rs-icon.png"> +
-  <img style="height:25px" src="https://github.com/gr92/my-assets/blob/main/dotfiles/icons/nodejs-icon.png">
+  <img style="height:30px" src="../assets/rust.webp"> +
+  <img style="height:30px" src="../assets/nodejs.webp">
 </h1>
 
 > Node Manager (fnm) es un administrador de versiones para **Node.js** construido en **Rust**.
 
 ## Instalación
 
-Para instalar _fnm_ en los shells _bash, zsh_ y _fish_, use el siguiente comando de acuerdo al shell que esté utilizando. Para más detalles, consulte la documentación en _fnm_.
+Para instalar _fnm_ en los shells _bash, zsh_ y _fish_, use el siguiente comando de acuerdo al shell que esté utilizando. Para más detalles, consulte la documentación en [fnm](https://github.com/Schniz/fnm).
 
 ```bash
 curl -fsSL https://fnm.vercel.app/install | zsh
 ```
 
-Mas detalles en [fnm](https://github.com/Schniz/fnm).
-
 ## Uso
 
-Para ver las versiones de Node.js disponibles, ejecute `fnm list-remote` o `fnm ls-remote`. Las versiones estables LTS son las versiones pares.
+Para ver las versiones de Node.js disponibles, ejecute `fnm list-remote` o `fnm ls-remote`. Las versiones LTS son las versiones pares.
 
 Para instalar una versión, ejecute `fnm install 16` y se instalará la última versión LTS de la serie v16.
 
@@ -46,8 +44,18 @@ Para más información sobre fnm, consulte este [articulo](https://www.freecodec
 
 ## Instalación de PNPM
 
-Para instalar PNPM, visite el sitio oficial de [pnpm](https://pnpm.io/), o use el siguiente comando:
+PNPM es una alternativa al administrador de packetes de Node.js (npm), es mas rapido y cada ves se hace mas popular.
+
+Para instalar PNPM, use los siguientes comandos:
+
+Instalar con **curl**
 
 ```bash
 curl -fsSL https://get.pnpm.io/install.sh | sh -
+```
+
+O instalar con **wget**
+
+```bash
+wget -qO- https://get.pnpm.io/install.sh | sh -
 ```
