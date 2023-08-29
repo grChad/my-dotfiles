@@ -69,7 +69,7 @@ sudo dnf install -y neovim python3-neovim
   ```
   </details>
 
-Al instalar _Nvim_, esta estará limpia y sin ninguna configuración. Si no sabes como hacerlo o tienes poca experiencia puedes Probar mi configuración, te la dejo [**aquí**](shelshelllhttps://github.com/grChad/nvim)
+Al instalar _Nvim_, esta estará limpia y sin ninguna configuración. Si no sabes como hacerlo o tienes poca experiencia puedes Probar mi configuración, te la dejo [**aquí**](https://github.com/grChad/nvim)
 
 ### Vs-Code <img height="20px" src="./assets/vscode.webp">
 
