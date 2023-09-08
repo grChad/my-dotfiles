@@ -224,4 +224,33 @@ zmodule romkatv/powerlevel10k --use degit
 
 Y luego ejecuta el comando: `zimfw install` para instalar lo que esta en tu `.zimrc`
 
+<details>
+    <summary>Otros commandos</summary>
+
+Para instalar algún modulo agregado al archivo _.zimrc_, es con el siguiente comando:
+
+```shell
+zimfw install
+```
+
+Para desinstalar modulo que ya no queramos con:
+
+```shell
+zimfw unistall
+```
+
+Para actualizar los módulos:
+
+```shell
+zimfw update
+```
+
+Para actualizar _Zimfw_, con:
+
+```shell
+zimfw upgrade
+```
+
+</details>
+
 **`end...`**
