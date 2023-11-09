@@ -1,6 +1,6 @@
 # Aplicaciones para el Equipo
 
-> Aplicaciones o programas que sequieren mas seguimiento para inslatar.
+> imageAplicaciones o programas que sequieren mas seguimiento para inslatar.
 
 ## Love2D
 
@@ -40,4 +40,16 @@ Te saldrá tanto la version normal para sistemas `.x86_64` o `.i686` para 32 bit
 
 ```shell
 sudo dnf install fontforge
+```
+
+## ktouch
+
+KTouch es un entrenador de mecanografía para aprender a mecanografiar al tacto. Proporciona texto para entrenar y se adapta a diferentes niveles dependiendo del que tenga el usuario.
+
+![imagen de Ktouch](https://cdn.kde.org/screenshots/ktouch/ktouch.png)
+
+Instalación desde _Fedora_:
+
+```bash
+sudo dnf install ktouch
 ```
