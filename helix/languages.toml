@@ -1,6 +1,12 @@
+# NOTE: Language Markdown
 [[language]]
 name = "markdown"
 
 [language.auto-pairs]
 "*" = "*"
 "_" = "_"
+
+# NOTE: Language Lua
+[[language]]
+name = "lua"
+indent = { tab-width = 3, unit = "   " }

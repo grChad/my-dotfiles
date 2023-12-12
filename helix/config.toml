@@ -1,44 +1,51 @@
 theme = "custom" # tema customizado
 
 [editor]
+mouse = true                                                # Scroll and select with the mouse
 line-number = 'relative'
-mouse = false
-middle-click-paste = true
 cursorline = true
-color-modes = true
+gutters = ["diff", "diagnostics", "line-numbers", "spacer"]
+idle-timeout = 200
+color-modes = true                                          # colorear los modos de diferentes colores
 
-[editor.soft-wrap]
-enable = true
-wrap-indicator = ""
+[editor.statusline]
+left = ["mode", "separator", "file-name", "file-modification-indicator"]
+center = ["spinner", "diagnostics"]
+right = [
+  "version-control",
+  "spacer",
+  "separator",
+  "spacer",
+  "position-percentage",
+  "position",
+]
+separator = '|'
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
 
 [editor.cursor-shape]
 insert = 'bar'
 normal = 'block'
 select = 'underline'
 
-[editor.statusline]
-left = ["mode", "spinner", "file-name"]
-right = ["diagnostics", "position"]
-separator = '|'
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
 
 [editor.indent-guides]
 render = true   # habilitar el la marca de indentado
 character = "▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 # skip-levels = 5
 
-[editor.gutters]
-layout = ["diff", "diagnostics", "line-numbers", "spacer"]
-
-# TODO: Sección de 'keys.normal'
+# NOTE: -----------------[Normal Mode]---------------------
 [keys.normal]
 # Desabilitar las teclas de movimiento en modo normal
 "left" = "no_op"
 "right" = "no_op"
-"up" = "no_op"
-"down" = "no_op"
+"up" = "scroll_up"
+"down" = "scroll_down"
 
 # ir al inicio y final de la linea
 0 = "goto_line_start"
@@ -46,7 +53,6 @@ layout = ["diff", "diagnostics", "line-numbers", "spacer"]
 
 D = "kill_to_line_end"
 d = { d = ["extend_line_below", "delete_selection"] }
-
 
 [keys.normal.space]
 w = [":write", ":format"]
@@ -59,21 +65,23 @@ x = ":buffer-close"
 
 "/" = "toggle_comments"
 
-# TODO: Sección de 'keys.insert'
+# NOTE: -----------------[Insert Mode]---------------------
 [keys.insert]
 k = { j = 'normal_mode' } # escapar al modo "normal"
+K = { J = 'normal_mode' } # escapar al modo "normal"
 
 # desabilitar las teclas de movimiento en modo insertar
 "left" = "no_op"
 "right" = "no_op"
-"up" = "no_op"
-"down" = "no_op"
+"up" = "scroll_up"
+"down" = "scroll_down"
 
 # moverse en modo insertar
 "C-h" = "move_char_left"
 "C-l" = "move_char_right"
 "C-j" = "move_line_down"
 "C-k" = "move_line_up"
+
 
 # TODO: Sección de 'keys.select'
 [keys.select]

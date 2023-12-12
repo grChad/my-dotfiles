@@ -11,7 +11,7 @@
 "ui.cursor.match" = { fg = "orange_0", modifiers = ["bold"] }
 
 "ui.selection" = { bg = "faint-gray" }
-"ui.selection.primary" = { bg = "gray" }
+"ui.selection.primary" = { bg = "mantle" }
 "ui.cursorline.primary" = { bg = "surface0" }
 
 "ui.highlight" = { bg = "gray" }
@@ -33,9 +33,9 @@
 "ui.text.focus" = { fg = "white", bg = "light-black", modifiers = ["bold"] }
 
 "ui.help" = { fg = "red_0", bg = "gray" }
-"ui.popup" = { fg = "blue_1", bg = "base" }
+"ui.popup" = { fg = "white", bg = "faint-gray" }
 "ui.window" = { fg = "gray" }
-"ui.menu" = { fg = "white", bg = "surface0" }
+"ui.menu" = { fg = "white", bg = "faint-gray" }
 "ui.menu.selected" = { fg = "dark", bg = "teal" }
 "ui.menu.scroll" = { fg = "blue_1", bg = "surface2" }
 
