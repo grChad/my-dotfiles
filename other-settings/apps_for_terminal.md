@@ -168,3 +168,15 @@ Por ejemplo:
     ✗ Android SDK is missing command line tools; download from https://goo.gl/XxQghQ
     • Try re-installing or updating your Android SDK, visit https://docs.flutter.dev/setup/#android-setup for detailed instructions.
 ```
+
+## Love2D
+
+LÖVE es un _increíble_ motor que puedes usar para crear juegos 2D en Lua. Es gratuito, de código abierto y funciona en Windows, macOS, Linux, Android e iOS.
+
+<p align="center"><img width="300" src="https://love2d.org/style/logo.png"></p>
+
+La ventaja para los usuarios de _Fedora_, es que lo tenemos desde el repositorio.
+
+```shell
+sudo dnf install love
+```
