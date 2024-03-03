@@ -1,4 +1,4 @@
-# NOTE: Language Markdown
+# NOTE: Language Markdown -------------------------------------------
 [[language]]
 name = "markdown"
 
@@ -6,7 +6,17 @@ name = "markdown"
 "*" = "*"
 "_" = "_"
 
-# NOTE: Language Lua
+# NOTE: Language Lua ------------------------------------------------
 [[language]]
 name = "lua"
 indent = { tab-width = 3, unit = "   " }
+
+# NOTE: Language HTML -----------------------------------------------
+[language-server.emmet-lsp]
+command = "emmet-language-server"
+# args = ["--stdio"]
+
+[[language]]
+name = "html"
+roots = [".git"]
+language-servers = ["emmet-lsp"]
