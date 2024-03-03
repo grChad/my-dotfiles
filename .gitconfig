@@ -7,3 +7,5 @@
 	ui = auto
 [init]
 	defaultbranch = main
+[core]
+	editor = nvim
