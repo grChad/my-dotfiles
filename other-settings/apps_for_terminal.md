@@ -180,3 +180,50 @@ La ventaja para los usuarios de _Fedora_, es que lo tenemos desde el repositorio
 ```shell
 sudo dnf install love
 ```
+
+## MySQL
+> [!NOTE]
+> la instalacion biene de la informacion brindada de [docs](https://docs.fedoraproject.org/e-US/quick-docs/installing-mysql-mariadb/) de _fedoraproject.org_.
+
+### Agregar el repositorio MySQL a Fedora
+Descargue el paquete de versión proporcionado por Oracle desde [aquí](https://dev.mysql.com/downloads/repo/yum/) Una vez descargado, instálelo usando dnf:
+
+```shell
+sudo dnf install <ruta absoluta del archivo>
+```
+
+### Instalación de MySQL en Fedora
+
+```shell
+sudo dnf install mysql-community-server
+```
+
+### Inicie el servicio MySQL y habilítelo al iniciar sesión:
+
+```shell
+sudo systemctl start mysqld
+sudo systemctl enable mysqld
+```
+
+busque la contraseña predeterminada. Por razones de seguridad, MySQL genera una clave raíz temporal.  Tenga en cuenta que MySQL tiene políticas de seguridad aún más estrictas que MariaDB.
+
+###  Configurar MySQL antes del primer uso
+
+```shell
+sudo mysql_secure_installation
+```
+
+Luego, responde las preguntas de seguridad como prefieras.  o simplemente decir sí a todos ellos.
+
+### usar MySQL
+
+```shell
+sudo mysql -u root -p
+```
+
+### remover MySQL
+Sugiero eliminar de la siguiente manera, la forma más adecuada y segura sin eliminar muchas dependencias es:
+
+```shell
+sudo rpm -e --nodeps mysql-community-libs mysql-community-common mysql-community-server
+```
