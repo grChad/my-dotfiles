@@ -1,23 +1,30 @@
 local wezterm = require('wezterm')
+local fontFamily = require('configs.fonts')
 
-local SOLID_LEFT_ARROW = ""
-local SOLID_RIGHT_ARROW = ""
+-- esto mantendra la configuracion
+local configTerminal = wezterm.config_builder()
 
-return {
-   -- font = wezterm.font('Comic Code Ligatures', { weight = 'Bold', italic = true }),
-   font = wezterm.font('Comic Code Ligatures'),
-   font_size = 10,
-   color_scheme = 'Dracula (Gogh)',
+local SOLID_LEFT_ARROW = ''
+local SOLID_RIGHT_ARROW = ''
+
+configTerminal = {
+   font = fontFamily,
+   font_size = 11,
+   cell_width = 0.85,
+   harfbuzz_features = { 'zero' },
+
+   color_scheme = 'Catppuccin Macchiato',
    colors = require('configs.colors'),
+
    default_cursor_style = 'BlinkingBar',
    cursor_blink_rate = 0,
    initial_cols = 110,
    initial_rows = 25,
-   -- window_decorations = 'RESIZE',
-   tab_max_width = 15,
+
+   tab_max_width = 20,
    use_fancy_tab_bar = false, -- Para poder editar los buffers
    enable_scroll_bar = false,
-   -- hide_tab_bar_if_only_one_tab = true,
+   hide_tab_bar_if_only_one_tab = true,
    tab_bar_at_bottom = true,
    window_frame = require('configs.tab_bar'),
    wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
@@ -62,3 +69,5 @@ return {
    end),
    window_padding = { left = 2, right = 2, top = 0, bottom = 0 }, -- se cambia con frecuencia.
 }
+
+return configTerminal
