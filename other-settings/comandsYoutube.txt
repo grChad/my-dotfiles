@@ -1,5 +1,0 @@
-.los numeros del 0 al 9, nos situal en un porcentaje del video, hasta el 90%;
-.la tecla 'm', nos permite activar y desactivar el sonido.
-.'N' y 'P' es para cambiar la lista de reproduccion.
-.'C', se activa y desactiva los subtitulos.
-.'<' y '>', nos permite controlar la vecocidad de reproduccion del video.

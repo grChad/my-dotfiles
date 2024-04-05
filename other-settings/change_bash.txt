@@ -1,5 +1,0 @@
-# Para cambiar de shell a zsh:
-cd
-sudo su
-usermod --shell /usr/bin/zsh gabriel
-usermod --shell /usr/bin/zsh root

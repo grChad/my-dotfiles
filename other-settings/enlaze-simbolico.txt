@@ -1,3 +1,0 @@
-# Para enalzar un archivo con la configuracion de otro.
-ejemplo: 
-	ln -s -f /home/gabriel/.zshrc .zshrc

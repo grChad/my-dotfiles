@@ -3,10 +3,11 @@
 ```bash
 git config --global credential.helper store
 ```
-Despues solo te pedira la contraseña por 1 ves.
+Después solo te pedirá la contraseña por 1 ves.
 
 ## Para eliminar archivos de GitHub:
-Ejemplo: **node_modules**
+Ejemplo: _node_modules_
+
 * Agregar <code>**node_modules/**</code> a **.gitignore**.
 * <code>**git rm -r --cache node_modules**</code>
 * <code>**git commit -m 'Remove the now ignore directory node_modules'**</code>

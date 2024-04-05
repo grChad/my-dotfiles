@@ -1,178 +1,144 @@
 <h1 align="center">
   My Dotfiles
-  <img height="30px" src="./assets/linux-name.webp">
+  <img height="30px" src="https://i.ibb.co/WHmHbbx/fedora.png" title="logo linux">
 </h1>
 
-> Mi configuración para un entorno **GNU/Linux** que no de pena. Y usando **Fedora** como distribución.
+> Mi configuración para mi entorno **GNU/Linux** que me sea de utilidad. Y usando **Fedora** como distribución.
 
 ## Requisitos
 
-Primero que nada, es recomendable tener tu distribución actualizada. Así que abres la terminal que tienes por default y ejecutas el comando.
+Primero que nada, es recomendable tener tu distribución actualizada. Así que abres la terminal y ejecutas el comando.
 
 ```bash
-sudo dnf update
+sudo dnf upgrade
 ```
 
-### Kitty <img height="20px" src="./assets/kitty.svg">
+> [!NOTE]
+> si ya esta por predeterminado `dnf5` en reemplazo de `dnf` usarlo en su lugar.
 
-Kitty es un emulador de terminal de código abierto y altamente configurable que ofrece características únicas como representación gráfica avanzada, soporte de imágenes y aceleración de hardware. Para mas detalles visita su [sitio oficial](https://sw.kovidgoyal.net/kitty/).
+### Kitty <img height="25px" src="https://i.ibb.co/sKbfczF/kitty.png">:
 
-La instalación de _kitty_ es fácil, ya que se encuentra dentro del repositorio oficial de `Fedora`, así que para instalarla solo ejecutamos el siguiente comando.
+Kitty es un emulador de terminal de código abierto y altamente configurable que ofrece características únicas como representación gráfica avanzada, soporte de imágenes y aceleración de hardware. Para mas detalles visita [kovidgoyal.net](https://sw.kovidgoyal.net/kitty/).
+
+Se encuentra dentro del repositorio de `Fedora`, así que la instalamos así.
 
 ```bash
 sudo dnf install kitty
 ```
 
-También tengo una configuración recomendada para comenzar con _kitty_, la puedes encontrar [**aquí**](./kitty)
+También tengo una configuración de _kitty_, la puedes encontrar [aquí](./kitty)
 
-### Git <img width="20px" src="./assets/git.webp">
+Otra cosa que debes hacer es agregar la nueva terminal _kitty_ a un atajo de teclado o que sea la terminal por defecto de tu distribución.
+
+### Git <img width="25px" src="https://i.ibb.co/Svsq5fD/git.png">
 
 Git es un sistema de control de versiones distribuido para rastrear cambios en archivos y coordinar el trabajo en proyectos de desarrollo de software.
 
-Viene por defecto en _fedora_, para otras distribuciones tendrás que acceder a su [sitio web](https://git-scm.com/)
+Viene por defecto en _fedora_, para otras distribuciones tendrás que acceder a su [git-scm.com](https://git-scm.com/)
 
-### Node.js <img height="20px" src="./assets/nodejs.webp">
+### Node.js <img height="25px" src="https://i.ibb.co/R7tjy8r/nodejs-icon.png">
 
 Es un entorno de tiempo de ejecución de JavaScript de código abierto que permite construir aplicaciones en el lado del servidor.
 
-Instalare _Node.js_ con un administrador de versiones llamado [fnm](https://github.com/Schniz/fnm). Para ello he preparado una guia de instalación que puedes ver [**aquí**](./other-settings/node.md).
+Instalare _Node.js_ con un administrador de versiones llamado [fnm](https://github.com/Schniz/fnm). Para ello he preparado una guia de instalación que puedes ver [aquí](./other-settings/node.md).
 
-### ZSH <img height="20px" src="./assets/zsh.webp">
+### ZSH <img height="20px" src="https://i.ibb.co/684JJtx/zsh.png">
 
-Zsh es un potente y versátil intérprete de comandos de Unix con características avanzadas de autocompletado y personalización, para mas detalles visite [Z _shell_](https://zsh.sourceforge.io/).
+Zsh es un potente y versátil intérprete de comandos de Unix con características avanzadas de autocompleted y personalización, para mas detalles visite [Z _shell_](https://zsh.sourceforge.io/).
 
-He hecho una guia para instalar _zsh_ junto con un Framework potente y liviano llamado [zimfw](https://github.com/zimfw/zimfw). Todo ello la encuentras [**aquí**](./zsh)
+He hecho una guia para instalar _zsh_ junto con un Framework potente y liviano llamado [zimfw](https://github.com/zimfw/zimfw). Todo ello la encuentras [aquí](./zsh)
 
 ## Editores de Código
 
-### NeoVim <img height="23px" src="./assets/nvim.webp">
+### NeoVim <img height="25px" src="https://i.ibb.co/gvHXFT4/nvim.webp">
 
 Es la evolución de _Vim_, un editor de texto que potencia la edición y programación con características modernas (se configura con _Lua_), extensibilidad y mayor eficiencia en la manipulación de código.
 
-Si quieres la ultima version estable, por suerte esta en el repositorio de _Fedora_ y la instalas con este comando:
+La version estable esta en el repositorio de _Fedora_ y la instalas con este comando:
 
 ```bash
 sudo dnf install -y neovim python3-neovim
 ```
 
 <details>
-    <summary>para Nightly</summary>
+  <summary>para Nightly</summary>
+  <br/>
 
 - Habilite el repositorio `COPR` para _neovim-nightly_.
-  ```bash
-  sudo dnf copr enable agriffis/neovim-nightly
-  ```
+
+```bash
+sudo dnf copr enable agriffis/neovim-nightly
+```
 - Hacer una actualización: `sudo dnf update`
 - y para finalizar lo instalas
-  ```bash
-  dnf install -y neovim python3-neovim
-  ```
-  </details>
 
-Al instalar _Nvim_, esta estará limpia y sin ninguna configuración. Si no sabes como hacerlo o tienes poca experiencia puedes Probar mi configuración, te la dejo [**aquí**](https://github.com/grChad/nvim)
+```bash
+dnf install -y neovim python3-neovim
+```
+</details>
 
-### Vs-Code <img height="20px" src="./assets/vscode.webp">
+También tengo una configuración fácil para _NeoVim_ [aquí](https://github.com/grChad/nvim).
 
-Visual Studio Code (VSCode) es un editor de código fuente gratuito y altamente personalizable desarrollado por Microsoft, escrita en _TypeScript_, popular por su amplia extensibilidad y herramientas integradas para desarrollo.
+### Vs-Code <img height="25px" src="https://i.ibb.co/jrSk3Q3/vscode.png">
 
-Mi configuración se encuentra [**aquí**](./vs-code)
+Visual Studio Code (VSCode) es un editor de código fuente gratuito y altamente personalizable desarrollado por Microsoft, escrita en _TypeScript_, para más detalles visita [Visual Studio Code](https://code.visualstudio.com/).
 
-### Helix <img height="20px" src="./assets/helix.svg">
+Mi configuración se encuentra [aquí](./vs-code)
 
-Helix se denomina a si mismo, como un editor post-moderno. Y algo de cierto tiene, hace uso de la edición modal (basado en modos) como _Vim_ o _NeoVim_, también tiene compatibilidad con LSP (language sever protocol) y lo mejor es que trae _Tree-sitter_ por default.
+### Helix <img height="23px" src="https://i.ibb.co/2hBZPLy/helix.png">
 
-Aunque no tiene todavía, una forma de crear plugins y extenderlo. Es muy practico y liviano para edición de código casual.
+Helix se denomina a si mismo, como un editor post-moderno. Y algo de cierto tiene, hace uso de la edición modal (basado en modos) como _Vim_ o _NeoVim_, también tiene compatibilidad con LSP (language sever protocol).
 
-Habilite el repositorio `COPR` para helix:
-
+1. Para instalar habilite el repositorio `COPR` para helix:
 ```bash
 sudo dnf copr enable varlad/helix
 ```
 
-Luego actualiza: `sudo dnf update`
+2. Luego actualiza: `sudo dnf update`
+```bash
+sudo dnf update
+```
 
-Y al final lo instalas con:
+3. Y al final lo instalas con:
 
 ```bash
 sudo dnf install helix
 ```
 
-Tengo una configuración para Helix, la encuentras [**aquí**](./helix)
+Tengo una configuración para Helix, la encuentras [aquí](./helix)
 
 ## GNOME Shell Extensions
 
-Don módulos adicionales que permiten personalizar y mejorar la experiencia del entorno de escritorio GNOME al agregar características y modificar su apariencia y comportamiento.
+Son módulos adicionales que permiten personalizar y mejorar la experiencia del entorno de escritorio GNOME al agregar características y modificar su apariencia y comportamiento.
 
-Ademas de los muchos que existen ya por default en tu sistema, puedes agregar las que quieras. Yo solo instalare unas que me son de utilidad.
+Visita [gnome shell extensions](https://extensions.gnome.org/).
 
-### Resource Monitor
+### One Thing
+One-Thing es una herramienta de productividad que le ayuda a concentrarse en una tarea a la vez.
 
-Es una extensión de GNOME Shell que monitorea el uso de recursos del sistema como CPU, RAM, disco, red y los muestra en la barra superior de GNOME Shell.
 
-Solo tengo activa la CPU y RAM. Pero me son de mucha utilidad. La encuentras [aquí](https://extensions.gnome.org/extension/1634/resource-monitor/)
+<div align="center">
+  <img src="https://i.ibb.co/9tfDDSd/one-thing.png">
 
-### Simple Message
+  La puedes instalar desde [aquí](https://extensions.gnome.org/extension/5072/one-thing/)
+</div>
 
-Es una extensión para agregar mensajes simples en la barra Superior de GNOME. Es como un TODO, que te indica que tienes algo pendiente por hacer.
+### RunCat
+proporciona una animación de fotograma clave en la barra superior de GNOME Shell.
+La velocidad de la animación cambia según el uso de la CPU.
 
-Su uso puede no ser tan accesible, ya que se requiere de la aplicación `extensiones` de la tienda de software de Fedora para poder interactuar con ella.
+<div align="center">
+  <img src="https://i.ibb.co/QnGHmW0/capture-run-Cat.png">
 
-Pero si eres programador y perezoso como yo, puedes usarlo por la `terminal` como un _hack_. Primero instalas _Simple Message_ desde [aquí](https://extensions.gnome.org/extension/5018/simple-message/)
-
-Luego ingresas a tu configuración de _zsh_, `.zshrc` dentro de la ruta del usuario. Y dentro de ella pegas este código.
-
-```bash
-# Alias para cambiar un mensaje de una extensión de gnome: 'Simple-Message'
-function set_simple_message() {
-  local message="$1"
-
-  if [ -z "$message" ]; then
-    dconf write /org/gnome/shell/extensions/simple-message/message "''"
-    echo " $(tput setaf 1)♻️ Mensaje Eliminado"
-  else
-    dconf write /org/gnome/shell/extensions/simple-message/message "\"$message\""
-    echo " Mensaje cambiado a $(tput setab 0)$(tput setaf 6) $message "
-  fi
-}
-alias ms='set_simple_message'
-```
-
-El alias que uso es `ms`, si no te gusta puedes cambiarlo por el que quieras.
-
-Para usarlo es tan simple como escribir por `terminal(kitty)` lo siguiente
-
-```bash
-ms "editar esta configuración lo antes posible"
-```
-
-Por la terminal veras algo como esto:
-
-<p align="center">
-    <img src="./assets/promp-simple-message.webp"/>
-</p>
-
-Y el mensaje también aparecerá en la barra superior de GNOME.
-
-### Space Bar
-
-Extensión de GNOME Shell que reemplaza el botón 'Actividades' con una barra de espacios de trabajo similar a i3.
-
-Básicamente me aparecen indicadores del numero de espacio de trabajo en el que me encuentro. Pero esta se puede modificar con colores, estilos y tamaños. Y la mejor utilidad es que puedes renombrarlos con el `click derecho`.
-
-Ejemplo, puedes renombrar al primer espacio de trabajo que esta por defecto como **1** y **Dev**, y al **2** como **Webs** y lo que quieras.
-
-La extensión la instalas desde [aquí](https://extensions.gnome.org/extension/5090/space-bar/)
+  La puedes instalar desde [aquí](https://extensions.gnome.org/extension/5072/one-thing/)
+</div>
 
 ## Otros:
 
-- Librerías de React Native CLI que uso, [aquí](./other-settings/react-native-cli.md)
-- Como crear un enlace simbólico
-- Problemas con el WiFi
-- Instalar Latex
-- Comandos para YouTube.
-- Comandos para Terminal
-- Herramientas para la [_terminal_](./other-settings/apps_for_terminal.md)
-- Herramientas para el [_escritorio_](./other-settings/apps_desktop.md)
-- Como instalar [_neovim_](./other-settings/neovim.md)
-- comandos para la terminal, [aquí](./other-settings/comandos_linux.md)
-- Grabar una ISO desde terminal [aquí](./other-settings/gravarISO.md)
+1. [React Native, librerías y mas](./other-settings/react-native-cli.md)
+2. [Latex y mis proyectos](https://github.com/grChad/proyectos-latex)
+3. [Aplicaciones para el escritorio](./other-settings/apps_desktop.md)
+4. [programas para terminal](./other-settings/apps_for_terminal.md)
+5. [El WiFi y sus problemas](./other-settings/wifi.md)
+6. [hacks y comandos para Linux]('./other-settings/hacks-linux.md')
+7. [Gravar imagen ISO desde terminal con 'dd']('./other-settings/gravarISO.md')
