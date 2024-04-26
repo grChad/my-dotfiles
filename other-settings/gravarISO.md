@@ -1,35 +1,51 @@
-# Como grabar una imagen ISO
-> Me refiero a un sistema Operativo **SO**, **windows e Linux**
+<h1 align="center">Como grabar una imagen ISO</h1>
 
-### verificamos los medios de almacenaliento
-Cada que se requiera ejecutamos el comando <code>**lsblk**</code>,
-esto nos mostrara una lista de las particiones de nuestro medio de almacenaliento local y alguna unidad externa.
+> Me refiero a un sistema Operativo, como **windows o Linux**
 
-### Ubicar y desmontar
-Ingresamos una unidad de almacenamiento (**USB**) y con <code>**lsblk**</code>
-ubicamos cual es. Puede verse algo asi:
+### verificamos los medios de almacenamiento
+Cada que se requiera ejecutamos el comando **`lsblk`**,
+esto nos mostrara una lista de las particiones de nuestro medio dé almacenamiento local y alguna unidad externa.
 
-<img src="../assets/captura-lsblk.png">
+<div align="center">
+  <img src="../assets/screenshot-lsblk.webp" title="image with command lsblk">
+</div>
 
-Nos interasa el media **sdb** que esta en la ruta <code>**/dev/sdb**</code>, como cualquier medio de almacenamiento. Ahora no fijamos si esta montada alguna particion de la misma, como la particion **sda** que tiene 4 particiones y **sda1** tiene montada el **boot** ( <code>**sda1  ---> /boot/efi**</code>).
+### desmontar
 
-Ninguna particion **sdb** esta montada pero si lo estubiese se desmonta asi:
-<code>**sudo umount /boot/efi**</code>, hasta verse como esta **sdb** en la imagen. Siempre puedes comprobar los cambios con el comando <code>**lsblk**</code>.
+Nos interesa el media **sdb** que esta en la ruta `/dev/sdb`, como cualquier medio de almacenamiento. Ahora no fijamos si esta montada alguna partición de la misma, como la partición **sda** que tiene 4 sub-particiones como `sda1` que tiene montada el `\boot\efi`.
+
+En la sub-partición **`sdb1`** de **`sdb`**, esta montada `/run/media/gabriel/Fedora-WS-Live-37-1-7`, para desmontarla tenemos que ejecutar el comando:
+
+```bash
+sudo umount /run/media/gabriel/Fedora-WS-Live-37-1-7
+```
+
+<div align="center">
+  <img src="../assets/capture-umount.webp" title="after command sudo umount">
+</div>
 
 ### Gravar la ISO
-La parte mas interesante:
-  ```bash
-  sudo dd if=path/to/xxxx.iso of=/dev/sdb bs=4M status=progress
-  ```
-* **dd**: El comando para gravar desponible en **Linux**, (mac & windows no se).
-* **if**: ruta de la **ISO** en su sistema, ejemplo: <code>**$HOME/Documentos/Fedora-Workstation-Live-x86_64-36-1.5.iso**</code>
-* **of**: ruta de la unidad **USB**, donde se quiera grabar, para este caso **sdb** en la ruta:<code>**/dev/sdb**</code>.
-* **bs**: Con temor a equibocarme es **bites por segundos**, se pueden colocar otros valores, pero el mas recomendado y el que nunca me fallo es: <code>**bs=4M**</code>.
-* **status**: Su nombre lo dice, pare ver el status en tiempo de ejecucion. Por defecto coloco <code>**status=progress**</code>, ignoro si tiene otros valores.
 
-Luego se espera... Te Comes unos doritos y ya...
+Todo se resume a este comando.
+
+```bash
+sudo dd if=path/to/xxxx.iso of=/dev/sdb bs=4M status=progress
+```
+
+- **`sudo`** El permiso de usuario para cosas de sistema.
+- **`dd`** El comando para gravar disponible en _Linux_.
+- **`if`** Ruta o `PATH` del archivo **ISO** en tu directorio, ejemplo: `/home/gabriel/Documentos/Fedora-Workstation-Live-x86_64-40-1.14.iso`.
+- **`of`** Ruta o `PATH` de la unidad _USB_, donde se quiera grabar, para este caso `sdb` que se encuentra en `/dev/sdb`.
+- **`bs`**: Con temor a equivocarme es **bites por segundos**, se pueden colocar otros valores, pero el mas recomendado y el que nunca me fallo es: `bs=4M`.
+- **`status`**: Su nombre lo dice, pare ver el status en tiempo de ejecución. Por defecto coloco `status=progress`, ignoro si tiene otros valores.
+
+<div align="center">
+  <img src="../assets/capture-sudo-dd.webp" title="command sudo dd">
+</div>
+
+Esperas por unos minutos para tenerlo listo.
 
 ### expulsar USB
-Ejecutamos:<code>**sudo eject /dev/sdb**</code>
+Ejecutamos: `sudo eject /dev/sdb`.
 
-Y vivieron felices por siempre &emsp; &emsp; &emsp; _**end**._
+Y vivieron felices por siempre ...**`end`**.
