@@ -140,5 +140,5 @@ La velocidad de la animación cambia según el uso de la CPU.
 3. [Aplicaciones para el escritorio](./other-settings/apps_desktop.md)
 4. [programas para terminal](./other-settings/apps_for_terminal.md)
 5. [El WiFi y sus problemas](./other-settings/wifi.md)
-6. [hacks y comandos para Linux]('./other-settings/hacks-linux.md')
-7. [Gravar imagen ISO desde terminal con 'dd']('./other-settings/gravarISO.md')
+6. [hacks y comandos para Linux](./other-settings/hacks-linux.md)
+7. [Gravar imagen ISO desde terminal con 'dd'](./other-settings/gravarISO.md)
