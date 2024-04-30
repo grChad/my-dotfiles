@@ -1,10 +1,12 @@
-# Programas para la Terminal <img style="height:25px" src="../assets/shell-icon.png">
+<h1 align="center">Programas para la Terminal</h1>
 
-## Grex: <img style="height: 17px" src="../assets/image-grex.png">
+## <img width="80px" src="https://raw.githubusercontent.com/pemistahl/grex/main/logo.png">
 
-grex es una biblioteca, así como una utilidad de línea de comandos que pretende simplificar la tarea a menudo complicada y tediosa de crear expresiones regulares. Lo hace generando automáticamente una única expresión regular a partir de casos de prueba proporcionados por el usuario. Se garantiza que la expresión resultante coincida con los casos de prueba a partir de los cuales se generó.
+Grex es una biblioteca, así como una utilidad de línea de comandos que pretende simplificar la tarea a menudo complicada y tediosa de crear expresiones regulares.
 
 ### Install
+
+Usando `cargo` de _Rust_.
 
 ```shell
 cargo install grex
@@ -12,57 +14,23 @@ cargo install grex
 
 Aunque también funciona con:
 
-<code>**(brew | cargo | choco | huber | scoop) install grex**</code>
+<code>**(brew | cargo | choco | huber | scoop)** install grex</code>
 
 ### usar
 
-Tan facil como colocar en la **_terminal_**, <code>**grex hola mola**</code> y obtendrias algo como <code>**^\[hl]ola$**</code>, que es la expresion regular.
+Tan fácil como colocar en la terminal, `grex hola mola` y obtendrías algo como `^\[hl]ola$`, que es la expresión regular.
 
-<p align="center"><img src="../assets/image-grex-terminal.png"></p>
+<div align="center"><img src="../assets/capture-grex-hola-mola.png"></div>
 
 También podrías tener las coincidencias en un archivo y buscar a través de ellas:
-<code>**grex -f file.txt**</code> y obtener el mismo resultado.
+`grex -f file.txt` y obtener el mismo resultado.
 
-<p align="center"><img src="../assets/image-grex-file.png"></p>
+<div align="center">
+  <img src="../assets/capture-cat-file.png">
+  <img src="../assets/capture-grex-file.png">
+</div>
 
-Para mas informacion en el **_GitHub_** de [**grex**](https://github.com/pemistahl/grex).
-
-## pfetch
-
-Es una bonita herramienta de información del sistema escrita en POSIX sh. Utilizando funciones integradas en el propio lenguaje
-
-### Install Unix/Linux
-
-- con [_wget_](https://www.gnu.org/software/wget/?) o con [_git_](https://git-scm.com/), **Solo elige uno!**
-
-```shell
-wget https://github.com/dylanaraps/pfetch/archive/master.zip
-git clone https://github.com/dylanaraps/pfetch.git
-```
-
-Si usaste _wget_, tienes que descomprimir el archivo **.zip**
-
-```shell
-unzip master.zip
-```
-
-Instale el binario usando el comando install:
-
-```shell
-sudo install pfetch-master/pfetch /usr/local/bin/
-```
-
-Ahora prueve con el comando **_pfetch_**.
-
-<p align="center"><img src="../assets/image-pfetch.png"></p>
-
-## winehq
-
-Wine permite correr software de _Windows_ en **_linux_**. Con Wine se puede instalar y correr aplicaciones igual que se hacia en _windows_ y la puedes descargar desde [**_aqui_**](https://wiki.winehq.org/Download).
-
-### uso
-
-Dar click en un programa **.exe** de _windows_ y solo eso, claro que al inicio pueda necesitar instalar otros programas...
+Para mas información en [grex](https://github.com/pemistahl/grex).
 
 ## webP
 
@@ -170,23 +138,27 @@ Por ejemplo:
 ```
 
 ## Love2D
+LÖVE es un marco _increíble_ que puedes usar para hacer juegos 2D en Lua. Es gratis, de código abierto y funciona desde _windows, Mac Os X, Linux, Android e Ios_.
 
-LÖVE es un _increíble_ motor que puedes usar para crear juegos 2D en Lua. Es gratuito, de código abierto y funciona en Windows, macOS, Linux, Android e iOS.
+En _Fedora_, se instala a través de la paquetería `dnf`.
 
-<p align="center"><img width="300" src="https://love2d.org/style/logo.png"></p>
-
-La ventaja para los usuarios de _Fedora_, es que lo tenemos desde el repositorio.
-
-```shell
+```bash
+sudo dnf makecache --refresh
 sudo dnf install love
 ```
 
+Eso es todo. Ahora en la terminal puedes llamarlo **`love`** y veras algo como esto.
+
+<div align="center">
+  <img src="../assets/capture-love.webp" alt="image of the app love2D" title="image of the app love2D">
+</div>
+
 ## MySQL
 > [!NOTE]
-> la instalacion biene de la informacion brindada de [docs](https://docs.fedoraproject.org/e-US/quick-docs/installing-mysql-mariadb/) de _fedoraproject.org_.
+> la instalación viene de la información brindada de [docs](https://docs.fedoraproject.org/e-US/quick-docs/installing-mysql-mariadb/) de _fedoraproject.org_.
 
 ### Agregar el repositorio MySQL a Fedora
-Descargue el paquete de versión proporcionado por Oracle desde [aquí](https://dev.mysql.com/downloads/repo/yum/) Una vez descargado, instálelo usando dnf:
+Descargue el paquete de versión proporcionado por Oracle desde [aquí](https://dev.mysql.com/downloads/repo/yum/) Una vez descargado, instalar usando `dnf`:
 
 ```shell
 sudo dnf install <ruta absoluta del archivo>
@@ -198,7 +170,7 @@ sudo dnf install <ruta absoluta del archivo>
 sudo dnf install mysql-community-server
 ```
 
-### Inicie el servicio MySQL y habilítelo al iniciar sesión:
+### Inicie el servicio MySQL y habilitar al iniciar sesión:
 
 ```shell
 sudo systemctl start mysqld

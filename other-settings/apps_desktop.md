@@ -62,23 +62,6 @@ Un juego divertido de escritura y para mejorar la velocidad de escritura. Dispon
 
 Es un traductor fácil de usar. Disponible en la `Tienda de Software` de _Fedora_.
 
-
-## Love2D
-Love es un marco _increíble_ que puedes usar para hacer juegos 2D en Lua. Es gratis, de código abierto y funciona desde _windows, Mac Os X, Linux, Android e Ios_.
-
-En _Fedora_, se instala a través de la paquetería `dnf`.
-
-```bash
-sudo dnf makecache --refresh
-sudo dnf install love
-```
-
-Eso es todo. Ahora en la terminal puedes llamarlo **`love`** y veras algo como esto.
-
-<div align="center">
-  <img src="../assets/capture-love.webp" alt="image of the app love2D" title="image of the app love2D">
-</div>
-
 ## fontforge
 
 Un programa para editar una fuente o modificar una que ya tengas descargada:
