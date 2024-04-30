@@ -1,107 +1,37 @@
-# Como uso Vs-Code <img style="height: 30px" src="../assets/visual-studio-code-icon.png">
+<h1 align="center">
+  Como uso Vs-Code
+  <img style="height: 30px" src="https://i.ibb.co/jrSk3Q3/vscode.png">
+</h1>
 
-> Mi segunda eleccion a <img style="height: 15px" src="../assets/Nvim-complete.png">
-> , Pero para **Tailwind** <img style="height: 15px" src="../assets/tailwind-css-icon.png">,
-> **Deno** <img style="height: 15px" src="../assets/deno.png"> o
-> **Styled-components** <img style="height: 15px" src="../assets/styled-icon.png"> son mas convenientes.
+> Mi segunda elección a _Neovim_. Mis usos son para _Deno_, _Styled-components_, _Flutter_, etc. Son mas convenientes.
 
-## PLugins
+## Extensiones
 
-### Auto Rename Tag <img style="height: 25px" src="../assets/icon-auto-rename-tag.png">
+- <img width="25" src="https://astro-build.gallerycdn.vsassets.io/extensions/astro-build/astro-vscode/2.8.6/1713885646513/Microsoft.VisualStudio.Services.Icons.Default"> **Astro**: Soporte de _Astro para VisualStudio_.
+- <img width="25" src="https://editorconfig.gallerycdn.vsassets.io/extensions/editorconfig/editorconfig/0.16.4/1607315835386/Microsoft.VisualStudio.Services.Icons.Default"> **EditorConfig for VS Code**: Un complemento que anula la configuración del usuario o espacio de trabajo por un archivo `.editorconfig`.
+- <img width="25" src="https://usernamehw.gallerycdn.vsassets.io/extensions/usernamehw/errorlens/3.17.0/1713124102396/Microsoft.VisualStudio.Services.Icons.Default"> **Error Lens**: Muestra los errores de diagnósticos del _language server_ en el código.
+- <img width="25" src="https://dbaeumer.gallerycdn.vsassets.io/extensions/dbaeumer/vscode-eslint/3.0.5/1712051003124/Microsoft.VisualStudio.Services.Icons.Default"> **ESLint**: Linter para `js, jsx, ts, tsx` y te hace trabajar con reglas como `standard` y otras.
+- <img width="25" src="https://eamodio.gallerycdn.vsassets.io/extensions/eamodio/gitlens/2024.4.2905/1714381672782/Microsoft.VisualStudio.Services.Icons.Default"> **GitLens - Git supercharged**: Para trabajar con Git.
+- <img width="25" src="https://wix.gallerycdn.vsassets.io/extensions/wix/vscode-import-cost/3.3.0/1649579526643/Microsoft.VisualStudio.Services.Icons.Default"> **Import Cost**: Dice lo que pesa la librería.
+- <img width="25" src="https://codeium.gallerycdn.vsassets.io/extensions/codeium/codeium/1.9.30/1714184426936/Microsoft.VisualStudio.Services.Icons.Default"> **Codeium**: IA de autocompleted, una opción Free de copilot.
+- <img width="25" src="https://dart-code.gallerycdn.vsassets.io/extensions/dart-code/flutter/3.87.20240402/1712063141663/Microsoft.VisualStudio.Services.Icons.Default"> **Flutter**: Extensión para soportar el SDK de flutter.
+- <img width="25" src="https://pkief.gallerycdn.vsassets.io/extensions/pkief/material-icon-theme/5.1.0/1713610070910/Microsoft.VisualStudio.Services.Icons.Default"> **Material Icon Theme**: Iconos geniales para documentos, archivos, Extensiones...
+- <img width="25" src="https://zhuangtongfa.gallerycdn.vsassets.io/extensions/zhuangtongfa/material-theme/3.17.2/1714027119547/Microsoft.VisualStudio.Services.Icons.Default"> **One Dark Pro**: Tema para el editor de Vs-Code.
+- <img width="25" src="https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/10.4.0/1711025051911/Microsoft.VisualStudio.Services.Icons.Default"> **Prettier - Code formatter**: Formatter de código.
+- <img width="25" src="https://ms-ceintl.gallerycdn.vsassets.io/extensions/ms-ceintl/vscode-language-pack-es/1.89.2024042409/1713949937613/Microsoft.VisualStudio.Services.Icons.Default"> **Spanish Language Pack for Visual Studio Code**: Paquete de idioma español para VSCode.
+- <img width="25" src="https://yoavbls.gallerycdn.vsassets.io/extensions/yoavbls/pretty-ts-errors/0.5.4/1712534608793/Microsoft.VisualStudio.Services.Icons.Default"> **Pretty TypeScript Errors**: Muestra los errores de TypeScript mas legibles y bonitos.
+- <img width="25" src="https://dart-code.gallerycdn.vsassets.io/extensions/dart-code/dart-code/3.87.20240429/1714402134611/Microsoft.VisualStudio.Services.Icons.Default"> **Dart**: Extension para soportar el lenguaje `dart`.
+- <img width="25" src="https://kamikillerto.gallerycdn.vsassets.io/extensions/kamikillerto/vscode-colorize/0.11.1/1619866227538/Microsoft.VisualStudio.Services.Icons.Default"> **colorize**: Permite visualizar colores en `css, sass, less, portcss, stylus, xml...`.
+- <img width="25" src="https://bradlc.gallerycdn.vsassets.io/extensions/bradlc/vscode-tailwindcss/0.11.65/1713978907565/Microsoft.VisualStudio.Services.Icons.Default"> **Tailwind CSS IntelliSense**: autocompleted, syntax highlighting and linting con tailwind.
+- <img width="25" src="https://vscodevim.gallerycdn.vsassets.io/extensions/vscodevim/vim/1.27.2/1703296672749/Microsoft.VisualStudio.Services.Icons.Default"> **Vim**: Ayuda a tener una experiencia como la de Vim.
+- <img width="25" src="https://rangav.gallerycdn.vsassets.io/extensions/rangav/vscode-thunder-client/2.21.18/1714402871230/Microsoft.VisualStudio.Services.Icons.Default"> **Thunder Client**: Cliente Rest API simple y rápido.
+- <img width="25" src="https://wayou.gallerycdn.vsassets.io/extensions/wayou/vscode-todo-highlight/1.0.5/1635478170130/Microsoft.VisualStudio.Services.Icons.Default"> **TODO Highlight**: Para resaltar partes importantes del código con `TODO, NOTE, BUGS, HAKS, WARNING...`
+- <img width="25" src="https://ellreka.gallerycdn.vsassets.io/extensions/ellreka/tailwindcss-highlight/2.0.0/1672145442377/Microsoft.VisualStudio.Services.Icons.Default"> **Tailwind CSS Highlight**: Extension para resaltado de sintaxis para tailwindCss.
 
-Practicamente me renombra la etiquetas html, xml o su sintaxis en otros archivos como js, ts, jsx, tsx, html, xml, ejs...
-Descarga desde las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag).
+## Configuraciones
 
-### EditorConfig for VS Code <img style="height: 25px" src="../assets/icon-editorconfig.png">
+El archivo `settings.json` tiene una configuración de todo VSCode, desde las extensiones hasta el comportamiento del editor.
 
-Me crea un archivo de configuracion **.editorconfig** donde puedo editar el tipo de sangria, tabs, espaciados y más por archivo **FileType**.
-Descarga desde las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig).
+El archivo: `keybindings.json` es usado por el usuario para agregar o modificar los métodos de teclado.
 
-### Error Lens <img style="height: 25px" src="../assets/icon-error-lens.png">
-
-Me muestra los errores del dignostico del **language server** a lado del código.
-Descarga desde las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens).
-
-### ESLint <img style="height: 25px" src="../assets/eslint-icon.png">
-
-es un linter para **{ js, jsx, ts, tsx }** y te hace trabajar con unas reglas de codigo como **standard** y otras.
-
-Para que se ejecute inmediatemente se guarde el documento revise el [**settings.json**](./settings.json).
-Y Descarga desde las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-
-### GitLens - Git supercharged <img style="height: 25px" src="../assets/icon-git-lens.png">
-
-Me da más informacion para trabajar con git, los cambios en la barra de signos del lado izquierdo y más.
-Descarga desde las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens).
-
-### Import Cost <img style="height: 25px" src="../assets/icon-import-cost.png">
-
-Dice lo que pesa el uso de la bibliotaca que se importa.
-Descarga desde las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost).
-
-### Material Icon Theme <img style="height: 25px" src="../assets/icon-material-icon-theme.png">
-
-Iconos geniales para todos los folders y ficheros con sus respectivos **fileTypes**, para cada caso...
-Descarga desde las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).
-
-### One Dark Pro <img style="height: 25px" src="../assets/icon-one-dark-pro.png">
-
-El mejor tema para un editor de código de toda la historia...
-Descarga desde las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme).
-
-### Prettier -Code formatter <img style="height: 25px" src="../assets/icon-prettier.png">
-
-Formateador de documentos, solo lo uso con js, y si te molesta el **';'** revisa mi [**settings.json**](./settings.json).
-
-Descarga desde las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode).
-
-### Spanish Language Pack for Visual Studio Code <img style="height: 25px" src="../assets/icon-spanish-language.png">
-
-Traduce todo el editor a español, incluso sospecho que me traduce parte de los diagnosticos del **language server protocol (LSP)**.
-
-El mismo cuento, desde **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-es)
-
-### Tailwind CSS IntelliSense <img style="height: 25px" src="../assets/tailwind-css-icon.png">
-
-Me brinda Autocompletado, sintaxis y linter para trabajar con **Tailwind**.
-Obtenlo desde **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-
-### Thunder Client <img style="height: 25px" src="../assets/icon-thunder-client.png">
-
-Un cliente para trabajar con **Rest API** como se hace con **postman** <img style="height: 15px" src="../assets/postman-icon.png"> o tambien **insomnia** <img style="height: 15px" src="../assets/icon-insomnia.png">, pero en **Vs Code**.
-Lo obtienes desde **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-
-### Vim <img style="height: 25px" src="../assets/icon-vs-code-vim.png">
-
-Mi favorito, de lo contrario extrañaria a <img style="height: 15px" src="../assets/Nvim-complete.png">, las configuraciones para que se paresca aun mas estan en mi [**settings.json**](./settings.json).
-Y claro que se descarga de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
-
-### vscode-styled-components <img style="height: 25px" src="../assets/styled-icon.png">
-
-Para usar gramatica de **sass** y de **css**, asi como su sintaxis y Autocompletado. Lo encuentras en **Vs Code** o tambien [**Aqui**](https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components)
-
-### Deno <img style="height: 25px" src="../assets/deno.png">
-
-Una alternativa con poco tiempo a <img style="height: 17px" src="../assets/nodejs.png">, pero que promete un gran futuro.
-La encuentras desde **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno)
-
-### TODO Highlight <img style="height: 25px" src="../assets/icon-todo-ihghlight.png">
-
-Para resaltar partes importantes del codigo con **TODO, NOTE, BUGS, HAKS, WARNING...**
-Esta en las extenciones de **Vs Code** o [**Aqui**](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
-
-### es6-string-html:
-
-> probar
-
-## Configuracion de teclado
-
-- Archivo: Nueva carpeta - <code>Alt + B</code>
-- Archivo: Nuevo archivo - <code>Alt + F</code>
-- copiar - <code>Alt + Y Alt + Y</code>
-- Eliminar Línea - <code>Alt + D Alt + D</code>
-- Guardar rodo - <code>Alt + S</code>
-- Insertar línea arriba - <code>Mayús + Alt + Enter</code>
-- Insertar línea debajo - <code>Alt + Enter</code>
-- Ver: Alternar visibilidad de la barra lateral - <code>Alt + Q</code>
-- 'deleteWordLeft' - <code>Alt + Backspace</code>
+Para _Fedora_ se encuentran en la ruta: `~/.config/Code/User/`, puedes reemplazarlos o crear un enlace simbólico.

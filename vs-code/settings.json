@@ -1,538 +1,500 @@
 {
-   "window.titleBarStyle": "custom",
-   "oneDarkPro.italic": true,
-   "workbench.colorTheme": "One Dark Pro",
-   "workbench.iconTheme": "material-icon-theme",
-   "workbench.startupEditor": "newUntitledFile",
-   "workbench.editor.languageDetection": true,
-   "workbench.sideBar.location": "left",
-   "files.autoSave": "afterDelay",
-   "editor.fontFamily": "Comic code Ligatures",
-   "editor.fontLigatures": true,
-   "editor.linkedEditing": true,
-   "editor.suggest.preview": true,
-   "editor.guides.bracketPairs": true,
-   "editor.bracketPairColorization.enabled": true,
-   "editor.colorDecorators": false,
-   "editor.tabSize": 2,
-   "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-   },
-   "gitlens.currentLine.enabled": false,
-   "gitlens.hovers.currentLine.over": "line",
-   "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-   },
-   "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-   },
-   "prettier.useEditorConfig": false,
-   "prettier.semi": false,
-   "telemetry.telemetryLevel": "off",
-   "vim.leader": "<Space>",
-   "vim.normalModeKeyBindingsNonRecursive": [
-      {
-         // Bajar mas rapido
-         "before": [
-            "D"
-         ],
-         "after": [
-            "5",
-            "j"
-         ]
-      },
-      {
-         // Subir mas rapido
-         "before": [
-            "E"
-         ],
-         "after": [
-            "5",
-            "k"
-         ]
-      },
-      {
-         "before": [
-            "<Leader>",
-            ";"
-         ],
-         "after": [
-            "$",
-            "a",
-            ";"
-         ]
-      },
-      {
-         // anidar lineas
-         "before": [
-            "<Leader>",
-            ","
-         ],
-         "after": [
-            "J"
-         ]
-      },
-      {
-         // Para guardar o escribir el archivo
-         "before": [
-            "<Leader>",
-            "w"
-         ],
-         "commands": [
-            "workbench.action.files.save"
-         ]
-      },
-      {
-         // Para eliminar el resaltado
-         "before": [
-            "<Leader>",
-            "m"
-         ],
-         "commands": [
-            ":noh"
-         ]
-      },
-      {
-         // Atajo para abrir la paleta de comandos
-         "before": [
-            "<Leader>",
-            "p"
-         ],
-         "commands": [
-            "workbench.action.showCommands"
-         ]
-      },
-      {
-         // Para acceder a los simbolos
-         "before": [
-            "<Leader>",
-            "t"
-         ],
-         "commands": [
-            "workbench.action.gotoSymbol"
-         ]
-      },
-      {
-         // Buffer prev
-         "before": [
-            "<Leader>",
-            "j"
-         ],
-         "commands": [
-            ":tabprev"
-         ]
-      },
-      {
-         // Buffer next
-         "before": [
-            "<Leader>",
-            "k"
-         ],
-         "commands": [
-            ":tabnext"
-         ]
-      },
-      {
-         // deleted buffer actual
-         "before": [
-            "<Leader>",
-            "q"
-         ],
-         "commands": [
-            "workbench.action.closeActiveEditor"
-         ]
-      },
-      {
-         // limpia todos los buffers exepto donde se encuentra
-         "before": [
-            "<Leader>",
-            "s",
-            "a"
-         ],
-         "commands": [
-            ":tabdelete"
-         ]
-      },
-      {
-         // toggle file manager
-         "before": [
-            "<Leader>",
-            "<Tab>"
-         ],
-         "commands": [
-            "workbench.action.toggleSidebarVisibility"
-         ]
-      },
-      {
-         // focus in fila manager
-         "before": [
-            "<Leader>",
-            "f"
-         ],
-         "commands": [
-            "revealInExplorer"
-         ]
-      },
-      {
-         // Alternar comantarios en modo Normal
-         "before": [
-            "<leader>",
-            "/"
-         ],
-         "commands": [
-            "editor.action.commentLine"
-         ]
-      },
-      {
-         // Cambiar de nombre a una propiedad
-         "before": [
-            "<leader>",
-            "r",
-            "e"
-         ],
-         "commands": [
-            "editor.action.rename"
-         ]
-      },
-      {
-         // Mostrar la definicion
-         "before": [
-            "M"
-         ],
-         "commands": [
-            "editor.action.showHover"
-         ]
-      }
-   ],
-   "vim.insertModeKeyBindingsNonRecursive": [
-      {
-         // Escapar con 'kj'
-         "before": [
-            "k",
-            "j"
-         ],
-         "after": [
-            "<ESC>"
-         ]
-      }
-   ],
-   "vim.visualModeKeyBindings": [
-      {
-         // Alternar comentario en modo visual
-         "before": [
-            "<leader>",
-            "/"
-         ],
-         "commands": [
-            "editor.action.commentLine",
-            "extension.vim_escape"
-         ]
-      }
-   ],
-   "editor.inlineSuggest.enabled": true,
-   "[dart]": {
-      "editor.formatOnSave": true,
-      "editor.formatOnType": true,
-      "editor.rulers": [
-         80
-      ],
-      "editor.selectionHighlight": false,
-      "editor.suggest.snippetsPreventQuickSuggestions": false,
-      "editor.suggestSelection": "first",
-      "editor.tabCompletion": "onlySnippets",
-      "editor.wordBasedSuggestions": false
-   },
-   "oneDarkPro.bold": true,
-   "oneDarkPro.vivid": true,
-   "editor.cursorBlinking": "solid",
-   "editor.tokenColorCustomizations": {
-      "[One Dark Pro]": {
-         "variables": "#E9EBF6",
-         "keywords": "#FF79C6",
-         "functions": "#E78284",
-         "textMateRules": [
-            {
-               "scope": [
-                  "entity.other.attribute-name.html",
-                  "meta.attribute.class.html",
-                  "meta.tag.structure.div.start.html",
-                  "text.html.derivative"
-               ],
-               "settings": {
-                  "foreground": "#F4B8E4",
-                  "fontStyle": "italic"
-               }
-            },
-            {
-               "scope": "text.html.derivative",
-               "settings": {
-                  "foreground": "#c6d0f5",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": [
-                  "punctuation.definition.tag.end.html",
-                  "punctuation.definition.tag.begin.html"
-               ],
-               "settings": {
-                  "foreground": "#ff6c6b",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": "entity.name.tag.html",
-               "settings": {
-                  "foreground": "#E78284",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": [
-                  "constant.character.entity.named.lt.html",
-                  "constant.character.entity.named.gt.html"
-               ],
-               "settings": {
-                  "foreground": "#E9EBF6",
-                  "fontStyle": "bold"
-               }
-            },
-            {
-               "scope": "constant.language.boolean",
-               "settings": {
-                  "foreground": "#ff6c6b",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": [
-                  "constant.language.null",
-                  "constant.language.undefined"
-               ],
-               "settings": {
-                  "foreground": "#7DC8FC",
-                  "fontStyle": "italic"
-               }
-            },
-            {
-               "scope": "constant.numeric",
-               "settings": {
-                  "foreground": "#EF9F76",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": "storage.type.function",
-               "settings": {
-                  "foreground": "#E78284",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": "support.type.property-name.json",
-               "settings": {
-                  "foreground": "#85C1DC",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": [
-                  "punctuation.support.type.property-name.begin.json.comments",
-                  "punctuation.support.type.property-name.end.json.comments"
-               ],
-               "settings": {
-                  "foreground": "#F2D5CF",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": "support.type.primitive",
-               "settings": {
-                  "foreground": "#E5C890",
-                  "fontStyle": "italic"
-               }
-            },
-            {
-               "scope": [
-                  "keyword.control.conditional",
-                  "keyword.control.loop"
-               ],
-               "settings": {
-                  "foreground": "#CA9EE6",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": "keyword.control.flow",
-               "settings": {
-                  "foreground": "#BABBF1",
-                  "fontStyle": "bold"
-               }
-            },
-            {
-               "scope": [
-                  "punctuation.definition.template-expression.begin",
-                  "punctuation.definition.template-expression.end"
-               ],
-               "settings": {
-                  "foreground": "#79dac8",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": "keyword.operator",
-               "settings": {
-                  "foreground": "#BABBF1",
-                  "fontStyle": "bold"
-               }
-            },
-            // for Markdown
-            {
-               "scope": [
-                  "entity.name.section.markdown"
-               ],
-               "settings": {
-                  "foreground": "#51afef",
-                  "fontStyle": "bold underline"
-               }
-            },
-            {
-               "scope": "markup.quote.markdown",
-               "settings": {
-                  "foreground": "#85C1DC",
-                  "fontStyle": "bold"
-               }
-            },
-            {
-               "scope": "markup.underline.link.markdown",
-               "settings": {
-                  "foreground": "#569CD6",
-                  "fontStyle": "italic underline"
-               }
-            },
-            {
-               "scope": "string.other.link.title.markdown",
-               "settings": {
-                  "foreground": "#79dac8",
-                  "fontStyle": "italic"
-               }
-            },
-            {
-               "scope": "markup.inline.raw.string.markdown",
-               "settings": {
-                  "foreground": "#E9EBF6",
-                  "fontStyle": "bold"
-               }
-            },
-            {
-               "scope": [
-                  "markup.italic.markdown",
-                  "markup.bold.markdown"
-               ],
-               "settings": {
-                  "foreground": "#EEBEBE"
-               }
-            },
-            {
-               "scope": [
-                  "punctuation.definition.markdown",
-                  "punctuation.definition.bold.markdown",
-                  "punctuation.definition.italic.markdown",
-                  "punctuation.definition.raw.markdown"
-               ],
-               "settings": {
-                  "foreground": "#FFFFFF",
-                  "fontStyle": ""
-               }
-            },
-            {
-               "scope": "fenced_code.block.language.markdown",
-               "settings": {
-                  "foreground": "#3CD2D2",
-                  "fontStyle": "bold"
-               }
-            }
-         ]
-      }
-   },
-   "editor.semanticTokenColorCustomizations": {
-      "enabled": true,
-      "[One Dark Pro]": {
-         "rules": {
-            "variable": "#E9EBF6",
-            "parameter": "#FFFFFF",
-            "property": "#85C1DC",
-            "function": "#51afef",
-            "method": "#99D1DB"
-         }
-      }
-   },
-   "update.mode": "none",
-   "workbench.colorCustomizations": {
-      "editor.background": "#303446",
-      "editor.lineHighlightBackground": "#414559",
-      "editorLineNumber.activeForeground": "#FF8800",
-      "editorCursor.background": "#ff5555",
-      "editorCursor.foreground": "#f8f8f2",
-      "editorSuggestWidget.background": "#414559",
-      "editorSuggestWidget.foreground": "#c6d0f5",
-      "editorSuggestWidget.border": "#51afef",
-      "editorSuggestWidget.selectedForeground": "#181818",
-      "editorSuggestWidget.selectedBackground": "#79dac8",
-      "editorSuggestWidget.focusHighlightForeground": "#ff5555",
-      "editorHoverWidget.border": "#51afef",
-      "editorHoverWidget.foreground": "#c6d0f5",
-      "editorHoverWidget.background": "#414559"
-   },
-   // NOTE: for plugin Error Lens
-   "errorLens.fontStyleItalic": true,
-   "errorLens.messageBackgroundMode": "none",
-   "errorLens.statusBarIconsUseBackground": false,
-   "errorLens.enabled": true,
-   "errorLens.enabledDiagnosticLevels": [
-      "error",
-      "warning",
-      "hint",
-      "info"
-   ],
-   // NOTE: for plugin todohighlighting
-   "todohighlight.keywords": [
-      "DEBUG:",
-      "REVIEW:",
-      {
-         "text": "NOTE:",
-         "color": "#51afef",
-         "backgroundColor": "transparent",
-         "fontWeight": "bold",
-         "fontStyle": "normal"
-      },
-      {
-         "text": "HACK:",
-         "color": "#FFA630",
-         "backgroundColor": "transparent",
-         "fontWeight": "bold",
-         "fontStyle": "normal"
-      },
-      {
-         "text": "TODO:",
-         "color": "#E5C890",
-         "backgroundColor": "transparent",
-         "fontWeight": "bold",
-         "fontStyle": "normal"
-      },
-      {
-         "text": "FIXME:",
-         "color": "#ff6c6b",
-         "backgroundColor": "transparent",
-         "fontWeight": "bold",
-         "fontStyle": "normal"
-      },
-      {
-         "text": "WARNING:",
-         "color": "#E78284",
-         "backgroundColor": "transparent",
-         "fontWeight": "bold",
-         "fontStyle": "normal"
-      }
-   ]
+	"workbench.colorTheme": "One Dark Pro",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.startupEditor": "newUntitledFile",
+	"workbench.editor.languageDetection": true,
+	// "files.autoSave": "afterDelay",
+	"editor.fontFamily": "ComicCodeLigatures Nerd Font",
+	"editor.fontLigatures": true,
+	"editor.lineNumbers": "relative",
+	"editor.linkedEditing": true,
+	"editor.suggest.preview": true,
+	"editor.guides.bracketPairs": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.colorDecorators": false,
+	"editor.tabSize": 2,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit"
+	},
+	"gitlens.currentLine.enabled": false,
+	"gitlens.hovers.currentLine.over": "line",
+	"[javascript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"colorize.languages": [
+		"css",
+		"sass",
+		"scss",
+		"less",
+		"postcss",
+		"sss",
+		"stylus",
+		"xml",
+		"svg",
+		"json",
+		"astro",
+		"dart",
+		"html"
+	],
+	"colorize.colorized_colors": ["BROWSERS_COLORS", "HEXA", "RGB", "HSL", "ARGB"],
+	"prettier.useEditorConfig": false,
+	"editor.formatOnSave": true,
+	"prettier.semi": false,
+	"telemetry.telemetryLevel": "off",
+
+	// NOTE: for [nvim]
+	"vim.highlightedyank.enable": true,
+	"vim.highlightedyank.color": "#ea805d99",
+	"vim.leader": "<Space>",
+	"vim.insertModeKeyBindingsNonRecursive": [
+		{
+			// Escapar con 'kj'
+			"before": ["k", "j"],
+			"after": ["<ESC>"]
+		},
+		{
+			// moverse a la izquierda
+			"before": ["<C-h>"],
+			"after": ["<Left>"]
+		},
+		{
+			// moverse a la derecha
+			"before": ["<C-l>"],
+			"after": ["<Right>"]
+		},
+		{
+			// moverse hacia abajo
+			"before": ["<C-j>"],
+			"after": ["<Down>"]
+		},
+		{
+			// moverse hacia arriba
+			"before": ["<C-k>"],
+			"after": ["<Up>"]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			// Para guardar o escribir el archivo
+			"before": ["<Leader>", "w"],
+			"commands": ["workbench.action.files.save"]
+		},
+		{
+			// Para eliminar el resaltado
+			"before": ["<Leader>", "m"],
+			"commands": [":noh"]
+		},
+		{
+			// Atajo para abrir la paleta de comandos
+			"before": ["<Leader>", "p"],
+			"commands": ["workbench.action.showCommands"]
+		},
+		{
+			// Para acceder a los simbolos
+			"before": ["<Leader>", "t"],
+			"commands": ["workbench.action.gotoSymbol"]
+		},
+
+		// NOTE: [Buffer]
+		{
+			// Buffer prev
+			"before": ["<Leader>", "j"],
+			"commands": [":tabprev"]
+		},
+		{
+			// Buffer next
+			"before": ["<Leader>", "k"],
+			"commands": [":tabnext"]
+		},
+		{
+			// deleted buffer actual
+			"before": ["<Leader>", "x"],
+			"commands": ["workbench.action.closeActiveEditor"]
+		},
+		{
+			// toggle file manager
+			"before": ["<Leader>", "<Tab>"],
+			"commands": ["workbench.action.toggleSidebarVisibility"]
+		},
+		{
+			// Para posicionarse en el administrador de archivos
+			"before": ["<Leader>", "f"],
+			"commands": ["revealInExplorer"]
+		},
+		{
+			// Alternar comantarios en modo Normal
+			"before": ["<leader>", "/"],
+			"commands": ["editor.action.commentLine"]
+		},
+		{
+			// Cambiar de nombre a una propiedad
+			"before": ["<leader>", "r", "e"],
+			"commands": ["editor.action.rename"]
+		},
+		{
+			// Mostrar Hover, diagnostics...
+			"before": ["<leader>", "d"],
+			"commands": ["editor.action.showHover"]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		{
+			// Alternar comentario en modo visual
+			"before": ["<leader>", "/"],
+			"commands": ["editor.action.commentLine", "extension.vim_escape"]
+		}
+	],
+	"editor.inlineSuggest.enabled": true,
+	"[dart]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnType": true,
+		"editor.rulers": [80],
+		"editor.selectionHighlight": false,
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		"editor.suggestSelection": "first",
+		"editor.tabCompletion": "onlySnippets",
+		"editor.wordBasedSuggestions": "off"
+	},
+	// "oneDarkPro.bold": true,
+	// "oneDarkPro.vivid": true,
+	"editor.cursorBlinking": "solid",
+	"editor.tokenColorCustomizations": {
+		"[Catppuccin Frappé]": {
+			"variables": "#DCD9D5",
+			"keywords": "#FF79C6",
+			"functions": "#E78284",
+			"textMateRules": [
+				{
+					"scope": [
+						"entity.other.attribute-name.html",
+						"meta.attribute.class.html",
+						"meta.tag.structure.div.start.html",
+						"text.html.derivative",
+						"invalid.deprecated.entity.other.attribute-name.html"
+					],
+					"settings": {
+						"foreground": "#F4B8E4",
+						"fontStyle": "italic"
+					}
+				},
+				{
+					"scope": "text.html.derivative",
+					"settings": {
+						"foreground": "#c6d0f5",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": [
+						"punctuation.definition.tag.end.html",
+						"punctuation.definition.tag.begin.html"
+					],
+					"settings": {
+						"foreground": "#ff6c6b",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": "entity.name.tag.html",
+					"settings": {
+						"foreground": "#E78284",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": [
+						"constant.character.entity.named.lt.html",
+						"constant.character.entity.named.gt.html"
+					],
+					"settings": {
+						"foreground": "#E9EBF6",
+						"fontStyle": "bold"
+					}
+				},
+				{
+					"scope": "constant.language.boolean",
+					"settings": {
+						"foreground": "#ff6c6b",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": ["constant.language.null", "constant.language.undefined"],
+					"settings": {
+						"foreground": "#7DC8FC",
+						"fontStyle": "italic"
+					}
+				},
+				{
+					"scope": "constant.numeric",
+					"settings": {
+						"foreground": "#EF9F76",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": "storage.type.function",
+					"settings": {
+						"foreground": "#E78284",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": "support.type.property-name.json",
+					"settings": {
+						"foreground": "#85C1DC",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": [
+						"punctuation.support.type.property-name.begin.json.comments",
+						"punctuation.support.type.property-name.end.json.comments"
+					],
+					"settings": {
+						"foreground": "#F2D5CF",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": "support.type.primitive",
+					"settings": {
+						"foreground": "#E5C890",
+						"fontStyle": "italic"
+					}
+				},
+				{
+					"scope": ["keyword.control.conditional", "keyword.control.loop"],
+					"settings": {
+						"foreground": "#CA9EE6",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": "keyword.control.flow",
+					"settings": {
+						"foreground": "#BABBF1",
+						"fontStyle": "bold"
+					}
+				},
+				{
+					"scope": [
+						"punctuation.definition.template-expression.begin",
+						"punctuation.definition.template-expression.end"
+					],
+					"settings": {
+						"foreground": "#79dac8",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": "keyword.operator",
+					"settings": {
+						"foreground": "#BABBF1",
+						"fontStyle": "bold"
+					}
+				},
+				// for Markdown
+				{
+					"scope": ["entity.name.section.markdown"],
+					"settings": {
+						"foreground": "#51afef",
+						"fontStyle": "bold underline"
+					}
+				},
+				{
+					"scope": "markup.quote.markdown",
+					"settings": {
+						"foreground": "#85C1DC",
+						"fontStyle": "bold"
+					}
+				},
+				{
+					"scope": "markup.underline.link.markdown",
+					"settings": {
+						"foreground": "#569CD6",
+						"fontStyle": "italic underline"
+					}
+				},
+				{
+					"scope": "string.other.link.title.markdown",
+					"settings": {
+						"foreground": "#79dac8",
+						"fontStyle": "italic"
+					}
+				},
+				{
+					"scope": "markup.inline.raw.string.markdown",
+					"settings": {
+						"foreground": "#E9EBF6",
+						"fontStyle": "bold"
+					}
+				},
+				{
+					"scope": ["markup.italic.markdown", "markup.bold.markdown"],
+					"settings": {
+						"foreground": "#EEBEBE"
+					}
+				},
+				{
+					"scope": [
+						"punctuation.definition.markdown",
+						"punctuation.definition.bold.markdown",
+						"punctuation.definition.italic.markdown",
+						"punctuation.definition.raw.markdown"
+					],
+					"settings": {
+						"foreground": "#FFFFFF",
+						"fontStyle": ""
+					}
+				},
+				{
+					"scope": "fenced_code.block.language.markdown",
+					"settings": {
+						"foreground": "#3CD2D2",
+						"fontStyle": "bold"
+					}
+				},
+				{
+					"scope": ["meta.paragraph.markdown", "text.html.markdown"],
+					"settings": { "foreground": "#C6D0F5", "fontStyle": "" }
+				}
+			]
+		}
+	},
+	"editor.semanticTokenColorCustomizations": {
+		"enabled": true,
+		"[Catppuccin Frappé]": {
+			"rules": {
+				"variable": "#DCD9D5",
+				"parameter": "#EEFFFF",
+				"property": "#85C1DC",
+				"function": "#51afef",
+				"method": "#99D1DB"
+			}
+		}
+	},
+	"update.mode": "none",
+	"workbench.colorCustomizations": {
+		"editor.background": "#303446",
+		"editor.foreground": "#EEFFFF",
+		"activityBarBadge.background": "#51AFEF",
+
+		"editor.lineHighlightBackground": "#414559",
+		"editorLineNumber.activeForeground": "#FF8800",
+		"editorCursor.background": "#ff5555",
+		"editorCursor.foreground": "#f8f8f2",
+		"editor.selectionBackground": "#51576d",
+		"editor.findMatchBackground": "#ff6c6b",
+		"editor.findMatchHighlightBackground": "#E5C890",
+		"scrollbarSlider.activeBackground": "#51AFEF",
+		"scrollbarSlider.hoverBackground": "#51AFEFAA",
+
+		// autocomplete code
+		"editorSuggestWidget.background": "#414559",
+		"editorSuggestWidget.foreground": "#c6d0f5",
+		"editorSuggestWidget.border": "#51afef",
+		"editorSuggestWidget.selectedForeground": "#181818",
+		"editorSuggestWidget.selectedBackground": "#51afef",
+		"editorSuggestWidget.focusHighlightForeground": "#ff5555",
+
+		// help windown, pop
+		"editorHoverWidget.border": "#51afef",
+		"editorHoverWidget.foreground": "#c6d0f5",
+		"editorHoverWidget.background": "#414559",
+
+		// status bar
+		"statusBar.background": "#292C3C",
+
+		// file tree
+		"sideBarTitle.foreground": "#DCD9D5",
+		"sideBar.background": "#292C3C",
+		"sideBar.foreground": "#DCD9D5",
+		"sideBarSectionHeader.border": "#232634",
+		"sideBarSectionHeader.background": "#51576d",
+		"sideBar.border": "#232634",
+		"list.hoverBackground": "#414559",
+		"list.activeSelectionBackground": "#51afef55",
+		"list.inactiveSelectionBackground": "#51afef55",
+		"list.focusBackground": "#414559",
+		"list.focusOutline": "#51afef55",
+
+		// buffer and groups
+		"editorGroupHeader.tabsBackground": "#292C3C",
+		"editorGroupHeader.tabsBorder": "#232634",
+		"editorGroupHeader.border": "#232634",
+		"tab.activeBackground": "#51576d",
+		"tab.inactiveBackground": "#292C3C",
+		"tab.activeBorder": "#7DC8FC",
+		"tab.border": "#51576d",
+
+		// file, extencions, git, pruevas, gitlens
+		"activityBar.background": "#232634",
+
+		// title bar
+		"titleBar.activeBackground": "#DCD9D5",
+		"titleBar.activeForeground": "#181818"
+	},
+	// NOTE: for plugin Error Lens
+	"errorLens.fontStyleItalic": true,
+	"errorLens.messageBackgroundMode": "none",
+	"errorLens.enabled": true,
+	"errorLens.enabledDiagnosticLevels": ["warning", "hint", "info", "error"],
+	// NOTE: for plugin todohighlighting
+	"todohighlight.keywords": [
+		"DEBUG:",
+		"REVIEW:",
+		{
+			"text": "NOTE:",
+			"color": "#51afef",
+			"backgroundColor": "transparent",
+			"fontWeight": "bold",
+			"fontStyle": "normal"
+		},
+		{
+			"text": "HACK:",
+			"color": "#FFA630",
+			"backgroundColor": "transparent",
+			"fontWeight": "bold",
+			"fontStyle": "normal"
+		},
+		{
+			"text": "TODO:",
+			"color": "#E5C890",
+			"backgroundColor": "transparent",
+			"fontWeight": "bold",
+			"fontStyle": "normal"
+		},
+		{
+			"text": "FIXME:",
+			"color": "#ff6c6b",
+			"backgroundColor": "transparent",
+			"fontWeight": "bold",
+			"fontStyle": "normal"
+		},
+		{
+			"text": "WARNING:",
+			"color": "#E78284",
+			"backgroundColor": "transparent",
+			"fontWeight": "bold",
+			"fontStyle": "normal"
+		}
+	],
+	"window.titleBarStyle": "custom",
+	"window.commandCenter": false,
+	"window.customTitleBarVisibility": "auto",
+	"window.menuBarVisibility": "compact",
+	"editor.wordWrap": "on",
+	"editor.wordWrapColumn": 90,
+	"prettier.printWidth": 90,
+	"prettier.singleQuote": true,
+	"prettier.useTabs": true
 }
