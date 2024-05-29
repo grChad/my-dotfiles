@@ -1,0 +1,24 @@
+{
+   "rules": {
+      "string-quotes": "single",
+      "max-line-length": 200,
+      "indentation": "tab",
+      "color-hex-case": "upper",
+      "block-opening-brace-space-before": "always",
+      "block-opening-brace-space-after": "always-single-line",
+      "block-opening-brace-newline-after": "always-multi-line",
+      "block-closing-brace-space-before": "always-single-line",
+      "block-closing-brace-newline-before": "always-multi-line",
+      "declaration-block-trailing-semicolon": "always",
+      "declaration-block-semicolon-newline-after": "always-multi-line",
+      "declaration-colon-newline-after": "always-multi-line",
+      "font-family-name-quotes": "always-where-recommended",
+      "color-function-notation": "legacy",
+      "alpha-value-notation": "number",
+      "rule-empty-line-before": "always-multi-line",
+      "selector-attribute-brackets-space-inside": "always",
+      "function-parentheses-space-inside": "always",
+      "function-comma-space-after": "always",
+      "selector-class-pattern": "[a-zA-Z_-][a-zA-Z0-9_-]*"
+   }
+}
