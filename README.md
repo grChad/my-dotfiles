@@ -36,17 +36,17 @@ Git es un sistema de control de versiones distribuido para rastrear cambios en a
 
 Viene por defecto en _fedora_, para otras distribuciones tendrás que acceder a su [git-scm.com](https://git-scm.com/)
 
-### Node.js <img height="25px" src="https://i.ibb.co/R7tjy8r/nodejs-icon.png">
-
-Es un entorno de tiempo de ejecución de JavaScript de código abierto que permite construir aplicaciones en el lado del servidor.
-
-Instalare _Node.js_ con un administrador de versiones llamado [fnm](https://github.com/Schniz/fnm). Para ello he preparado una guia de instalación que puedes ver [aquí](./other-settings/node.md).
-
 ### ZSH <img height="20px" src="https://i.ibb.co/684JJtx/zsh.png">
 
 Zsh es un potente y versátil intérprete de comandos de Unix con características avanzadas de autocompleted y personalización, para mas detalles visite [Z _shell_](https://zsh.sourceforge.io/).
 
 He hecho una guia para instalar _zsh_ junto con un Framework potente y liviano llamado [zimfw](https://github.com/zimfw/zimfw). Todo ello la encuentras [aquí](./zsh)
+
+### Node.js <img height="25px" src="https://i.ibb.co/R7tjy8r/nodejs-icon.png">
+
+Es un entorno de tiempo de ejecución de JavaScript de código abierto que permite construir aplicaciones en el lado del servidor.
+
+Instalare _Node.js_ con un administrador de versiones llamado [fnm](https://github.com/Schniz/fnm). Para ello he preparado una guia de instalación que puedes ver [aquí](./other-settings/node.md).
 
 ## Editores de Código
 
@@ -69,12 +69,14 @@ sudo dnf install -y neovim python3-neovim
 ```bash
 sudo dnf copr enable agriffis/neovim-nightly
 ```
+
 - Hacer una actualización: `sudo dnf update`
 - y para finalizar lo instalas
 
 ```bash
 dnf install -y neovim python3-neovim
 ```
+
 </details>
 
 También tengo una configuración fácil para _NeoVim_ [aquí](https://github.com/grChad/nvim).
@@ -90,11 +92,13 @@ Mi configuración se encuentra [aquí](./vs-code)
 Helix se denomina a si mismo, como un editor post-moderno. Y algo de cierto tiene, hace uso de la edición modal (basado en modos) como _Vim_ o _NeoVim_, también tiene compatibilidad con LSP (language sever protocol).
 
 1. Para instalar habilite el repositorio `COPR` para helix:
+
 ```bash
 sudo dnf copr enable varlad/helix
 ```
 
 2. Luego actualiza: `sudo dnf update`
+
 ```bash
 sudo dnf update
 ```
@@ -114,23 +118,62 @@ Son módulos adicionales que permiten personalizar y mejorar la experiencia del 
 Visita [gnome shell extensions](https://extensions.gnome.org/).
 
 ### One Thing
-One-Thing es una herramienta de productividad que le ayuda a concentrarse en una tarea a la vez.
 
+One-Thing es una herramienta de productividad que le ayuda a concentrarse en una tarea a la vez.
 
 <div align="center">
   <img src="https://i.ibb.co/9tfDDSd/one-thing.png">
 
-  La puedes instalar desde [aquí](https://extensions.gnome.org/extension/5072/one-thing/)
+La puedes instalar desde [aquí](https://extensions.gnome.org/extension/5072/one-thing/)
+
+</div>
+
+### Simple Message
+
+Similar a [One Thing](#one-thing), pero mas simple y se requiere de una configuracion en _zsh_ para tener la experiencia completa.
+
+La puedes instalar desde [aquí](https://extensions.gnome.org/extension/5018/simple-message/)
+
+<details>
+  <summary>Configuración recomendada para Zsh</summary>
+
+```bash
+DCONF_WRITE_COMMAND="dconf write /org/gnome/shell/extensions/simple-message/message"
+function show_message() {
+  local message="$1"
+
+  if [ -n "$message" ] && [ "$message" != "ms" ]; then
+    eval "$DCONF_WRITE_COMMAND \"\\\"$message\\\"\""
+    echo "Se ha agregado el mensaje $(tput setab 0)$(tput setaf 6) $message "
+  else
+    # Borrar el mensaje
+    eval "$DCONF_WRITE_COMMAND \"\\\"\\\"\""
+    echo "Mensaje eliminado"
+  fi
+}
+alias ms='show_message'
+```
+
+</details>
+
+Ahora solo tienes que usar el comando `ms` seguido de tu mensaje en comillas simples `'mensaje'` o `"mensaje"` y eso es todo.
+
+<div align="center">
+  <img src="./assets/capture-simple-message-terminal.png">
+  <img src="./assets/capture-simple-message-titleBar.png">
 </div>
 
 ### RunCat
+
 proporciona una animación de fotograma clave en la barra superior de GNOME Shell.
 La velocidad de la animación cambia según el uso de la CPU.
 
 <div align="center">
   <img src="https://i.ibb.co/QnGHmW0/capture-run-Cat.png">
-
-  La puedes instalar desde [aquí](https://extensions.gnome.org/extension/5072/one-thing/)
+  <p>
+    La puedes instalar desde
+    <a href="https://extensions.gnome.org/extension/5072/one-thing/">aquí</a>
+  </p>
 </div>
 
 ## Otros:
