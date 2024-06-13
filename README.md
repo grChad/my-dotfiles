@@ -179,9 +179,10 @@ La velocidad de la animación cambia según el uso de la CPU.
 ## Otros:
 
 1. [React Native, librerías y mas](./other-settings/react-native-cli.md)
-2. [Latex y mis proyectos](https://github.com/grChad/proyectos-latex)
-3. [Aplicaciones para el escritorio](./other-settings/apps_desktop.md)
-4. [programas para terminal](./other-settings/apps_for_terminal.md)
-5. [El WiFi y sus problemas](./other-settings/wifi.md)
-6. [hacks y comandos para Linux](./other-settings/hacks-linux.md)
-7. [Gravar imagen ISO desde terminal con 'dd'](./other-settings/gravarISO.md)
+2. [Configurar el entorno de LaTeX](./other-settings/latex.md)
+3. [Proyectos con LaTeX](https://github.com/grChad/proyectos-latex)
+4. [Aplicaciones para el escritorio](./other-settings/apps_desktop.md)
+5. [programas para terminal](./other-settings/apps_for_terminal.md)
+6. [El WiFi y sus problemas](./other-settings/wifi.md)
+7. [hacks y comandos para Linux](./other-settings/hacks-linux.md)
+8. [Gravar imagen ISO desde terminal con 'dd'](./other-settings/gravarISO.md)
