@@ -90,3 +90,23 @@ latexmk -pdf -pvc main.tex
 - **pdf**: Es para pre-visualizar un documento pdf.
 - **pvc**: Es para que recargue al leer los cambios (hot-reload).
 - **main.tex**: El archivo _tex_ que se edita.
+
+## Paquetes
+
+Al instalar _texlive-scheme-medium_ ya tienes muchos paquetes para usar, como:
+
+- geometry
+- titlesec
+- lipsum
+- parskip
+- ...
+
+Pero habrán paquetes que solo están en _texlive-scheme-full_, como las siguientes:
+
+- **fontawesome**: para usar iconos muy útiles como el de _github_, _facebook_ ...
+
+Para esos casos se requiere instalarlos por separado. Ejemplo:
+
+```bash
+sudo dnf install texlive-fontawesome
+```
