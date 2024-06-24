@@ -182,7 +182,7 @@ La velocidad de la animación cambia según el uso de la CPU.
 2. [Configurar el entorno de LaTeX](./other-settings/latex.md)
 3. [Proyectos con LaTeX](https://github.com/grChad/proyectos-latex)
 4. [Aplicaciones para el escritorio](./other-settings/apps_desktop.md)
-5. [programas para terminal](./other-settings/apps_for_terminal.md)
+5. [herramientas para terminal](./other-settings/tools-terminal.md)
 6. [El WiFi y sus problemas](./other-settings/wifi.md)
 7. [hacks y comandos para Linux](./other-settings/hacks-linux.md)
 8. [Gravar imagen ISO desde terminal con 'dd'](./other-settings/gravarISO.md)

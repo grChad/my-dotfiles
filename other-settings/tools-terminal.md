@@ -1,4 +1,4 @@
-<h1 align="center">Programas para la Terminal</h1>
+<h1 align="center">Herramientas para terminal</h1>
 
 ## <img width="80px" src="https://raw.githubusercontent.com/pemistahl/grex/main/logo.png">
 
@@ -31,6 +31,14 @@ También podrías tener las coincidencias en un archivo y buscar a través de el
 </div>
 
 Para mas información en [grex](https://github.com/pemistahl/grex).
+
+## ripgrep
+
+Herramienta de búsqueda orientada a líneas, que busca recursivamente el directorio para un patrón de expresiones regulares. Recomendable para usar con _NeoVim_.
+
+#### Install
+
+Con _Fedora_ `sudo dnf install ripgrep`. para otros visitar [aquí](https:/github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation).
 
 ## webP
 
@@ -81,64 +89,11 @@ sudo dnf install unrar
    unrar t name_file.rar
    ```
 
-## Flutter SDK
-
-Puedes instalar Flutter desde el [sitio oficial](https://docs.flutter.dev/get-started/install/linux), tanto manual como por Snap.
-
-<details>
-    <summary>Snap</summary>
-
-```shell
-sudo snap install flutter --classic
-```
-
-</details>
-
-<details>
-    <summary>Instalar manualmente</summary>
-
-1. Descargue el siguiente paquete de instalación para obtener la última versión estable del SDK de Flutter [Aquí](https://docs.flutter.dev/release/archive?tab=linux)
-2. Extraiga el archivo en la ubicación deseada. Por ejemplo:
-
-   ```shell
-   cd ~/development
-   tar xf ~/Downloads/flutter_linux_3.10.6-stable.tar.xz
-   ```
-
-3. Añade el Path de flutter en tu **.zsrhc**:
-   ```shell
-   export PATH=$HOME/`pwd`/flutter/bin:$PATH
-   ```
-4. Opcionalmente, pre-descargue los binarios de desarrollo:
-   ```shell
-   flutter precache
-   ```
-
-¡Ya estás listo para ejecutar los comandos de Flutter!
-
-</details>
-
-### Ejecute Flutter doctor
-
-Ejecute el siguiente comando para ver si hay alguna dependencia que necesite instalar para completar la configuración (para una salida detallada, agregue el flag -v):
-
-```shell
-flutter doctor
-```
-
-Este comando verifica su entorno y muestra un informe en la ventana del terminal. El SDK de Dart se incluye con Flutter; no es necesario instalar Dart por separado. Verifique la salida cuidadosamente para ver si hay otro software que pueda necesitar instalar o realizar otras tareas (que se muestran en negrita).
-
-Por ejemplo:
-
-```shell
-[-] Android toolchain - develop for Android devices
-    • Android SDK at /Users/dash/Library/Android/sdk
-    ✗ Android SDK is missing command line tools; download from https://goo.gl/XxQghQ
-    • Try re-installing or updating your Android SDK, visit https://docs.flutter.dev/setup/#android-setup for detailed instructions.
-```
-
 ## Love2D
+
 LÖVE es un marco _increíble_ que puedes usar para hacer juegos 2D en Lua. Es gratis, de código abierto y funciona desde _windows, Mac Os X, Linux, Android e Ios_.
+
+#### Install
 
 En _Fedora_, se instala a través de la paquetería `dnf`.
 
@@ -154,46 +109,49 @@ Eso es todo. Ahora en la terminal puedes llamarlo **`love`** y veras algo como e
 </div>
 
 ## MySQL
+
 > [!NOTE]
 > la instalación viene de la información brindada de [docs](https://docs.fedoraproject.org/e-US/quick-docs/installing-mysql-mariadb/) de _fedoraproject.org_.
 
-### Agregar el repositorio MySQL a Fedora
+#### Agregar el repositorio MySQL a Fedora
+
 Descargue el paquete de versión proporcionado por Oracle desde [aquí](https://dev.mysql.com/downloads/repo/yum/) Una vez descargado, instalar usando `dnf`:
 
 ```shell
 sudo dnf install <ruta absoluta del archivo>
 ```
 
-### Instalación de MySQL en Fedora
+#### Instalación de MySQL en Fedora
 
 ```shell
 sudo dnf install mysql-community-server
 ```
 
-### Inicie el servicio MySQL y habilitar al iniciar sesión:
+#### Inicie el servicio MySQL y habilitar al iniciar sesión:
 
 ```shell
 sudo systemctl start mysqld
 sudo systemctl enable mysqld
 ```
 
-busque la contraseña predeterminada. Por razones de seguridad, MySQL genera una clave raíz temporal.  Tenga en cuenta que MySQL tiene políticas de seguridad aún más estrictas que MariaDB.
+busque la contraseña predeterminada. Por razones de seguridad, MySQL genera una clave raíz temporal. Tenga en cuenta que MySQL tiene políticas de seguridad aún más estrictas que MariaDB.
 
-###  Configurar MySQL antes del primer uso
+#### Configurar MySQL antes del primer uso
 
 ```shell
 sudo mysql_secure_installation
 ```
 
-Luego, responde las preguntas de seguridad como prefieras.  o simplemente decir sí a todos ellos.
+Luego, responde las preguntas de seguridad como prefieras. o simplemente decir sí a todos ellos.
 
-### usar MySQL
+#### usar MySQL
 
 ```shell
 sudo mysql -u root -p
 ```
 
-### remover MySQL
+#### remover MySQL
+
 Sugiero eliminar de la siguiente manera, la forma más adecuada y segura sin eliminar muchas dependencias es:
 
 ```shell
