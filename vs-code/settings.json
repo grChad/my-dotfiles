@@ -20,29 +20,21 @@
 	"gitlens.hovers.currentLine.over": "line",
 	"[javascript]": {
 		"editor.formatOnSave": true,
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+		// "editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[typescript]": {
 		"editor.formatOnSave": true,
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+		// "editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[jsonc]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"colorize.languages": [
-		"css",
-		"sass",
-		"scss",
-		"less",
-		"postcss",
-		"sss",
-		"stylus",
-		"xml",
-		"svg",
-		"json",
-		"astro",
-		"dart",
-		"html"
+	// prettier-ignore
+	"colorize.include": [
+		"**/*.css", "**/*.scss", "**/*.sass", "**/*.less", "**/*.styl",
+		"**/*.json"
 	],
 	"colorize.colorized_colors": ["BROWSERS_COLORS", "HEXA", "RGB", "HSL", "ARGB"],
 	"prettier.useEditorConfig": false,
@@ -167,10 +159,8 @@
 	// "oneDarkPro.vivid": true,
 	"editor.cursorBlinking": "solid",
 	"editor.tokenColorCustomizations": {
-		"[Catppuccin Frappé]": {
-			"variables": "#DCD9D5",
+		"[One Dark Pro]": {
 			"keywords": "#FF79C6",
-			"functions": "#E78284",
 			"textMateRules": [
 				{
 					"scope": [
@@ -372,13 +362,13 @@
 	},
 	"editor.semanticTokenColorCustomizations": {
 		"enabled": true,
-		"[Catppuccin Frappé]": {
+		"[One Dark Pro]": {
 			"rules": {
-				"variable": "#DCD9D5",
-				"parameter": "#EEFFFF",
-				"property": "#85C1DC",
-				"function": "#51afef",
-				"method": "#99D1DB"
+				// "variable": "#DCD9D5",
+				"parameter": "#EEFFFF"
+				// "property": "#85C1DC"
+				// "function": "#51afef"
+				// "method": "#99D1DB"
 			}
 		}
 	},
@@ -394,7 +384,7 @@
 		"editorCursor.foreground": "#f8f8f2",
 		"editor.selectionBackground": "#51576d",
 		"editor.findMatchBackground": "#ff6c6b",
-		"editor.findMatchHighlightBackground": "#E5C890",
+		// "editor.findMatchHighlightBackground": "#E5C890",
 		"scrollbarSlider.activeBackground": "#51AFEF",
 		"scrollbarSlider.hoverBackground": "#51AFEFAA",
 
@@ -444,10 +434,11 @@
 		"titleBar.activeForeground": "#181818"
 	},
 	// NOTE: for plugin Error Lens
-	"errorLens.fontStyleItalic": true,
-	"errorLens.messageBackgroundMode": "none",
 	"errorLens.enabled": true,
+	"errorLens.fontStyleItalic": true,
+	"errorLens.messageBackgroundMode": "message",
 	"errorLens.enabledDiagnosticLevels": ["warning", "hint", "info", "error"],
+
 	// NOTE: for plugin todohighlighting
 	"todohighlight.keywords": [
 		"DEBUG:",
@@ -496,5 +487,6 @@
 	"editor.wordWrapColumn": 90,
 	"prettier.printWidth": 90,
 	"prettier.singleQuote": true,
-	"prettier.useTabs": true
+	"prettier.useTabs": true,
+	"editor.minimap.enabled": false
 }

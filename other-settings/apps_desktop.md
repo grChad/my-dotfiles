@@ -5,6 +5,7 @@
 ## Navegador Brave
 
 Una alternativa a _Google-Chrome_ pero con muchas mas mejoras y seguridad al usar.
+
 <div align="center">
   <img src="https://brave.com/static-assets/images/brave-logo-sans-text.svg" alt="brave logo" title="brave logo">
 </div>
@@ -26,6 +27,7 @@ Esto podría cambiar con el tiempo, siempre estar atento a los cambios.
 ## Audacity
 
 Un editor de audio libre y el más popular en el entorno GNU/Linux.
+
 <div align="center">
   <img width="100px" src="https://www.audacityteam.org/_astro/Audacity_Logo.63b57726.svg" alt="audacity logo" title="audacity logo">
 </div>
@@ -57,6 +59,16 @@ Un juego divertido de escritura y para mejorar la velocidad de escritura. Dispon
 <div align="center">
   <img src="https://images.sftcdn.net/images/t_app-icon-s/p/4fed82ea-96d6-11e6-a89f-00163ec9f5fa/574674166/tux-typing-linux-155549_960_720.webp" alt="tux typing logo" title="tux typing logo">
 </div>
+
+## Keypunch
+
+<div align="center" >
+  <img width="70%" src="https://github.com/bragefuglseth/keypunch/blob/main/data/screenshots/2-ready.png?raw=true" alt="image to keypunk" title="image to keypunk">
+</div>
+
+Una aplicación simple para practicar macanografía. Permite el uso de una gran variedad de idiomas disponibles.
+
+La instalacion biene de un packete de flatpak llamada `dev.bragefuglseh.keypunch`, tambien en _github_ como [bragefuglseth/keypunch](https://github.com/bragefuglseth/keypunch) o por ultimo desde la tienda de software de _Fedora_ siempre que se tengan habilitados los paquetes de _Flatpak_.
 
 ## Dialect
 

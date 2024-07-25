@@ -38,7 +38,7 @@ UNPLUGGED_ICONS = {
     90: "",
     100: "",
 }
-PLUGGED_ICONS = { 1: "" }
+PLUGGED_ICONS = {1: ""}
 UNPLUGGED_COLORS = {
     15: as_rgb(color_as_int(opts.color1)),
     16: as_rgb(color_as_int(opts.color15)),
@@ -166,6 +166,7 @@ def get_battery_cells() -> list:
 timer_id = None
 right_status_length = -1
 
+
 def draw_tab(
     draw_data: DrawData,
     screen: Screen,
@@ -180,12 +181,12 @@ def draw_tab(
     global right_status_length
     if timer_id is None:
         timer_id = add_timer(_redraw_tab_bar, REFRESH_TIME, True)
-    name_user = '😼' + os.environ.get("USER", "user").capitalize()
+    name_user = "😼" + os.environ.get("USER", "user").capitalize()
     date = datetime.now().strftime("%d/%B/%Y ")
 
     cells = get_battery_cells()
     cells.append((user_color, name_user))
-    cells.append((separator_right_color, ' | '))
+    cells.append((separator_right_color, " | "))
     cells.append((date_color, date))
     right_status_length = RIGHT_MARGIN
     for cell in cells:
