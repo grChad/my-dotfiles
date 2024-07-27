@@ -4,13 +4,9 @@ Si necesitas configurar el Wi-Fi en tu equipo Fedora, sigue los siguientes pasos
 
 1. Asegúrate de tener tu equipo actualizado y verifica el controlador que utiliza ejecutando el comando `lspci | grep -i network`.
 
-2. Si utilizas un controlador Broadcom BCM43228 802.11a/b/g/n, necesitas instalar los controladores `broadcom-wl`.
+2. Si utilizas un controlador Broadcom BCM43228, necesitas instalar los controladores `broadcom-wl`.
 
-3. Habilita los repositorios libres y no libres de rpmfusion con el siguiente comando:
-
-```shell
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-```
+3. Habilita los repositorios libres y no libres de [rpm fusion](https://rpmfusion.org/), puedes instalarlos por comando o descargando el paquete. Es importante instalar la version correspondiente a tu version de _Fedora_.
 
 4. Instala los controladores `broadcom-wl` con el siguiente comando:
 
@@ -18,7 +14,7 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 sudo dnf install broadcom-wl
 ```
 
-5. Reinicia tu equipo como un _hack_ ejecutando el siguiente comando:
+5. Reinicia tu equipo como un `hacker` ejecutando el siguiente comando:
 
 ```shell
 sudo init 6
