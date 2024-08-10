@@ -9,3 +9,7 @@
 	defaultbranch = main
 [core]
 	editor = nvim
+[http]
+	postBuffer = 524288000
+	lowSpeedLimit = 0
+	lowSeedTime = 999999
