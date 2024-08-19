@@ -26,9 +26,23 @@ Se encuentra dentro del repositorio de `Fedora`, así que la instalamos así.
 sudo dnf install kitty
 ```
 
-También tengo una configuración de _kitty_, la puedes encontrar [aquí](./kitty)
+Otra cosa que debes hacer es agregar _kitty_ a un atajo de teclado o que sea la terminal por defecto de tu distribución.
 
-Otra cosa que debes hacer es agregar la nueva terminal _kitty_ a un atajo de teclado o que sea la terminal por defecto de tu distribución.
+<details>
+  <summary><code>comandos favoritos</code></summary>
+
+```bash
+# Visualizar imágenes desde la terminal
+kitten icat image.png
+
+# Lista de fuentes disponibles para kitty
+
+kitty +list-fonts
+```
+
+</details>
+
+También tengo una configuración de _kitty_, la puedes encontrar [aquí](./kitty)
 
 ### Git <img width="25px" src="https://i.ibb.co/Svsq5fD/git.png">
 
