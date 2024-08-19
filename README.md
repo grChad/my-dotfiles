@@ -165,7 +165,7 @@ Ahora solo tienes que usar el comando `ms` seguido de tu mensaje en comillas sim
 
 ### RunCat
 
-proporciona una animación de fotograma clave en la barra superior de GNOME Shell.
+Proporciona una animación de fotograma clave en la barra superior de GNOME Shell.
 La velocidad de la animación cambia según el uso de la CPU.
 
 <div align="center">
@@ -173,6 +173,30 @@ La velocidad de la animación cambia según el uso de la CPU.
   <p>
     La puedes instalar desde
     <a href="https://extensions.gnome.org/extension/5072/one-thing/">aquí</a>
+  </p>
+</div>
+
+### Tiling Shell
+
+Una extension avanzada para administrar ventanas como 'Tiling'.
+
+<div align="center">
+  <img src="https://extensions.gnome.org/extension-data/screenshots/screenshot_7065_c1v2s78.jpg" width="400" alt="image of tiling shell" title="tiling shell">
+  <p>
+    La puedes instalar desde
+    <a href="https://extensions.gnome.org/extension/7065/tiling-shell/">aquí</a>
+  </p>
+</div>
+
+### Highlight Focus
+
+Como su nombre indica, agrega un borde en la ventana que esta enfocada. Se complementa muy bien con [Tiling Shell](#tiling-shell)
+
+<div align="center">
+<img src="https://extensions.gnome.org/extension-data/screenshots/screenshot_4699.png" width="300" alt="image of higilight focus" title="image of Highlight focus">
+  <p>
+    La puedes instalar desde
+    <a href="https://extensions.gnome.org/extension/4699/highlight-focus/">aquí</a>
   </p>
 </div>
 
