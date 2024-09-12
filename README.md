@@ -36,7 +36,6 @@ Otra cosa que debes hacer es agregar _kitty_ a un atajo de teclado o que sea la 
 kitten icat image.png
 
 # Lista de fuentes disponibles para kitty
-
 kitty +list-fonts
 ```
 
@@ -217,10 +216,11 @@ Como su nombre indica, agrega un borde en la ventana que esta enfocada. Se compl
 ## Otros:
 
 1. [React Native, librerías y mas](./other-settings/react-native-cli.md)
-2. [Configurar el entorno de LaTeX](./other-settings/latex.md)
-3. [Proyectos con LaTeX](https://github.com/grChad/proyectos-latex)
-4. [Aplicaciones para el escritorio](./other-settings/apps_desktop.md)
-5. [herramientas para terminal](./other-settings/tools-terminal.md)
-6. [El WiFi y sus problemas](./other-settings/wifi.md)
-7. [hacks y comandos para Linux](./other-settings/hacks-linux.md)
-8. [Gravar imagen ISO desde terminal con 'dd'](./other-settings/gravarISO.md)
+2. [Depuración WIFI](./other-settings/depuracion-wifi.md)
+3. [Configurar el entorno de LaTeX](./other-settings/latex.md)
+4. [Proyectos con LaTeX](https://github.com/grChad/proyectos-latex)
+5. [Aplicaciones para el escritorio](./other-settings/apps_desktop.md)
+6. [herramientas para terminal](./other-settings/tools-terminal.md)
+7. [El WiFi y sus problemas](./other-settings/wifi.md)
+8. [hacks y comandos para Linux](./other-settings/hacks-linux.md)
+9. [Gravar imagen ISO desde terminal con 'dd'](./other-settings/gravarISO.md)
