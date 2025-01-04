@@ -488,5 +488,6 @@
 	"prettier.printWidth": 90,
 	"prettier.singleQuote": true,
 	"prettier.useTabs": true,
-	"editor.minimap.enabled": false
+	"editor.minimap.enabled": false,
+	"editor.guides.bracketPairsHorizontal": true
 }

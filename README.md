@@ -1,6 +1,9 @@
 <h1 align="center">
-  My Dotfiles
-  <img height="30px" src="https://i.ibb.co/WHmHbbx/fedora.png" title="logo linux">
+  My Dot-files
+  <img 
+    src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327148/fedora-linux-icon_gswdid.png"
+    height="30px" title="logo de Fedora" alt="logo de Fedora"
+  >
 </h1>
 
 > Mi configuración para mi entorno **GNU/Linux** que me sea de utilidad. Y usando **Fedora** como distribución.
@@ -16,7 +19,7 @@ sudo dnf upgrade
 > [!NOTE]
 > si ya esta por predeterminado `dnf5` en reemplazo de `dnf` usarlo en su lugar.
 
-### Kitty <img height="25px" src="https://i.ibb.co/sKbfczF/kitty.png">:
+### Kitty <img height="25px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327153/kitty_nwsuzj.png">
 
 Kitty es un emulador de terminal de código abierto y altamente configurable que ofrece características únicas como representación gráfica avanzada, soporte de imágenes y aceleración de hardware. Para mas detalles visita [kovidgoyal.net](https://sw.kovidgoyal.net/kitty/).
 
@@ -43,19 +46,19 @@ kitty +list-fonts
 
 También tengo una configuración de _kitty_, la puedes encontrar [aquí](./kitty)
 
-### Git <img width="25px" src="https://i.ibb.co/Svsq5fD/git.png">
+### Git <img width="25px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327149/git-icon_lukouu.png">
 
 Git es un sistema de control de versiones distribuido para rastrear cambios en archivos y coordinar el trabajo en proyectos de desarrollo de software.
 
 Viene por defecto en _fedora_, para otras distribuciones tendrás que acceder a su [git-scm.com](https://git-scm.com/)
 
-### ZSH <img height="20px" src="https://i.ibb.co/684JJtx/zsh.png">
+### ZSH <img height="20px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327159/shell-zsh_wmexfq.png">
 
 Zsh es un potente y versátil intérprete de comandos de Unix con características avanzadas de autocompleted y personalización, para mas detalles visite [Z _shell_](https://zsh.sourceforge.io/).
 
 He hecho una guia para instalar _zsh_ junto con un Framework potente y liviano llamado [zimfw](https://github.com/zimfw/zimfw). Todo ello la encuentras [aquí](./zsh)
 
-### Node.js <img height="25px" src="https://i.ibb.co/R7tjy8r/nodejs-icon.png">
+### Node.js <img height="25px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327155/nodejs-icon_s9sdas.png">
 
 Es un entorno de tiempo de ejecución de JavaScript de código abierto que permite construir aplicaciones en el lado del servidor.
 
@@ -63,7 +66,7 @@ Instalare _Node.js_ con un administrador de versiones llamado [fnm](https://gith
 
 ## Editores de Código
 
-### NeoVim <img height="25px" src="https://i.ibb.co/gvHXFT4/nvim.webp">
+### NeoVim <img height="25px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327045/Nvim_foxbab.png">
 
 Es la evolución de _Vim_, un editor de texto que potencia la edición y programación con características modernas (se configura con _Lua_), extensibilidad y mayor eficiencia en la manipulación de código.
 
@@ -94,13 +97,13 @@ dnf install -y neovim python3-neovim
 
 También tengo una configuración fácil para _NeoVim_ [aquí](https://github.com/grChad/nvim).
 
-### Vs-Code <img height="25px" src="https://i.ibb.co/jrSk3Q3/vscode.png">
+### Vs-Code <img height="25px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327164/visual-studio-code-icon_z5tqbs.png">
 
 Visual Studio Code (VSCode) es un editor de código fuente gratuito y altamente personalizable desarrollado por Microsoft, escrita en _TypeScript_, para más detalles visita [Visual Studio Code](https://code.visualstudio.com/).
 
 Mi configuración se encuentra [aquí](./vs-code)
 
-### Helix <img height="23px" src="https://i.ibb.co/2hBZPLy/helix.png">
+### Helix <img height="23px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327151/helix_pwbaqu.png">
 
 Helix se denomina a si mismo, como un editor post-moderno. Y algo de cierto tiene, hace uso de la edición modal (basado en modos) como _Vim_ o _NeoVim_, también tiene compatibilidad con LSP (language sever protocol).
 
@@ -135,17 +138,17 @@ Visita [gnome shell extensions](https://extensions.gnome.org/).
 One-Thing es una herramienta de productividad que le ayuda a concentrarse en una tarea a la vez.
 
 <div align="center">
-  <img src="https://i.ibb.co/9tfDDSd/one-thing.png">
+  <img src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733329282/one-thing_rezpgp.png">
 
-La puedes instalar desde [aquí](https://extensions.gnome.org/extension/5072/one-thing/)
+La puedes instalar desde [aquí](https://github.com/one-thing-gnome/one-thing)
 
 </div>
 
 ### Simple Message
 
-Similar a [One Thing](#one-thing), pero mas simple y se requiere de una configuracion en _zsh_ para tener la experiencia completa.
+Similar a [One Thing](#one-thing), pero mas simple y se requiere de una configuración en _zsh_ para tener la experiencia completa.
 
-La puedes instalar desde [aquí](https://extensions.gnome.org/extension/5018/simple-message/)
+La puedes instalar desde [aquí](https://github.com/freddez/gnome-shell-simple-message)
 
 <details>
   <summary>Configuración recomendada para Zsh</summary>
@@ -172,8 +175,12 @@ alias ms='show_message'
 Ahora solo tienes que usar el comando `ms` seguido de tu mensaje en comillas simples `'mensaje'` o `"mensaje"` y eso es todo.
 
 <div align="center">
-  <img src="./assets/capture-simple-message-terminal.png">
-  <img src="./assets/capture-simple-message-titleBar.png">
+  <img 
+    src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733329551/simple-message-terminal_jtya91.png"
+  >
+  <img 
+    src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733329552/simple-message-titleBar_yxcofz.png"
+  >
 </div>
 
 ### RunCat
@@ -182,34 +189,25 @@ Proporciona una animación de fotograma clave en la barra superior de GNOME Shel
 La velocidad de la animación cambia según el uso de la CPU.
 
 <div align="center">
-  <img src="https://i.ibb.co/QnGHmW0/capture-run-Cat.png">
+  <img src="https://github.com/win0err/gnome-runcat/raw/master/assets/runcat-header.gif">
   <p>
     La puedes instalar desde
-    <a href="https://extensions.gnome.org/extension/5072/one-thing/">aquí</a>
+    <a href="https://github.com/win0err/gnome-runcat">aquí</a>
   </p>
 </div>
 
-### Tiling Shell
+### Tiling Shell <img src="https://raw.githubusercontent.com/domferr/tilingshell/main/logo.png" height="25">
 
 Una extension avanzada para administrar ventanas como 'Tiling'.
 
 <div align="center">
-  <img src="https://extensions.gnome.org/extension-data/screenshots/screenshot_7065_c1v2s78.jpg" width="400" alt="image of tiling shell" title="tiling shell">
+  <img 
+    src="https://github.com/domferr/tilingshell/raw/main/doc/horiz_summary.jpg"
+    width="700" alt="image of tiling shell" title="tiling shell"
+  >
   <p>
     La puedes instalar desde
-    <a href="https://extensions.gnome.org/extension/7065/tiling-shell/">aquí</a>
-  </p>
-</div>
-
-### Highlight Focus
-
-Como su nombre indica, agrega un borde en la ventana que esta enfocada. Se complementa muy bien con [Tiling Shell](#tiling-shell)
-
-<div align="center">
-<img src="https://extensions.gnome.org/extension-data/screenshots/screenshot_4699.png" width="300" alt="image of higilight focus" title="image of Highlight focus">
-  <p>
-    La puedes instalar desde
-    <a href="https://extensions.gnome.org/extension/4699/highlight-focus/">aquí</a>
+    <a href="https://github.com/domferr/tilingshell">aquí</a>
   </p>
 </div>
 
