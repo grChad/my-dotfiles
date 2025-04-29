@@ -1,8 +1,7 @@
 <h1 align="center">
   Node Manager (fnm)
-
-  <img style="height:30px" src="https://i.ibb.co/HXw52pZ/rs-logo.png"> +
-  <img style="height:30px" src="https://i.ibb.co/B6tfy0p/nodejs-logo.png">
+  <img style="height:30px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327158/rust-language-icon_xtzte5.png"/> +
+  <img style="height:30px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1733327155/nodejs-icon_s9sdas.png"/>
 </h1>
 
 > Node Manager (fnm) es un administrador de versiones para **Node.js** construido en **Rust**.
@@ -23,11 +22,11 @@ Para instalar una versión como la `20 LTS`, ejecute `fnm install 20` y se insta
 
 Para ver qué versiones tiene en su sistema, ejecute `fnm ls` nos mostrara algo como esto:
 
-<div align="center"><img src="https://i.ibb.co/c3cGjr0/capture-fnm-ls.png"></div>
+<div align="center"><img src="https://res.cloudinary.com/dw9anhksw/image/upload/v1745892462/fnm-ls_rf7sxb.png"></div>
 
-Para usar una versión diferente como la `V21`, ejecute `fnm use 21` y podrá utilizar la versión v21.7.1
+Para usar una versión diferente como la `V22`, primero instale con `fnm install 22` si no lo tiene, luego ejecute `fnm use 22` y podrá utilizarlo.
 
-<div align="center"><img src="https://i.ibb.co/8MRJr6N/capture-fnm-use.png"></div>
+<div align="center"><img src="https://res.cloudinary.com/dw9anhksw/image/upload/v1745892581/fnm-use_pzxttc.png"></div>
 
 Para utilizar una versión en un proyecto específico, agregue la versión que desea usar en el archivo `.node-version` o `.nvmrc`, por ejemplo:
 
@@ -47,18 +46,24 @@ Para más información sobre fnm, consulte este [articulo](https://www.freecodec
 
 ## Instalación de PNPM
 
-PNPM es una alternativa al administrador de packetes de Node.js (npm), es mas rapido y cada ves se hace mas popular.
+PNPM es una alternativa al administrador de packetes de Node.js (npm), más rápido y cada ves mas popular. Consulte lo ultimo desde su [website](https://pnpm.io/).
 
-Para instalar PNPM, use los siguientes comandos:
+#### Instalar
 
-Instalar con **curl**
+Con **curl**
 
 ```bash
 curl -fsSL https://get.pnpm.io/install.sh | sh -
 ```
 
-O instalar con **wget**
+Con **wget**
 
 ```bash
 wget -qO- https://get.pnpm.io/install.sh | sh -
+```
+
+#### Actualizar
+
+```bash
+pnpm self-update
 ```
