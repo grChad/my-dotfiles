@@ -3,13 +3,14 @@ export PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim"         # Neovim (recomendado)
 
 # --------------------------------[ para Android Studio ]-----------------------------
-# export ANDROID_HOME=$HOME/Android/Sdk
-# export PATH=$PATH:$ANDROID_HOME/emulator
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # ------------------------[ JDK compatible con React Native ]-------------------------
-# NOTE: Todavia por ver
-#export PATH="$HOME/Escritorio/localUser/jdk-17/bin:$PATH"
+# Crear un directorio localUser en /home/gabriel/Escritorio/
+# Renombrar el directorio descargado a 'jsk-17' o el recomendado por 'React Native'
+export PATH="$HOME/Escritorio/localUser/jdk-17/bin:$PATH"
 
 # ------------------------------------[ editor Helix] ----------------------------------
 export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
