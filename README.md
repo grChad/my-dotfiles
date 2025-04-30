@@ -221,4 +221,5 @@ Una extension avanzada para administrar ventanas como 'Tiling'.
 6. [herramientas para terminal](./other-settings/tools-terminal.md)
 7. [El WiFi y sus problemas](./other-settings/wifi.md)
 8. [hacks y comandos para Linux](./other-settings/hacks-linux.md)
-9. [Gravar imagen ISO desde terminal con 'dd'](./other-settings/gravarISO.md)
+9. [Gravar imagen ISO desde terminal](./other-settings/gravarISO.md)
+10. [Agregar glyphos a una fuente](./other-settings/nerdfonts-patcher.md)
