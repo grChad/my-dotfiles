@@ -1,12 +1,12 @@
 <h1 align="center">Herramientas para terminal</h1>
 
+> Herramientas pensadas facilitarme las cosas y en aumentar la producción.
+
 ## <img width="80px" src="https://raw.githubusercontent.com/pemistahl/grex/main/logo.png">
 
 Grex es una biblioteca, así como una utilidad de línea de comandos que pretende simplificar la tarea a menudo complicada y tediosa de crear expresiones regulares.
 
-### Install
-
-Usando `cargo` de _Rust_.
+Instalar usando `cargo` de _Rust_.
 
 ```shell
 cargo install grex
@@ -16,39 +16,51 @@ Aunque también funciona con:
 
 <code>**(brew | cargo | choco | huber | scoop)** install grex</code>
 
-### usar
-
-Tan fácil como colocar en la terminal, `grex hola mola` y obtendrías algo como `^\[hl]ola$`, que es la expresión regular.
-
-<div align="center"><img src="../assets/capture-grex-hola-mola.png"></div>
-
-También podrías tener las coincidencias en un archivo y buscar a través de ellas:
-`grex -f file.txt` y obtener el mismo resultado.
+Usarlo es tan fácil como colocar en la terminal, `grex hola mola` y obtendrías algo como `^\[hl]ola$`, que es la expresión regular.
 
 <div align="center">
-  <img src="../assets/capture-cat-file.png">
-  <img src="../assets/capture-grex-file.png">
+  <img src="https://res.cloudinary.com/dw9anhksw/image/upload/v1746025322/capture-grex-hola-mola_wdbben.png"/>
 </div>
 
-Para mas información en [grex](https://github.com/pemistahl/grex).
+También podrías tener las coincidencias en un archivo y buscar a través de ellas y obtener el mismo resultado:
+
+```bash
+grex -f file.txt
+```
+
+<div align="center">
+  <img src="https://res.cloudinary.com/dw9anhksw/image/upload/v1746025612/capture-cat-file_dycgjd.png">
+  <img src="https://res.cloudinary.com/dw9anhksw/image/upload/v1746025629/capture-grex-file_zgtklb.png">
+</div>
+
+Para mas información visita [grex](https://github.com/pemistahl/grex).
 
 ## ripgrep
 
 Herramienta de búsqueda orientada a líneas, que busca recursivamente el directorio para un patrón de expresiones regulares. Recomendable para usar con _NeoVim_.
 
-#### Install
+```bash
+sudo dnf install ripgrep
+```
 
-Con _Fedora_ `sudo dnf install ripgrep`. para otros visitar [aquí](https:/github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation).
+## fzf
+
+Buscador difuso de linea de comandos con proposito general, puede ser mas util que [ripgrep](#ripgrep).
+
+```bash
+sudo dnf install fzf
+```
 
 ## webP
 
 WebP es un formato de imagen moderno que proporciona una compresión con y sin pérdida superior para imágenes en la Web. Con WebP, los webmasters y los desarrolladores web pueden crear imágenes más pequeñas y enriquecidas que hacen que la Web sea más rápida.
 
-Para instalarlo desde el repositorio de _Fedora_, ejecutamos el siguiente comando.
-
-```shell
+```bash
 sudo dnf install libwebp
 ```
+
+> [!NOTE]
+> Si tienes problemas en la instalación o no reconoce la ruta del path o simplemente no la puedes usar incluso si esta instalada en tu sistema. Visita el [webSite](https://developers.google.com/speed/webp) y descarga el ejecutable `libwebp-1.5.0-linux-x86-64.tar.gz` para tu sistema. Lo los archivos de la carpeta `/bin/` los pasas a un directorio del sistema como `/home/user/.local/bin/` para que sea reconocido por el `PATH`.
 
 #### Uso
 
@@ -92,8 +104,6 @@ sudo dnf install unrar
 ## Love2D
 
 LÖVE es un marco _increíble_ que puedes usar para hacer juegos 2D en Lua. Es gratis, de código abierto y funciona desde _windows, Mac Os X, Linux, Android e Ios_.
-
-#### Install
 
 En _Fedora_, se instala a través de la paquetería `dnf`.
 

@@ -218,7 +218,7 @@ Una extension avanzada para administrar ventanas como 'Tiling'.
 3. [Configurar el entorno de LaTeX](./other-settings/latex.md)
 4. [Proyectos con LaTeX](https://github.com/grChad/proyectos-latex)
 5. [Aplicaciones para el escritorio](./other-settings/apps_desktop.md)
-6. [herramientas para terminal](./other-settings/tools-terminal.md)
+6. [herramientas de terminal](./other-settings/tools-terminal.md)
 7. [El WiFi y sus problemas](./other-settings/wifi.md)
 8. [hacks y comandos para Linux](./other-settings/hacks-linux.md)
 9. [Gravar imagen ISO desde terminal](./other-settings/gravarISO.md)
