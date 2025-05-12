@@ -12,7 +12,7 @@ Instalación según la pagina oficial de [Brave/linux](https://brave.com/linux/)
 curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
-Este código agrega el repositorio `bave-browser` a la lista de repositorios del sistema y lo instala. Después de ello las actualizaciones son automáticas.
+Este código agrega el repositorio `brave-browser` a la lista de repositorios del sistema y lo instala. Después de ello las actualizaciones son automáticas.
 
 ## Cronógrafo
 
@@ -108,7 +108,7 @@ sudo dnf install inkscape
 Es un cliente Rest similar a _Insomnia_ o a _Postman_. Pero 100% libre. Con licencia GLP-3.0.
 
 <div align="center">
-  <img src="https://cartero.danirod.es/assets/main-screenshot/crop-gnu-linux-light.png"  alt="logo de cartero" title="logo de cartero">
+  <img src="https://cartero.danirod.es/assets/main-screenshot/crop-gnu-linux-light.png"  alt="Vista del Cliente" title="Vista del Cliente">
 </div>
 
 Se encuentra en la tienda de software como `cartero` mediante _Flathub_ o también en su [website](https://cartero.danirod.es/).
