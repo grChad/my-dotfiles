@@ -1,36 +1,33 @@
 <h1 align="center">Aplicaciones para el Equipo</h1>
 
-> imageAplicaciones o programas que requiero en mi día a día.
+> Aplicaciones o programas que requiero en mi día a día.
 
-## Navegador Brave
+## Navegador Brave <img height="30px" src="https://brave.com/static-assets/images/brave-logo-sans-text.svg"/>
 
-Una alternativa a _Google-Chrome_ pero con muchas mas mejoras y seguridad al usar.
-
-<div align="center">
-  <img src="https://brave.com/static-assets/images/brave-logo-sans-text.svg" alt="brave logo" title="brave logo">
-</div>
+Una alternativa a _Google-Chrome_ y _firefox_, con las ventajas de ambos y el que no trafica con mis datos (por lo menos por ahora).
 
 Instalación según la pagina oficial de [Brave/linux](https://brave.com/linux/)
 
 ```bash
-sudo dnf install dnf-plugins-core
-
-sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-
-sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-
-sudo dnf install brave-browser
+curl -fsS https://dl.brave.com/install.sh | sh
 ```
 
-Esto podría cambiar con el tiempo, siempre estar atento a los cambios.
+Este código agrega el repositorio `bave-browser` a la lista de repositorios del sistema y lo instala. Después de ello las actualizaciones son automáticas.
 
-## Audacity
+## Cronógrafo
 
-Un editor de audio libre y el más popular en el entorno GNU/Linux.
+Aplicación para sincronizar letras de canciones por marcas de tiempo.
 
 <div align="center">
-  <img width="100px" src="https://www.audacityteam.org/_astro/Audacity_Logo.63b57726.svg" alt="audacity logo" title="audacity logo">
+  <img width="300px" src="https://github.com/Dzheremi2/Chronograph/raw/master/docs/screenshots/libLW.png"/>
+  <img width="300px" src="https://github.com/Dzheremi2/Chronograph/raw/master/docs/screenshots/syncCW.png"/>
 </div>
+
+Su repositorio es [Chronophaph](https://github.com/Dzheremi2/Chronograph/) y se puede instalar desde la tienda de software de _fedora_.
+
+## Audacity <img height="30px" src="https://www.audacityteam.org/_astro/Audacity_Logo.DK8H7nvr.svg"/>
+
+Un editor de audio libre y el más popular en el entorno GNU/Linux.
 
 La instalación esta disponible tanto desde la `Tienda de Software` de _Fedora_ como por terminal:
 
@@ -50,6 +47,10 @@ sudo dnf install zathura
 
 ## Selector de color
 
+<div align="center">
+  <img width="600px" src="https://res.cloudinary.com/dw9anhksw/image/upload/v1747068390/selector-color_c6rebc.webp"/>
+</div>
+
 Un programa simple que hace lo que promete, disponible en la `Tienda de software` de _Fedora_.
 
 ## Tux Typing
@@ -66,35 +67,25 @@ Un juego divertido de escritura y para mejorar la velocidad de escritura. Dispon
   <img width="70%" src="https://github.com/bragefuglseth/keypunch/blob/main/data/screenshots/2-ready.png?raw=true" alt="image to keypunk" title="image to keypunk">
 </div>
 
-Una aplicación simple para practicar macanografía. Permite el uso de una gran variedad de idiomas disponibles.
+Una aplicación simple para practicar mecanografía. Permite el uso de una gran variedad de idiomas disponibles.
 
-La instalacion biene de un packete de flatpak llamada `dev.bragefuglseh.keypunch`, tambien en _github_ como [bragefuglseth/keypunch](https://github.com/bragefuglseth/keypunch) o por ultimo desde la tienda de software de _Fedora_ siempre que se tengan habilitados los paquetes de _Flatpak_.
+La instalación viene de un paquete de _flatpak_ llamada `dev.bragefuglseh.keypunch`, también en _github_ como [bragefuglseth/keypunch](https://github.com/bragefuglseth/keypunch) o por ultimo desde la tienda de software de _Fedora_ siempre que se tengan habilitados los paquetes de _Flatpak_.
 
 ## Dialect
 
-Es un traductor fácil de usar. Disponible en la `Tienda de Software` de _Fedora_.
+Es un traductor fácil de usar. Disponible en la tienda de Software de _Fedora_.
 
 ## fontforge
 
 Un programa para editar una fuente o modificar una que ya tengas descargada:
 
-```shell
-dnf search fontforge
-```
-
-Te saldrá tanto la version normal para sistemas `.x86_64` o `.i686`. Se instalara el que sea compatible con la estructura de tu sistema.
-
-```shell
+```bash
 sudo dnf install fontforge
 ```
 
-## Gimp
+## Gimp <img height="30px" src="https://www.gimp.org/images/frontpage/wilber-big.png" />
 
-Programa que manipula imágenes a nivel profesional, libre.
-
-<div align="center">
-  <img src="https://www.gimp.org/images/frontpage/wilber-big.png" alt="gimp logo" title="gimp logo">
-</div>
+Programa que manipula imágenes a nivel profesional y libre.
 
 La instalación esta disponible tanto desde la `Tienda de Software` de _Fedora_ como por terminal:
 
@@ -102,13 +93,9 @@ La instalación esta disponible tanto desde la `Tienda de Software` de _Fedora_ 
 sudo dnf install gimp
 ```
 
-## Inkscape
+## Inkscape <img height="30px" src="https://www.gimp.org/images/frontpage/Inkscape_Logo.svg.png" />
 
 Es un editor de gráficos vectoriales gratuito y de código abierto para GNU/Linux, Windows y MacOs.
-
-<div align="center">
-  <img src="https://www.gimp.org/images/frontpage/Inkscape_Logo.svg.png" alt="inkscape logo" title="inkscape logo">
-</div>
 
 La instalación esta disponible tanto desde la `Tienda de Software` de _Fedora_ como por terminal:
 
@@ -116,12 +103,12 @@ La instalación esta disponible tanto desde la `Tienda de Software` de _Fedora_ 
 sudo dnf install inkscape
 ```
 
-## Cartero
+## Cartero <img height="30px" src="https://cartero.danirod.es/assets/cartero.svg" />
 
-Es un cliente Rest similar a _Insomnia_ o a _Postman_. Pero 100% libre. con liscencia GLP-3.0.
+Es un cliente Rest similar a _Insomnia_ o a _Postman_. Pero 100% libre. Con licencia GLP-3.0.
 
 <div align="center">
-  <img src="https://cartero.danirod.es/cartero-logo.png" width="200" alt="logo de cartero" title="logo de cartero">
+  <img src="https://cartero.danirod.es/assets/main-screenshot/crop-gnu-linux-light.png"  alt="logo de cartero" title="logo de cartero">
 </div>
 
-Se encuantra en la tienda de software mediante _Flatpak_.
+Se encuentra en la tienda de software como `cartero` mediante _Flathub_ o también en su [website](https://cartero.danirod.es/).
